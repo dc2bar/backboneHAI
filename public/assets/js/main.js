@@ -33,13 +33,14 @@ $(function (){
             var uuid = here_now.uuids[i];
             for(var x in users) {
               var user = users[x];
+              console.log(user.uuid);
+              console.log(uuid);
               if (user.uuid == uuid) {
                 here.push(user);
               }
             }
           }
         });
-        console.log(here);
       }
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
