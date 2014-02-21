@@ -114,11 +114,12 @@ $(function (){
     login: function () {
       //lol. meh, only wook will understand this and he's admin anyway. not sure wtf some names get 7 À appended from haichat.
       //TODO: use real logins instead of hijacking blab chat.
-      var url = require('url');
-      var url_parts = url.parse(request.url, true);
-      var query = url_parts.query;
-      console.log(query);
-      this.user.name = B64.decode(this.checkCookie('hainame')).replace('7 À','');
+      function getURLParameter(name) {
+        return decodeURI(
+            (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+        );
+      }
+      this.user.name = B64.decode(getURLParameter('hn')).replace('7 À','');
       var currentUser = new App.Models.User(this.user);
       App.login(currentUser);
     },
