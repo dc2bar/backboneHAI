@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/main.js" afterPath="$PROJECT_DIR$/public/assets/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backbone.iws" />
@@ -41,7 +40,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="6" selection-start="3454" selection-end="3454" vertical-scroll-proportion="0.5067568" vertical-offset="1380" max-vertical-offset="3690">
+            <state line="111" column="19" selection-start="3447" selection-end="3447" vertical-scroll-proportion="0.4814189" vertical-offset="1380" max-vertical-offset="3690">
               <folding />
             </state>
           </provider>
@@ -80,6 +79,7 @@
         <option value="$PROJECT_DIR$/assets/js/server.js" />
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/public/assets/js/main.js" />
+        <option value="$PROJECT_DIR$/scratch" />
       </list>
     </option>
   </component>
@@ -249,7 +249,11 @@
       <created>1393022830323</created>
       <updated>1393022830323</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit&#10;">
+      <created>1393022949599</created>
+      <updated>1393022949599</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -392,6 +396,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="15" selection-start="2868" selection-end="2868" vertical-scroll-proportion="-56.53846" vertical-offset="0" max-vertical-offset="1560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scratch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="68" selection-start="0" selection-end="2049" vertical-scroll-proportion="0.776699" vertical-offset="105" max-vertical-offset="1365">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="80" column="66" selection-start="2921" selection-end="2921" vertical-scroll-proportion="-50.0" vertical-offset="0" max-vertical-offset="2190">
@@ -402,16 +420,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="15" selection-start="2868" selection-end="2868" vertical-scroll-proportion="-56.53846" vertical-offset="0" max-vertical-offset="1560">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="6" selection-start="3454" selection-end="3454" vertical-scroll-proportion="0.5067568" vertical-offset="1380" max-vertical-offset="3690">
+        <state line="111" column="19" selection-start="3447" selection-end="3447" vertical-scroll-proportion="0.4814189" vertical-offset="1380" max-vertical-offset="3690">
           <folding />
         </state>
       </provider>
