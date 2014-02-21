@@ -41,6 +41,7 @@ $(function (){
             }
           }
         });
+        console.log(here);
       }
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
