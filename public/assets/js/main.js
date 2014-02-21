@@ -27,7 +27,9 @@ $(function (){
       });
       this.User = user;
       function getUsers(here_now) {
+        var here = [];
         $.getJSON( "http://198.199.114.208/getUsers?callback=?", function( data ) {
+          console.log(here_now);
           console.log(data);
         });
       }
@@ -146,7 +148,6 @@ $(function (){
       this.listenTo(this.collection, "change reset add remove", this.render);
     },
     render: function() {
-      console.log(this.collection);
       var thisView = this;
       $(thisView.$el).empty();
       this.collection.each( function(user) {
@@ -179,7 +180,6 @@ $(function (){
       this.render();
     },
     render: function () {
-      console.log(this.collection);
       var thisView = this;
       $(thisView.$el).empty();
       this.collection.each( function(message) {
