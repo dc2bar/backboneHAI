@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PubNub Backbone</title>
+</head>
+
+<script id="login-modal" type="text/x-handlebars-template">
+  <div class="add-comment add-comment-velvet styled" id="addcomments">
+
+  <div class="modal-header">
+    <div class="add-comment-title"><h3>Chat Login</h3></div>
+  </div>
+
+  <div class="modal-body">
+    <!-- login form -->
+      <div class="comment-form login-form">
+        <form class="login">
+          <div class="form-inner">
+            <!-- <div class="field_text">
+              <label for="username" class="label_title">Username:</label>
+              <input type="text" id="username" value="" placeholder="Pick a chat name"
+                     class="username inputtext input_middle"/>
+            </div>
+            <div class="field_text">
+              <label for="password" class="label_title">Password:</label>
+              <input type="text" id="password" value="" placeholder="Password"
+                     class="password inputtext input_middle"/>
+            </div>
+            <div class="field_text">
+              <div>No password needed right now. will work on that later.</div>
+            </div> -->
+            <div class="field_select">
+              <label for="image">Pick a chat icon</label>
+              <div id="image" class="avatar">
+                <img src="{{avatar}}">
+              </div>
+            </div>
+            <div class="field_select">
+              <label for="color">Pick a chat color</label>
+              <div id="color" class="color"></div>
+            </div>
+          </div>
+
+          <div class="rowSubmit">
+            <span class="btn login-btn"><input type="button" id="login" value="Login"/></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div><!-- /modal-body -->
+
+</script>
+
+<script id="usercard" type="text/x-handlebars-template">
+  <div class="widget-container widget_profile boxed-velvet">
+    <div class="inner gradient">
+      <div class="widget_profile_top clearfix">
+        <div class="avatar"><img src="{{avatar}}" alt=""></div>
+        <h5>{{name}}</h5>
+        <span class="subtitle">{{title}}</span>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="chatline" type="text/x-handlebars-template">
+  <div class="comment-list clearfix">
+    <ol>
+      <li class="comment first last">
+        <div class="comment-body">
+          <div class="inner gradient">
+            <div class="comment-arrow"></div>
+            <div class="comment-avatar">
+              <div class="avatar"><img src="{{avatar}}" alt=""></div>
+            </div>
+            <div class="comment-text">
+              <div class="comment-author clearfix">
+                <a href="#" class="link-author" hidefocus="true" style="outline: none;">{{sender}}</a> <span
+                  class="comment-date">{{date}} | {{time}}</span>
+              </div>
+              <div class="comment-entry" style="color:{{color}};">
+                {{text}}
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</script>
+
+<script id="chatinput" type="text/x-handlebars-template">
+  <div class="chat-button">
+    <div class="btn btn-default send">
+      <input type="button" value="Send">
+    </div>
+  </div>
+  <div class="chat-bar">
+    <input type="text" class="input-text">
+  </div>
+</script>
+
+<script src="assets/js/vendor/jquery.min.js"></script>
+<script src="assets/js/vendor/underscore.min.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/vendor/backbone.min.js"></script>
+<script src="assets/js/vendor/pubnub.min.js"></script>
+<script src="assets/js/vendor/backbone-pubnub.min.js"></script>
+<script src="assets/js/vendor/handlebars.min.js"></script>
+<script src="assets/js/vendor/b64.js"></script>
+<script src="assets/js/vendor/colorpicker.js"></script>
+<script src="assets/js/main.js"></script>
+<link href="assets/css/main.css" media="screen" rel="stylesheet">
+<link href="assets/css/bootstrap.css" media="screen" rel="stylesheet">
+<link href="assets/css/colorpicker.css" media="screen" rel="stylesheet">
+<body>
+  <div class="login-modal">
+    login
+  </div>
+  <div class="chat-container">
+    <div class="chat-area">
+      <div class="message-container">
+        <div class="messages">
+          messages
+        </div>
+      </div>
+      <div class="chat-input">
+        chat input
+      </div>
+    </div>
+    <div class="userslist-container">
+      <div class="userslist">
+        users
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
