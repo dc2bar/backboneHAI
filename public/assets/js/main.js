@@ -31,11 +31,15 @@ $(function (){
         $.getJSON( "http://198.199.114.208/getUsers?callback=?", function( users ) {
           for(var i in here_now.uuids) {
             var uuid = here_now.uuids[i];
-            var found = $.grep(users, function(user){ return user.uuid == uuid; });
-            console.log(uuid);
-            console.log(found);
+            for(var x in users) {
+              var user = users[x];
+              if (user.uuid == uuid) {
+                here.push(user);
+              }
+            }
           }
         });
+        console.log(here);
       }
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
