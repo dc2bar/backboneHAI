@@ -144,6 +144,7 @@ $(function (){
     el: '.userslist',
     initialize: function () {
       this.listenTo(this.collection, "change reset add remove", this.render);
+      this.listenTo(this, "change", this.render);
       this.render();
     },
     render: function() {
