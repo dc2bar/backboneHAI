@@ -14,8 +14,11 @@ $(function (){
       user.set('uuid', uuid);
       usersCollection.add(user);
       this.User = user;
+      pubnub.subscribe({
+        channel : 'haiChat'
+      })
       pubnub.here_now({
-        channel : 'backbone-collection-UsersCollection',
+        channel : 'haiChat',
         callback : function(m){
           var allUsers = m['uuids'];
           console.log(allUsers);
@@ -42,7 +45,7 @@ $(function (){
     publish_key: 'pub-c-94687441-ef61-4ff5-a0eb-c852642a769a',
     subscribe_key: 'sub-c-e3c8bbee-926d-11e3-9979-02ee2ddab7fe',
     ssl: true,
-    uuid: 'asdf'
+    uuid: uuid
   });
 
   App.Collections.Users = Backbone.PubNub.Collection.extend({
