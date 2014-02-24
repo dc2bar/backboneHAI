@@ -78,7 +78,7 @@ pubnub.subscribe({
     switch(m.type){
       case 'update':
         var target = usersCollection.where({ name: m.data.username });
-        target.set(m.data.userobject);
+        target[0].set(m.data.userobject);
         break;
     }
   }
