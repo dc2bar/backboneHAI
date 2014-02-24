@@ -126,9 +126,11 @@ var checkedIn = [];
 
 function clearUsers() {
   var stillOnline = [];
+  console.log(checkedIn);
   for(var i in checkedIn) {
     var username = checkedIn[i];
     var userProfile = usersCollection.where({ name: username });
+    console.log(userProfile);
     var userProfile = userProfile.pop();
     stillOnline.push(userProfile);
   }
