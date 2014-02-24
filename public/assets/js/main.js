@@ -178,8 +178,8 @@ $(function (){
       updatedUser['color'] = 'ffff00';
       updatedUser['avatar'] = 'google.com';
       updatedUser['status'] = '';
-      console.log(this.model);
-      this.model.set({
+      var me = usersCollection.get(this.model.id);
+      me.set({
         title: updatedUser['title'],
         avatar: updatedUser['avatar'],
         color: updatedUser['color'],
