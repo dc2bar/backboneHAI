@@ -61,7 +61,6 @@ $(function (){
           var target = usersCollection.where({ name: userobject.name });
           if(target.length > 0) {
             $.each(target, function(k,v){
-              console.log(v);
               v.set(userobject);
             })
           }
@@ -185,23 +184,7 @@ $(function (){
       $(thisView.$el).empty();
       this.collection.each( function(user) {
         var userView = new App.Views.User({model: user});
-        var dupe = usersCollection.where({ name: user.get('name') });
-        console.log(dupe);
-        if(dupe.length > 0) {
-          var message = {
-            type: 'update',
-            data: {
-              username: App.User.name,
-              userobject: App.User
-            }
-          }
-          pubnub.publish({
-            channel : 'fuck_pubnub',
-            message : message
-          });
-        } else {
-          $(thisView.$el).append(userView.render().el);
-        }
+        $(thisView.$el).append(userView.render().el);
       });
       return this;
     }
@@ -224,6 +207,16 @@ $(function (){
     },
     updateProfile: function () {
       document.cookie = 'newchatcookie=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+      var message = {
+        type: 'logoff',
+        data: {
+          username: App.User.name
+        }
+      }
+      pubnub.publish({
+        channel : 'fuck_pubnub',
+        message : message
+      });
       location.reload();
     }
   });
