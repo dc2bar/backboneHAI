@@ -180,7 +180,7 @@ $(function (){
       updatedUser['status'] = '';
       var me = usersCollection.where({ name: App.User.get('name') });
       if(me.length > 0) {
-        $.each(dupe, function(k,v){
+        $.each(me, function(k,v){
           v.set({
             title: updatedUser['title'],
             avatar: updatedUser['avatar'],
