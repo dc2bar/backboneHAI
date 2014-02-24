@@ -158,9 +158,12 @@ $(function (){
   });
 
   App.Views.User = Backbone.View.extend({
+    events : {
+      'click .widget_profile_top' : 'updateProfile'
+    },
     attributes : function () {
       return {
-        uuid : this.model.get('uuid')
+        username : this.model.get('name')
       };
     },
     render: function () {
@@ -168,6 +171,24 @@ $(function (){
       var template = Handlebars.compile(source);
       this.$el.html(template(this.model.toJSON()));
       return this;
+    },
+    updateProfile: function() {
+      var updatedUser = Array();
+      updatedUser['title'] = 'updated!';
+      updatedUser['color'] = 'ffff00';
+      updatedUser['avatar'] = 'google.com';
+      updatedUser['status'] = '';
+      var me = usersCollection.where({ name: App.User.get('name') });
+      if(me.length > 0) {
+        $.each(dupe, function(k,v){
+          v.set({
+            title: updatedUser['title'],
+            avatar: updatedUser['avatar'],
+            color: updatedUser['color'],
+            status: updatedUser['status']
+          });
+        })
+      }
     }
   });
 
