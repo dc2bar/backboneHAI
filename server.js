@@ -119,6 +119,7 @@ app.get('/stillHere', function(req, res){
   res.header('Content-Type', 'application/json');
   res.header('Charset', 'utf-8');
   checkedIn[''+req.query.username] = req.query.username;
+  console.log(checkedIn);
   res.send(req.query.callback + '({ok:"ok"});');
 });
 
@@ -126,16 +127,13 @@ var checkedIn = [];
 
 function clearUsers() {
   var stillOnline = [];
-  console.log(checkedIn);
   for(var i in checkedIn) {
     var username = checkedIn[i];
     var userProfile = usersCollection.where({ name: username });
-    console.log(userProfile);
     var userProfile = userProfile.pop();
     stillOnline.push(userProfile);
   }
-  console.log(stillOnline.sort());
-  console.log(usersCollection);
+  console.log(usersCollection.models);
   checkedIn.empty;
 }
 
