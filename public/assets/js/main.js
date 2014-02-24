@@ -14,19 +14,6 @@ $(function (){
       user.set('uuid', uuid);
       usersCollection.add(user);
       this.User = user;
-      pubnub.subscribe({
-        channel : 'haiChat',
-        callback : function(m){
-          console.log(m);
-        }
-      });
-      pubnub.here_now({
-        channel : 'haiChat',
-        callback : function(m){
-          console.log(m);
-          var allUsers = m['uuids'];
-        }
-      });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
   };
@@ -44,8 +31,6 @@ $(function (){
     ssl: true,
     uuid: uuid
   });
-
-  console.log(uuid);
 
   App.Collections.Users = Backbone.PubNub.Collection.extend({
     name: 'UsersCollection',
@@ -141,6 +126,7 @@ $(function (){
   App.Views.UsersList = Backbone.View.extend({
     el: '.userslist',
     initialize: function () {
+      console.log(App.User);
       this.listenTo(this.collection, "change reset add remove", this.render);
       this.render();
     },

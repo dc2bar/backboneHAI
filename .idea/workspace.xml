@@ -38,7 +38,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="36" selection-start="786" selection-end="786" vertical-scroll-proportion="0.2964989" vertical-offset="119" max-vertical-offset="3645">
+            <state line="125" column="46" selection-start="4126" selection-end="4126" vertical-scroll-proportion="0.49234137" vertical-offset="1425" max-vertical-offset="3435">
               <folding />
             </state>
           </provider>
@@ -47,7 +47,7 @@
       <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="22" selection-start="2383" selection-end="2383" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1800">
+            <state line="100" column="44" selection-start="2964" selection-end="2964" vertical-scroll-proportion="0.0" vertical-offset="831" max-vertical-offset="1800">
               <folding />
             </state>
           </provider>
@@ -414,7 +414,11 @@
       <created>1393262941413</created>
       <updated>1393262941413</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Initial commit&#10;">
+      <created>1393263026801</created>
+      <updated>1393263026801</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -592,14 +596,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="22" selection-start="2383" selection-end="2383" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1800">
+        <state line="100" column="44" selection-start="2964" selection-end="2964" vertical-scroll-proportion="0.0" vertical-offset="831" max-vertical-offset="1800">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="36" selection-start="786" selection-end="786" vertical-scroll-proportion="0.2964989" vertical-offset="119" max-vertical-offset="3645">
+        <state line="125" column="46" selection-start="4126" selection-end="4126" vertical-scroll-proportion="0.49234137" vertical-offset="1425" max-vertical-offset="3435">
           <folding />
         </state>
       </provider>
