@@ -38,7 +38,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="40" selection-start="782" selection-end="782" vertical-scroll-proportion="0.41396105" vertical-offset="105" max-vertical-offset="3420">
+            <state line="25" column="46" selection-start="844" selection-end="844" vertical-scroll-proportion="0.46266234" vertical-offset="90" max-vertical-offset="3480">
               <folding />
             </state>
           </provider>
@@ -47,7 +47,7 @@
       <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="25" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.0" vertical-offset="942" max-vertical-offset="1560">
+            <state line="22" column="12" selection-start="637" selection-end="672" vertical-scroll-proportion="0.0" vertical-offset="269" max-vertical-offset="1560">
               <folding />
             </state>
           </provider>
@@ -77,6 +77,7 @@
         <option value="$PROJECT_DIR$/assets/js/server.js" />
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/scratch" />
+        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/public/assets/js/main.js" />
       </list>
     </option>
@@ -320,7 +321,11 @@
       <created>1393220435783</created>
       <updated>1393220435784</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Initial commit&#10;">
+      <created>1393220488173</created>
+      <updated>1393220488173</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -498,14 +503,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="25" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.0" vertical-offset="942" max-vertical-offset="1560">
+        <state line="22" column="12" selection-start="637" selection-end="672" vertical-scroll-proportion="0.0" vertical-offset="269" max-vertical-offset="1560">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="40" selection-start="782" selection-end="782" vertical-scroll-proportion="0.41396105" vertical-offset="105" max-vertical-offset="3420">
+        <state line="25" column="46" selection-start="844" selection-end="844" vertical-scroll-proportion="0.46266234" vertical-offset="90" max-vertical-offset="3480">
           <folding />
         </state>
       </provider>

@@ -15,6 +15,10 @@ $(function (){
       usersCollection.add(user);
       this.User = user;
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
+      pubnub.here_now({
+        channel : 'backbone-collection-UsersCollection',
+        callback : function(m){console.log(JSON.stringify(m))}
+      });
     }
   };
 
