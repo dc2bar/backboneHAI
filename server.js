@@ -71,19 +71,6 @@ pubnub.subscribe({
   }
 });
 
-pubnub.subscribe({
-  channel : 'fuck_pubnub',
-  message : function(m){
-    console.log(m);
-    switch(m.type){
-      case 'update':
-        var target = usersCollection.where({ name: m.data.username });
-        target[0].set(m.data.userobject);
-        break;
-    }
-  }
-});
-
 var express = require('express');
 
 var app = module.exports = express.createServer();
