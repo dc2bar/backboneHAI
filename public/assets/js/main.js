@@ -217,7 +217,8 @@ $(function (){
       this.$el.html(template());
     },
     sendChat: function (e) {
-      if ((e.type == 'keyup' && e.charCode == 13) || e.type == 'click'){
+      console.log(e);
+      if (e.charCode == 13 || e.type == 'click'){
         var message = $('.input-text',this.$el).val();
 
         if (message != '') {
