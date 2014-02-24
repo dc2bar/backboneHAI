@@ -15,6 +15,7 @@ $(function (){
       $.getJSON('getUsers?callback=?', function(users) {
         usersCollection.set(users);
         var dupe = usersCollection.where({ name: user.get('name') });
+        console.log(dupe);
         if(dupe) {
           dupe.save({
             title: user.get('title'),
