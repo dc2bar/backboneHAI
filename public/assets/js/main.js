@@ -36,6 +36,14 @@ $(function (){
     model: App.Models.User
   });
 
+  App.Collections.Users.prototype.add = function(user) {
+    var isDupe = this.any(function(_user) {
+      return _user.get('name') === truck.get('name');
+    });
+
+    return isDupe ? false : Backbone.Collection.prototype.add.call(this, user);
+  }
+
   App.Collections.Messages = Backbone.PubNub.Collection.extend({
     name: 'MessagesCollection',
     pubnub: pubnub,
@@ -44,14 +52,6 @@ $(function (){
 
   var usersCollection = new App.Collections.Users();
   var chatMessages = new App.Collections.Messages();
-
-  usersCollection.prototype.add = function(user) {
-    var isDupe = this.any(function(_user) {
-      return _user.get('name') === truck.get('name');
-    });
-
-    return isDupe ? false : Backbone.Collection.prototype.add.call(this, user);
-  }
 
   /*------------Views----------------*/
   App.Views.LoginModal = Backbone.View.extend({
