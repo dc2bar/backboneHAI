@@ -14,6 +14,8 @@ $(function (){
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
       $.getJSON('getUsers?callback=?', function(users) {
         usersCollection.set(users);
+        var exists = usersCollection.find(function(model) { return model.get('name') == user.name; })
+        console.log(exists);
         usersCollection.add(user);
       });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
