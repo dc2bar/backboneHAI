@@ -56,6 +56,7 @@ $(function (){
         case 'update':
           var target = usersCollection.where({ name: m.data.username });
           var userobject = m.data.userobject;
+            console.log(target);
           if(target.length > 0) {
             $.each(target, function(k,v){
               console.log(v);
