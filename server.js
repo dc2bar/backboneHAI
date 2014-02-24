@@ -108,12 +108,11 @@ function checkList() {
   var newusersCollection = [];
   for(var i in usersCollection.models) {
     var userUUID = usersCollection.models[i].attributes.uuid;
-    console.log(userUUID);
-    if(currentlyHere[user.uuid]) {
+    if(currentlyHere[userUUID]) {
       newusersCollection.push(user);
     }
   }
-  console.log(usersCollection);
+  console.log(usersCollection.models);
   console.log(newusersCollection);
 }
 
