@@ -55,7 +55,12 @@ $(function (){
       switch(m.type){
         case 'update':
           var target = usersCollection.where({ name: m.data.username });
-          target[0].set(m.data.userobject);
+          var userobject = m.data.userobject;
+          if(target.length > 0) {
+            $.each(target, function(k,v){
+              v.set({userobject});
+            })
+          }
           break;
         case 'logoff':
           var target = usersCollection.where({ name: m.data.username });
