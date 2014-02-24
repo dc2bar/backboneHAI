@@ -9,6 +9,7 @@ $(function (){
       var loginModalView = new App.Views.LoginModal();
     },
     login: function (user) {
+      loginModalView.delete();
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
       user.set('uuid', uuid);
@@ -33,15 +34,15 @@ $(function (){
             var uuid = here_now.uuids[i];
             for(var x in users) {
               var user = users[x];
-              console.log(user.uuid);
-              console.log(uuid);
               if (user.uuid == uuid) {
                 here.push(user);
               }
             }
           }
         });
-        console.log(here);
+        for(var y in here) {
+          usersCollection.add()
+        }
       }
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
