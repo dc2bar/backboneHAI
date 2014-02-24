@@ -96,40 +96,12 @@ app.get('/getMessages', function(req, res){
   res.send(req.query.callback + '('+JSON.stringify(messagesCollection)+');');
 });
 
-
-var currentlyHere = [];
-
-app.get('/stillHere', function(req, res){
+app.get('/whoIs', function(req, res){
   var uuid = req.query.uuid;
-  currentlyHere[uuid] = uuid;
+  res.send(JSON.stringify(usersCollection.find(function(model) { return model.get('uuid') == uuid; })));
 });
 
-function checkList() {
-  var newusersCollection = [];
-  for(var i in usersCollection.models) {
-    var user = usersCollection.models[i];
-    var userUUID = user.get('uuid');
-    if(currentlyHere[userUUID]) {
-      newusersCollection.push(user);
-    }
-  }
-  console.log(usersCollection.models);
-  console.log(newusersCollection);
-}
-
 app.listen(80);
-
-setInterval(checkList,1500);
-
-
-
-
-
-
-
-
-
-
 
 
 

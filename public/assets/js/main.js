@@ -14,6 +14,18 @@ $(function (){
       user.set('uuid', uuid);
       usersCollection.add(user);
       this.User = user;
+      pubnub.here_now({
+        channel : 'backbone-collection-UsersCollection',
+        callback : function(m){
+          var allUsers = m['uuids'];
+          for(var i in allUsers) {
+            var uuid = allUsers[i];
+            $.getJSON( "whoIs?uuid="+uuid, function( data ) {
+              console.log(data);
+            });
+          }
+        }
+      });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
   };
