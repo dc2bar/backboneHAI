@@ -219,6 +219,7 @@ $(function (){
     sendChat: function (e) {
       if ((e.type == 'keyup' && e.charCode == 13) || e.type == 'click'){
         var message = $('.input-text',this.$el).val();
+
         if (message != '') {
           var time = (new Date).getTime();
           var newLine = new App.Models.Message({
