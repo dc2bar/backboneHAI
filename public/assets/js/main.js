@@ -15,8 +15,17 @@ $(function (){
       $.getJSON('getUsers?callback=?', function(users) {
         usersCollection.set(users);
         var dupe = usersCollection.where({ name: user.get('name') });
-        usersCollection.remove(dupe);
-        usersCollection.add(user);
+        if(dupe) {
+          dupe.set({
+            title: user.get('title'),
+            avatar: user.get('avatar'),
+            color: user.get('color'),
+            status: user.get('status')
+          })
+        } else {
+          usersCollection.add(user);
+        }
+
       });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
