@@ -186,6 +186,7 @@ $(function (){
       this.collection.each( function(user) {
         var userView = new App.Views.User({model: user});
         var dupe = usersCollection.where({ name: user.get('name') });
+        console.log(dupe);
         if(dupe.length > 0) {
           var message = {
             type: 'update',
