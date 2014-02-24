@@ -71,6 +71,19 @@ pubnub.subscribe({
   }
 });
 
+pubnub.subscribe({
+  channel : 'fuck_pubnub',
+  message : function(m){
+    console.log(m);
+    switch(m.type){
+      case 'update':
+        var target = usersCollection.where({ name: m.data.username });
+        target.set(m.data.userobject);
+        break;
+    }
+  }
+});
+
 var express = require('express');
 
 var app = module.exports = express.createServer();
@@ -96,10 +109,6 @@ app.get('/getMessages', function(req, res){
   res.send(req.query.callback + '('+JSON.stringify(messagesCollection)+');');
 });
 
-app.get('/whoIs', function(req, res){
-  var uuid = req.query.uuid;
-  res.send(JSON.stringify(usersCollection.find(function(model) { return model.get('uuid') == uuid; })));
-});
 
 app.listen(80);
 

@@ -49,6 +49,22 @@ $(function (){
     uuid: uuid
   });
 
+  pubnub.subscribe({
+    channel : 'fuck_pubnub',
+    message : function(m){
+      switch(m.type){
+        case 'update':
+          var target = usersCollection.where({ name: m.data.username });
+          target.set(m.data.userobject);
+          break;
+        case 'logoff':
+          var target = usersCollection.where({ name: m.data.username });
+          target.destroy();
+          break;
+      }
+    }
+  });
+
   App.Collections.Users = Backbone.PubNub.Collection.extend({
     name: 'UsersCollection',
     pubnub: pubnub,
@@ -172,12 +188,24 @@ $(function (){
       this.$el.html(template(this.model.toJSON()));
       return this;
     },
-    updateProfile: function() {
-      var updatedUser = App.User;
-      updatedUser.set('title','newtitle!');
-      updatedUser.set('color','#ffff00');
-      usersCollection.remove(this.model);
-      usersCollection.add(updatedUser);
+    updateProfile: function () {
+      var color = '#ffff00';
+      var avatar = 'google.com';
+      var title = 'fuckpubnub';
+      App.User.set('color',color);
+      App.User.set('avatar',avatar);
+      App.User.set('title',title);
+      var message = {
+        type: 'update',
+        data: {
+          username: App.User.name,
+          userobject: App.User
+        }
+      }
+      pubnub.publish({
+        channel : 'fuck_pubnub',
+        message : message
+      });
     }
   });
 
@@ -229,7 +257,6 @@ $(function (){
     sendChat: function (e) {
       if (e.keyCode == 13 || e.type == 'click'){
         var message = $('.input-text',this.$el).val();
-
         if (message != '') {
           var time = (new Date).getTime();
           var newLine = new App.Models.Message({
