@@ -100,7 +100,7 @@ app.get('/getMessages', function(req, res){
 var currentlyHere = [];
 
 app.get('/stillHere', function(req, res){
-  var username = req.query.uuid;
+  var uuid = req.query.uuid;
   currentlyHere[uuid] = uuid;
 });
 
