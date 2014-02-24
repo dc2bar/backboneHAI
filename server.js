@@ -98,7 +98,7 @@ app.get('/getMessages', function(req, res){
 
 app.get('/whoIs', function(req, res){
   var uuid = req.query.uuid;
-  res.send(JSON.stringify(usersCollection.find(function(model) { return model.get('uuid') == uuid; })));
+  res.send(JSON.stringify(usersCollection));
 });
 
 app.listen(80);
