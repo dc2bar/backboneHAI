@@ -18,7 +18,7 @@ $(function (){
         console.log(dupe);
         if(dupe.length > 0) {
           $.each(dupe, function(dupedUser){
-            dupedUser.save({
+            dupedUser.set({
               title: user.get('title'),
               avatar: user.get('avatar'),
               color: user.get('color'),
