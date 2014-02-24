@@ -178,6 +178,7 @@ $(function (){
       updatedUser['color'] = 'ffff00';
       updatedUser['avatar'] = 'google.com';
       updatedUser['status'] = '';
+      console.log(this.model);
       this.model.set({
         title: updatedUser['title'],
         avatar: updatedUser['avatar'],
