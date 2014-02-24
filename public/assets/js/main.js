@@ -45,6 +45,14 @@ $(function (){
   var usersCollection = new App.Collections.Users();
   var chatMessages = new App.Collections.Messages();
 
+  usersCollection.prototype.add = function(user) {
+    var isDupe = this.any(function(_user) {
+      return _user.get('name') === truck.get('name');
+    });
+
+    return isDupe ? false : Backbone.Collection.prototype.add.call(this, user);
+  }
+
   /*------------Views----------------*/
   App.Views.LoginModal = Backbone.View.extend({
     el: '.login-modal',
@@ -124,21 +132,8 @@ $(function (){
   App.Views.UsersList = Backbone.View.extend({
     el: '.userslist',
     initialize: function () {
-      var that = this;
-      $.getJSON('/getUsers?callback=?', function(data){
-        for(var x in data) {
-          //kill old entry if found
-          var user = data[x];
-          if(user.name == App.User.name){
-            delete data[x];
-          } else {
-            usersCollection.add(user);
-          }
-        }
-        usersCollection.add(App.User);
-        that.listenTo(this.collection, "change reset add remove", that.render);
-        that.render();
-      });
+      this.listenTo(this.collection, "change reset add remove", this.render);
+      this.render();
     },
     render: function() {
       var thisView = this;
