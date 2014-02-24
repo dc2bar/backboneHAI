@@ -14,8 +14,8 @@ $(function (){
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
       $.getJSON('getUsers?callback=?', function(users) {
         usersCollection.set(users);
+        usersCollection.add(user);
       });
-      usersCollection.add(user);
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
   };
