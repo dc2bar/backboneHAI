@@ -8,7 +8,8 @@ $(function (){
     start: function () {
       var loginModalView = new App.Views.LoginModal();
     },
-    login: function () {
+    login: function (user) {
+      App.User = user;
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
