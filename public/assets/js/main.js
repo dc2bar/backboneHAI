@@ -124,6 +124,7 @@ $(function (){
   App.Views.UsersList = Backbone.View.extend({
     el: '.userslist',
     initialize: function () {
+      var that = this;
       $.getJSON('/getUsers?callback=?', function(data){
         for(var x in data) {
           //kill old entry if found
@@ -135,8 +136,8 @@ $(function (){
           }
         }
         usersCollection.add(App.User);
-        this.listenTo(this.collection, "change reset add remove", this.render);
-        this.render();
+        that.listenTo(this.collection, "change reset add remove", that.render);
+        that.render();
       });
     },
     render: function() {
