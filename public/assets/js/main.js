@@ -109,13 +109,13 @@ $(function (){
     },
     initialize: function () {
       if(this.checkCookie('color')){
-        this.user.color = this.checkCookie('color');
+        this.user.color = urlDecode(this.checkCookie('color'));
       }
       if(this.checkCookie('avatar')){
-        this.user.avatar = this.checkCookie('avatar');
+        this.user.avatar = urlDecode(this.checkCookie('avatar'));
       }
       if(this.checkCookie('title')){
-        this.user.title = this.checkCookie('title');
+        this.user.title = urlDecode(this.checkCookie('title'));
       }
       if (this.checkCookie('newchatcookie')) {
         this.login();
