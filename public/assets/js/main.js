@@ -16,7 +16,7 @@ $(function (){
         usersCollection.set(users);
         var dupe = usersCollection.where({ name: user.get('name') });
         if(dupe) {
-          dupe.set({
+          dupe.save({
             title: user.get('title'),
             avatar: user.get('avatar'),
             color: user.get('color'),
