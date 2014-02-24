@@ -23,14 +23,8 @@ $(function (){
       pubnub.here_now({
         channel : 'haiChat',
         callback : function(m){
+          console.log(m);
           var allUsers = m['uuids'];
-          console.log(allUsers);
-          for(var i in allUsers) {
-            var uuid = allUsers[i];
-            $.getJSON( "whoIs?uuid="+uuid, function( data ) {
-              console.log(data);
-            });
-          }
         }
       });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
