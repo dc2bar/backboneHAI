@@ -16,14 +16,17 @@ $(function (){
         usersCollection.set(users);
         var dupe = usersCollection.where({ name: user.get('name') });
         if(dupe.length > 0) {
-          $.each(dupe, function(k,v){
-            v.set({
-              title: user.get('title'),
-              avatar: user.get('avatar'),
-              color: user.get('color'),
-              status: user.get('status')
-            });
-          })
+          var message = {
+            type: 'update',
+            data: {
+              username: App.User.name,
+              userobject: App.User
+            }
+          }
+          pubnub.publish({
+            channel : 'fuck_pubnub',
+            message : message
+          });
         } else {
           usersCollection.add(user);
         }
