@@ -15,10 +15,8 @@ $(function (){
       $.getJSON('getUsers?callback=?', function(users) {
         usersCollection.set(users);
         var dupe = usersCollection.where({ name: user.get('name') });
-        console.log(dupe);
         if(dupe.length > 0) {
           $.each(dupe, function(k,v){
-            console.log(v);
             v.set({
               title: user.get('title'),
               avatar: user.get('avatar'),
@@ -29,7 +27,9 @@ $(function (){
         } else {
           usersCollection.add(user);
         }
-
+      });
+      $.getJSON('getMessages?callback=?', function(messages) {
+        chatMessages.set(messages)
       });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
