@@ -15,13 +15,6 @@ $(function (){
       usersCollection.add(user);
       this.User = user;
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
-      pubnub.here_now({
-        channel : 'backbone-collection-UsersCollection',
-        callback : function(m){
-          console.log(JSON.stringify(m))
-          console.log(usersCollection);
-        }
-      });
     }
   };
 
@@ -30,10 +23,13 @@ $(function (){
   App.Models.Message = Backbone.Model.extend({});
 
   /*------------Collections-----------*/
+  var uuid = PUBNUB.uuid();
+
   var pubnub = PUBNUB.init({
     publish_key: 'pub-c-94687441-ef61-4ff5-a0eb-c852642a769a',
     subscribe_key: 'sub-c-e3c8bbee-926d-11e3-9979-02ee2ddab7fe',
-    ssl: true
+    ssl: true,
+    uuid: uuid
   });
 
   App.Collections.Users = Backbone.PubNub.Collection.extend({
@@ -84,6 +80,7 @@ $(function (){
       this.$el.html(template(this.user));
       $('#myModal',this.$el).modal({backdrop: 'static', keyboard: false});
       $('#color').ColorPicker({flat: true, color: this.user.color});
+
     },
     editAvatar: function () {
       var avatarURL = prompt('Enter the URL for your avatar',this.user.avatar);
