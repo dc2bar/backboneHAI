@@ -58,6 +58,7 @@ $(function (){
           var userobject = m.data.userobject;
           if(target.length > 0) {
             $.each(target, function(k,v){
+              console.log(v);
               v.set(userobject);
             })
           }
