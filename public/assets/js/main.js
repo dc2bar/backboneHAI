@@ -124,7 +124,7 @@ $(function (){
   App.Views.UsersList = Backbone.View.extend({
     el: '.userslist',
     initialize: function () {
-      $.getJSON('/getUsers', function(data){
+      $.getJSON('/getUsers?callback=?', function(data){
         console.log(data);
       })
       usersCollection.add(App.User);
