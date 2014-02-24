@@ -108,10 +108,16 @@ $(function (){
       'click .avatar' : 'editAvatar'
     },
     initialize: function () {
-      if (this.checkCookie('newchatcookie')) {
+      if(this.checkCookie('color')){
         this.user.color = this.checkCookie('color');
+      }
+      if(this.checkCookie('avatar')){
         this.user.avatar = this.checkCookie('avatar');
+      }
+      if(this.checkCookie('title')){
         this.user.title = this.checkCookie('title');
+      }
+      if (this.checkCookie('newchatcookie')) {
         this.login();
       } else {
         this.render();
@@ -131,7 +137,7 @@ $(function (){
       $(this.avatarSelector + ' img', this.el).attr('src',this.user.avatar);
     },
     setLogin: function () {
-      this.user.title = '#'+$('.title').val();
+      this.user.title = $('.title').val();
       this.user.color = '#'+$('.colorpicker_hex input').val();
       this.setCookie('title',this.user.title,999);
       this.setCookie('avatar',this.user.avatar,999);
@@ -199,6 +205,10 @@ $(function (){
       var template = Handlebars.compile(source);
       this.$el.html(template(this.model.toJSON()));
       return this;
+    },
+    updateProfile: function () {
+      document.cookie = 'newchatcookie=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+      location.reload();
     }
   });
 
