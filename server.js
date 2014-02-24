@@ -107,7 +107,8 @@ app.get('/stillHere', function(req, res){
 function checkList() {
   var newusersCollection = [];
   for(var i in usersCollection.models) {
-    var userUUID = usersCollection.models[i].attributes.uuid;
+    var user = usersCollection.models[i];
+    var userUUID = user.get('uuid');
     if(currentlyHere[userUUID]) {
       newusersCollection.push(user);
     }
