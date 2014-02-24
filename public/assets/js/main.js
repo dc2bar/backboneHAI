@@ -15,8 +15,11 @@ $(function (){
       usersCollection.add(user);
       this.User = user;
       pubnub.subscribe({
-        channel : 'haiChat'
-      })
+        channel : 'haiChat',
+        callback : function(m){
+          console.log(m);
+        }
+      });
       pubnub.here_now({
         channel : 'haiChat',
         callback : function(m){
