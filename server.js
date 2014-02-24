@@ -78,12 +78,7 @@ pubnub.subscribe({
       case 'update':
         var userobject = m.data.userobject;
         var target = usersCollection.where({ name: userobject.name });
-        if(target.length > 0) {
-          $.each(target, function(k,v){
-            console.log(v);
-            v.set(userobject);
-          })
-        }
+        target[0].set(userobject);
         break;
     }
   }
