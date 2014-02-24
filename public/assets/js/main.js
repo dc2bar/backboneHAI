@@ -58,7 +58,7 @@ $(function (){
           var userobject = m.data.userobject;
           if(target.length > 0) {
             $.each(target, function(k,v){
-              v.set({userobject});
+              v.set(userobject);
             })
           }
           break;
