@@ -118,7 +118,7 @@ function checkList() {
 
 app.listen(80);
 
-setInterval(checkList(),1500);
+setInterval(checkList,1500);
 
 
 
