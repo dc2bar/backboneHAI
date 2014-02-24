@@ -54,9 +54,8 @@ $(function (){
     message : function(m){
       switch(m.type){
         case 'update':
-          var target = usersCollection.where({ name: m.data.username });
           var userobject = m.data.userobject;
-            console.log(target);
+          var target = usersCollection.where({ name: userobject.name });
           if(target.length > 0) {
             $.each(target, function(k,v){
               console.log(v);
