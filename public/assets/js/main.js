@@ -30,13 +30,10 @@ $(function (){
   App.Models.Message = Backbone.Model.extend({});
 
   /*------------Collections-----------*/
-  var uuid = PUBNUB.uuid();
-
   var pubnub = PUBNUB.init({
     publish_key: 'pub-c-94687441-ef61-4ff5-a0eb-c852642a769a',
     subscribe_key: 'sub-c-e3c8bbee-926d-11e3-9979-02ee2ddab7fe',
-    ssl: true,
-    uuid: uuid
+    ssl: true
   });
 
   App.Collections.Users = Backbone.PubNub.Collection.extend({
@@ -87,7 +84,6 @@ $(function (){
       this.$el.html(template(this.user));
       $('#myModal',this.$el).modal({backdrop: 'static', keyboard: false});
       $('#color').ColorPicker({flat: true, color: this.user.color});
-
     },
     editAvatar: function () {
       var avatarURL = prompt('Enter the URL for your avatar',this.user.avatar);
