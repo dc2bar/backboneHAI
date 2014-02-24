@@ -206,7 +206,7 @@ $(function (){
     el: '.chat-input',
     events : {
       'click .send' : 'sendChat',
-      'keypress .input-text' : 'sendChat'
+      'keyup .input-text' : 'sendChat'
     },
     initialize: function () {
       this.render();
@@ -217,7 +217,7 @@ $(function (){
       this.$el.html(template());
     },
     sendChat: function (e) {
-      if ((e.type == 'keypress' && e.charCode == 13) || e.type == 'click'){
+      if ((e.type == 'keyup' && e.charCode == 13) || e.type == 'click'){
         var message = $('.input-text',this.$el).val();
         if (message != '') {
           var time = (new Date).getTime();
