@@ -12,6 +12,9 @@ $(function (){
       App.User = user;
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
+      $.getJSON('getUsers?callback=?', function(users) {
+        usersCollection.set(users);
+      });
       usersCollection.add(user);
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
