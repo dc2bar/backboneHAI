@@ -127,7 +127,7 @@ $(function (){
       $.getJSON('/getUsers?callback=?', function(data){
 
       });
-      var temp = new Backbone.collection.extend({});
+      var temp = new Backbone.Collection.extend({});
       for(var x in data) {
         //kill old entry if found
         var user = data[x];
