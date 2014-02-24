@@ -15,7 +15,7 @@ $(function (){
       $.getJSON('getUsers?callback=?', function(users) {
         usersCollection.set(users);
         var dupe = usersCollection.where({ name: user.get('name') });
-        console.log(dupe);
+        usersCollection.remove(dupe);
         usersCollection.add(user);
       });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
