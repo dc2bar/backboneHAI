@@ -125,18 +125,16 @@ $(function (){
     el: '.userslist',
     initialize: function () {
       $.getJSON('/getUsers?callback=?', function(data){
-        var temp = new Backbone.Collection.extend({model: App.Models.User});
         for(var x in data) {
           //kill old entry if found
           var user = data[x];
           if(user.name == App.User.name){
             delete data[x];
           } else {
-            temp.add(user);
+            usersCollection.add(user);
           }
         }
-        temp.add(App.User);
-        usersCollection = temp;
+        usersCollection.add(App.User);
         this.listenTo(this.collection, "change reset add remove", this.render);
         this.render();
       });
