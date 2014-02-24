@@ -96,4 +96,49 @@ app.get('/getMessages', function(req, res){
   res.send(req.query.callback + '('+JSON.stringify(messagesCollection)+');');
 });
 
+
+var currentlyHere = [];
+
+app.get('/stillHere', function(req, res){
+  var username = req.query.uuid;
+  currentlyHere[uuid] = uuid;
+});
+
+function checkList() {
+  var newusersCollection = [];
+  for(var i in usersCollection) {
+    var user = usersCollection[i];
+    if(currentlyHere[user.uuid]) {
+      newusersCollection.push(user);
+    }
+  }
+  console.log(usersCollection);
+  console.log(newusersCollection);
+}
+
 app.listen(80);
+
+setInterval(checkList(),1500);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
