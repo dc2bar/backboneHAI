@@ -140,6 +140,3 @@ setInterval(checkList,1500);
 
 
 
-
-
-
