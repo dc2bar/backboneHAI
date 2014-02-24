@@ -185,7 +185,22 @@ $(function (){
       $(thisView.$el).empty();
       this.collection.each( function(user) {
         var userView = new App.Views.User({model: user});
-        $(thisView.$el).append(userView.render().el);
+        var dupe = usersCollection.where({ name: user.get('name') });
+        if(dupe.length > 0) {
+          var message = {
+            type: 'update',
+            data: {
+              username: App.User.name,
+              userobject: App.User
+            }
+          }
+          pubnub.publish({
+            channel : 'fuck_pubnub',
+            message : message
+          });
+        } else {
+          $(thisView.$el).append(userView.render().el);
+        }
       });
       return this;
     }
