@@ -17,8 +17,9 @@ $(function (){
         var dupe = usersCollection.where({ name: user.get('name') });
         console.log(dupe);
         if(dupe.length > 0) {
-          $.each(dupe, function(dupedUser){
-            dupedUser.set({
+          $.each(dupe, function(k,v){
+            console.log(v);
+            v.set({
               title: user.get('title'),
               avatar: user.get('avatar'),
               color: user.get('color'),
