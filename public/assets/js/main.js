@@ -12,6 +12,7 @@ $(function (){
       App.User = user;
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
+      usersCollection.add(user);
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
   };
@@ -35,6 +36,14 @@ $(function (){
     pubnub: pubnub,
     model: App.Models.User
   });
+
+  App.Collections.Users.prototype.add = function(user) {
+    var isDupe = this.any(function(_user) {
+      return _user.get('name') === truck.get('name');
+    });
+
+    return isDupe ? false : Backbone.Collection.prototype.add.call(this, user);
+  }
 
   App.Collections.Messages = Backbone.PubNub.Collection.extend({
     name: 'MessagesCollection',
