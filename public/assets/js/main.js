@@ -9,7 +9,6 @@ $(function (){
       var loginModalView = new App.Views.LoginModal();
     },
     login: function (user) {
-      loginModalView.delete();
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
       user.set('uuid', uuid);
@@ -135,6 +134,7 @@ $(function (){
       this.user.name = B64.decode(getURLParameter('hn')).replace('7 À','');
       var currentUser = new App.Models.User(this.user);
       App.login(currentUser);
+      this.remove();
     },
     checkCookie: function (name) {
       var results = document.cookie.match ( '(^|;) ?' + name + '=([^;]*)(;|$)' );
