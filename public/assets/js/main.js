@@ -32,7 +32,7 @@ $(function (){
         }
       });
       $.getJSON('getMessages?callback=?', function(messages) {
-        chatMessages.set(messages)
+        chatMessages.set(messages);
       });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
@@ -98,7 +98,7 @@ $(function (){
     colorSelector: '.color',
     user: {
       name: 'HowTheFuckDidYouBypassLogin?',
-      title: 'test title',
+      title: 'Giant Faggot',
       avatar: 'assets/images/avatar_placeholder.jpg',
       color: '#959da6',
       status: 'offline'
@@ -111,6 +111,7 @@ $(function (){
       if (this.checkCookie('newchatcookie')) {
         this.user.color = this.checkCookie('color');
         this.user.avatar = this.checkCookie('avatar');
+        this.user.title = this.checkCookie('title');
         this.login();
       } else {
         this.render();
@@ -130,7 +131,9 @@ $(function (){
       $(this.avatarSelector + ' img', this.el).attr('src',this.user.avatar);
     },
     setLogin: function () {
+      this.user.title = '#'+$('.title').val();
       this.user.color = '#'+$('.colorpicker_hex input').val();
+      this.setCookie('title',this.user.title,999);
       this.setCookie('avatar',this.user.avatar,999);
       this.setCookie('color',this.user.color,999);
       this.setCookie('newchatcookie','true',999);
@@ -196,25 +199,6 @@ $(function (){
       var template = Handlebars.compile(source);
       this.$el.html(template(this.model.toJSON()));
       return this;
-    },
-    updateProfile: function () {
-      var color = '#ffff00';
-      var avatar = 'google.com';
-      var title = 'fuckpubnub';
-      App.User.set('color',color);
-      App.User.set('avatar',avatar);
-      App.User.set('title',title);
-      var message = {
-        type: 'update',
-        data: {
-          username: App.User.name,
-          userobject: App.User
-        }
-      }
-      pubnub.publish({
-        channel : 'fuck_pubnub',
-        message : message
-      });
     }
   });
 
