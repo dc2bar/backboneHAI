@@ -147,6 +147,7 @@ $(function (){
       this.render();
     },
     render: function() {
+      console.log('rendered');
       var thisView = this;
       $(thisView.$el).empty();
       this.collection.each( function(user) {
@@ -184,8 +185,6 @@ $(function (){
         color: updatedUser['color'],
         status: updatedUser['status']
       });
-      usersCollection.trigger('change');
-      console.log(usersCollection);
     }
   });
 
