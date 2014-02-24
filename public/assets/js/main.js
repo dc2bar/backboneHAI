@@ -13,37 +13,7 @@ $(function (){
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
       user.set('uuid', uuid);
       usersCollection.add(user);
-      pubnub.subscribe({
-        channel: 'haiChat',
-        message: function(m){
-          console.log(JSON.stringify(m))
-        }
-      });
-      pubnub.here_now({
-        channel: 'haiChat',
-        callback: function(m){
-          getUsers(m);
-        }
-      });
       this.User = user;
-      function getUsers(here_now) {
-        var here = [];
-        $.getJSON( "http://198.199.114.208/getUsers?callback=?", function( users ) {
-          for(var i in here_now.uuids) {
-            var uuid = here_now.uuids[i];
-            for(var x in users) {
-              var user = users[x];
-              if (user.uuid == uuid) {
-                here.push(user);
-              }
-            }
-          }
-        });
-        for(var y in here) {
-          console.log(here[y]);
-          usersCollection.add()
-        }
-      }
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
   };
