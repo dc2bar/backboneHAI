@@ -14,7 +14,7 @@ $(function (){
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
       $.getJSON('getUsers?callback=?', function(users) {
         usersCollection.set(users);
-        var dupe = usersCollection.where({ name: user.name });
+        var dupe = usersCollection.where({ name: user.get('name') });
         console.log(usersCollection);
         console.log(user.name);
         console.log(dupe);
