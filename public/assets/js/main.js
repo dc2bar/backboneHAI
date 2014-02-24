@@ -16,12 +16,14 @@ $(function (){
         usersCollection.set(users);
         var dupe = usersCollection.where({ name: user.get('name') });
         console.log(dupe);
-        if(dupe) {
-          dupe.save({
-            title: user.get('title'),
-            avatar: user.get('avatar'),
-            color: user.get('color'),
-            status: user.get('status')
+        if(dupe.length > 0) {
+          $.each(dupe, function(dupedUser){
+            dupedUser.save({
+              title: user.get('title'),
+              avatar: user.get('avatar'),
+              color: user.get('color'),
+              status: user.get('status')
+            });
           })
         } else {
           usersCollection.add(user);
