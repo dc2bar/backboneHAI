@@ -18,7 +18,7 @@ $(function (){
         channel : 'backbone-collection-UsersCollection',
         callback : function(m){
           var allUsers = m['uuids'];
-          console.log(m);
+          console.log(allUsers);
           for(var i in allUsers) {
             var uuid = allUsers[i];
             $.getJSON( "whoIs?uuid="+uuid, function( data ) {
