@@ -136,7 +136,6 @@ $(function (){
         channel : 'haiChat',
         callback : function(m){
           var allUsers = m['uuids'];
-          console.log(allUsers);
           for(var i in allUsers) {
             var uuid = allUsers[i];
             $.getJSON( "whoIs?uuid="+uuid, function( data ) {
