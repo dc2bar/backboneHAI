@@ -125,22 +125,21 @@ $(function (){
     el: '.userslist',
     initialize: function () {
       $.getJSON('/getUsers?callback=?', function(data){
-
-      });
-      var temp = new Backbone.Collection.extend({});
-      for(var x in data) {
-        //kill old entry if found
-        var user = data[x];
-        if(user.name == App.User.name){
-          delete data[x];
-        } else {
-          temp.add(user);
+        var temp = new Backbone.Collection.extend({});
+        for(var x in data) {
+          //kill old entry if found
+          var user = data[x];
+          if(user.name == App.User.name){
+            delete data[x];
+          } else {
+            temp.add(user);
+          }
         }
-      }
-      temp.add(App.User);
-      usersCollection = temp;
-      this.listenTo(this.collection, "change reset add remove", this.render);
-      this.render();
+        temp.add(App.User);
+        usersCollection = temp;
+        this.listenTo(this.collection, "change reset add remove", this.render);
+        this.render();
+      });
     },
     render: function() {
       var thisView = this;

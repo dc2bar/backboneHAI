@@ -38,7 +38,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="25" selection-start="4389" selection-end="4389" vertical-scroll-proportion="0.2286652" vertical-offset="1801" max-vertical-offset="3615">
+            <state line="141" column="9" selection-start="4632" selection-end="4632" vertical-scroll-proportion="0.392779" vertical-offset="1756" max-vertical-offset="3600">
               <folding />
             </state>
           </provider>
@@ -450,7 +450,11 @@
       <created>1393265430590</created>
       <updated>1393265430590</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Initial commit&#10;">
+      <created>1393265484124</created>
+      <updated>1393265484124</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -635,7 +639,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="25" selection-start="4389" selection-end="4389" vertical-scroll-proportion="0.2286652" vertical-offset="1801" max-vertical-offset="3615">
+        <state line="141" column="9" selection-start="4632" selection-end="4632" vertical-scroll-proportion="0.392779" vertical-offset="1756" max-vertical-offset="3600">
           <folding />
         </state>
       </provider>
