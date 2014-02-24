@@ -185,6 +185,7 @@ $(function (){
         color: updatedUser['color'],
         status: updatedUser['status']
       });
+      usersCollection.trigger('change');
     }
   });
 
