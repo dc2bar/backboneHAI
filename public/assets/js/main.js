@@ -35,6 +35,11 @@ $(function (){
         chatMessages.set(messages);
       });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
+      function checkIn() {
+        $.getJSON('stillHere?username'+encodeURI(App.User.name)+'&callback=?', function(data) {
+        });
+      }
+      setInterval(checkIn, 3000);
     }
   };
 
@@ -67,7 +72,9 @@ $(function (){
           break;
         case 'logoff':
           var target = usersCollection.where({ name: m.data.username });
-          target[0].destroy();
+          for(var i in target){
+            target[i].destroy();
+          }
           break;
       }
     }

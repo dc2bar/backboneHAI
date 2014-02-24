@@ -80,6 +80,12 @@ pubnub.subscribe({
         var target = usersCollection.where({ name: userobject.name });
         target[0].set(userobject);
         break;
+      case 'logoff':
+        var target = usersCollection.where({ name: m.data.username });
+        for(var i in target){
+          target[i].destroy();
+        }
+        break;
     }
   }
 });
@@ -99,15 +105,39 @@ app.configure(function(){
 
 app.get('/getUsers', function(req, res){
   res.header('Content-Type', 'application/json');
-  res.header('Charset', 'utf-8')
+  res.header('Charset', 'utf-8');
   res.send(req.query.callback + '('+JSON.stringify(usersCollection)+');');
 });
 
 app.get('/getMessages', function(req, res){
   res.header('Content-Type', 'application/json');
-  res.header('Charset', 'utf-8')
+  res.header('Charset', 'utf-8');
   res.send(req.query.callback + '('+JSON.stringify(messagesCollection)+');');
 });
+
+app.get('/stillHere', function(req, res){
+  res.header('Content-Type', 'application/json');
+  res.header('Charset', 'utf-8');
+  checkedIn[''+req.query.username] = req.query.username;
+  res.send(req.query.callback + '({ok:"ok"});');
+});
+
+var checkedIn = [];
+
+function clearUsers() {
+  var stillOnline = [];
+  for(var i in checkedIn) {
+    var username = checkedIn[i];
+    var userProfile = usersCollection.where({ name: username });
+    var userProfile = userProfile.pop();
+    stillOnline.push(userProfile);
+  }
+  console.log(stillOnline.sort());
+  console.log(usersCollection.models.sort());
+  checkedIn.empty;
+}
+
+setInterval(clearUsers, 3000);
 
 
 app.listen(80);
