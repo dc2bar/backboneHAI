@@ -36,7 +36,7 @@ $(function (){
       });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
       function checkIn() {
-        $.getJSON('stillHere?username='+encodeURI(App.User.name)+'&callback=?', function(data) {
+        $.getJSON('stillHere?username='+encodeURI(user.get('name'))+'&callback=?', function(data) {
         });
       }
       setInterval(checkIn, 3000);
