@@ -40,6 +40,7 @@ $(function (){
           }
         });
         for(var y in here) {
+          console.log(here[y]);
           usersCollection.add()
         }
       }
