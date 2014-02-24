@@ -55,11 +55,11 @@ $(function (){
       switch(m.type){
         case 'update':
           var target = usersCollection.where({ name: m.data.username });
-          target.set(m.data.userobject);
+          target[0].set(m.data.userobject);
           break;
         case 'logoff':
           var target = usersCollection.where({ name: m.data.username });
-          target.destroy();
+          target[0].destroy();
           break;
       }
     }
