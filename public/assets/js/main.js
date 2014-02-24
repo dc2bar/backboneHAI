@@ -12,7 +12,6 @@ $(function (){
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
       user.set('uuid', uuid);
-      usersCollection.add(user);
       this.User = user;
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
@@ -126,7 +125,10 @@ $(function (){
   App.Views.UsersList = Backbone.View.extend({
     el: '.userslist',
     initialize: function () {
-      console.log(App.User);
+      $.getJSON('getUsers', function(data){
+        console.log(data);
+      })
+      usersCollection.add(user);
       this.listenTo(this.collection, "change reset add remove", this.render);
       this.render();
     },
