@@ -17,7 +17,10 @@ $(function (){
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
       pubnub.here_now({
         channel : 'backbone-collection-UsersCollection',
-        callback : function(m){console.log(JSON.stringify(m))}
+        callback : function(m){
+          console.log(JSON.stringify(m))
+          console.log(usersCollection);
+        }
       });
     }
   };
