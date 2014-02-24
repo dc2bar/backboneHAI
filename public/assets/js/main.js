@@ -37,14 +37,6 @@ $(function (){
     model: App.Models.User
   });
 
-  App.Collections.Users.prototype.add = function(user) {
-    var isDupe = this.any(function(_user) {
-      return _user.get('name') === truck.get('name');
-    });
-
-    return isDupe ? false : Backbone.Collection.prototype.add.call(this, user);
-  }
-
   App.Collections.Messages = Backbone.PubNub.Collection.extend({
     name: 'MessagesCollection',
     pubnub: pubnub,
