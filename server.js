@@ -133,6 +133,7 @@ function clearUsers() {
     var userProfile = userProfile.pop();
     stillOnline.push(userProfile);
   }
+  console.log(stillOnline);
   console.log(usersCollection.models);
   checkedIn.empty;
 }
