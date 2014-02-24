@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="">
+    <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="Initial commit&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -47,7 +47,7 @@
       <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="1" selection-start="3262" selection-end="3262" vertical-scroll-proportion="0.64396286" vertical-offset="1116" max-vertical-offset="2250">
+            <state line="84" column="3" selection-start="2437" selection-end="2437" vertical-scroll-proportion="0.13312693" vertical-offset="1131" max-vertical-offset="2250">
               <folding />
             </state>
           </provider>
@@ -338,7 +338,11 @@
       <created>1393222253727</created>
       <updated>1393222253727</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Initial commit&#10;">
+      <created>1393259253654</created>
+      <updated>1393259253654</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -523,7 +527,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="1" selection-start="3262" selection-end="3262" vertical-scroll-proportion="0.64396286" vertical-offset="1116" max-vertical-offset="2250">
+        <state line="84" column="3" selection-start="2437" selection-end="2437" vertical-scroll-proportion="0.13312693" vertical-offset="1131" max-vertical-offset="2250">
           <folding />
         </state>
       </provider>
