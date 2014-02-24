@@ -144,7 +144,6 @@ $(function (){
     el: '.userslist',
     initialize: function () {
       this.listenTo(this.collection, "change reset add remove", this.render);
-      this.listenTo(this, "change", this.render);
       this.render();
     },
     render: function() {
@@ -179,17 +178,12 @@ $(function (){
       updatedUser['color'] = 'ffff00';
       updatedUser['avatar'] = 'google.com';
       updatedUser['status'] = '';
-      var me = usersCollection.where({ name: App.User.get('name') });
-      if(me.length > 0) {
-        $.each(me, function(k,v){
-          v.set({
-            title: updatedUser['title'],
-            avatar: updatedUser['avatar'],
-            color: updatedUser['color'],
-            status: updatedUser['status']
-          });
-        })
-      }
+      this.model.set({
+        title: updatedUser['title'],
+        avatar: updatedUser['avatar'],
+        color: updatedUser['color'],
+        status: updatedUser['status']
+      });
     }
   });
 
