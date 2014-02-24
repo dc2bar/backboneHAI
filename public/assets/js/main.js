@@ -147,7 +147,6 @@ $(function (){
       this.render();
     },
     render: function() {
-      console.log('rendered');
       var thisView = this;
       $(thisView.$el).empty();
       this.collection.each( function(user) {
@@ -174,17 +173,11 @@ $(function (){
       return this;
     },
     updateProfile: function() {
-      var updatedUser = Array();
-      updatedUser['title'] = 'updated!';
-      updatedUser['color'] = 'ffff00';
-      updatedUser['avatar'] = 'google.com';
-      updatedUser['status'] = '';
-      this.model.set({
-        title: updatedUser['title'],
-        avatar: updatedUser['avatar'],
-        color: updatedUser['color'],
-        status: updatedUser['status']
-      });
+      var updatedUser = App.User;
+      updatedUser.set('title','newtitle!');
+      updatedUser.set('color','#ffff00');
+      usersCollection.remove(this.model);
+      usersCollection.add(updatedUser);
     }
   });
 
