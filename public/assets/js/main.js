@@ -20,19 +20,6 @@ $(function (){
           console.log(m);
         }
       });
-      pubnub.here_now({
-        channel : 'haiChat',
-        callback : function(m){
-          var allUsers = m['uuids'];
-          console.log(allUsers);
-          for(var i in allUsers) {
-            var uuid = allUsers[i];
-            $.getJSON( "whoIs?uuid="+uuid, function( data ) {
-              console.log(data);
-            });
-          }
-        }
-      });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
   };
@@ -145,8 +132,23 @@ $(function (){
   App.Views.UsersList = Backbone.View.extend({
     el: '.userslist',
     initialize: function () {
-      this.render();
+      pubnub.here_now({
+        channel : 'haiChat',
+        callback : function(m){
+          var allUsers = m['uuids'];
+          console.log(allUsers);
+          for(var i in allUsers) {
+            var uuid = allUsers[i];
+            $.getJSON( "whoIs?uuid="+uuid, function( data ) {
+              for(var i in data) {
+                console.log(data[i]);
+              }
+            });
+          }
+        }
+      });
       this.listenTo(this.collection, "change reset add remove", this.render);
+      this.render();
     },
     render: function() {
       var thisView = this;
