@@ -178,14 +178,14 @@ $(function (){
       updatedUser['color'] = 'ffff00';
       updatedUser['avatar'] = 'google.com';
       updatedUser['status'] = '';
-      var me = usersCollection.get(this.model.id);
-      me.set({
+      this.model.set({
         title: updatedUser['title'],
         avatar: updatedUser['avatar'],
         color: updatedUser['color'],
         status: updatedUser['status']
       });
       usersCollection.trigger('change');
+      console.log(usersCollection);
     }
   });
 
