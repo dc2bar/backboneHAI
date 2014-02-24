@@ -8,11 +8,9 @@ $(function (){
     start: function () {
       var loginModalView = new App.Views.LoginModal();
     },
-    login: function (user) {
+    login: function () {
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
-      user.set('uuid', uuid);
-      this.User = user;
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
   };
@@ -128,7 +126,7 @@ $(function (){
       $.getJSON('getUsers', function(data){
         console.log(data);
       })
-      usersCollection.add(user);
+      usersCollection.add(App.User);
       this.listenTo(this.collection, "change reset add remove", this.render);
       this.render();
     },
