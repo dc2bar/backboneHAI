@@ -302,7 +302,24 @@ $(function (){
         {
           var nodes = data.data.children;
           var selected = Math.round(Math.random() * (100));
-          console.log(nodes[selected]);
+          var node = nodes[selected].data;
+          for(var i=0;i<5;i++){
+            if(node.domain == 'i.imgur.com'){
+              var time = (new Date).getTime();
+              var newLine = new App.Models.Message({
+                avatar: App.User.get('avatar'),
+                sender: App.User.get('name'),
+                color: App.User.get('color'),
+                recipient: 'all',
+                time: time,
+                text: '<a href="'+node.url+'">NSFW"</a>'
+              })
+              this.collection.add(newLine);
+              break;
+            } else {
+              node = nodes[Math.round(Math.random() * (100))].data;
+            }
+          }
         }
       )
     }
