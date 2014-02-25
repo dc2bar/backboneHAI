@@ -111,9 +111,15 @@ app.get('/stillHere', function(req, res){
 function clearUsers() {
   usersCollection.reset();
 
-  checkedIn.sort(function(a,b){a.name-b.name});
+  var sortable = [];
+  for(var i in checkedIn){
+    sortable.push(checkedIn[i]);
+  }
+  sortable.sort(function(a,b){a.name-b.name});
 
-  console.log(checkedIn);
+  console.log('--------');
+  console.log(sortable);
+  console.log('========');
 
   for(var i in checkedIn) {
     var model = new UserModel(checkedIn[i]);
