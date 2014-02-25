@@ -263,17 +263,19 @@ $(function (){
         var message = $('.input-text',this.$el).val();
         if (message != '') {
           message = this.filterMessage(message);
-          var time = (new Date).getTime();
-          var newLine = new App.Models.Message({
-            avatar: App.User.get('avatar'),
-            sender: App.User.get('name'),
-            color: App.User.get('color'),
-            recipient: 'all',
-            time: time,
-            text: message
-          })
-          this.collection.add(newLine);
-          $('.input-text',this.$el).val('');
+          if(message != false) {
+            var time = (new Date).getTime();
+            var newLine = new App.Models.Message({
+              avatar: App.User.get('avatar'),
+              sender: App.User.get('name'),
+              color: App.User.get('color'),
+              recipient: 'all',
+              time: time,
+              text: message
+            })
+            this.collection.add(newLine);
+            $('.input-text',this.$el).val('');
+          }
         }
       }
     },
@@ -281,7 +283,7 @@ $(function (){
       message = message.replace(/gay/g, "M@");
       if(message == '/tits'){
         this.getBoobs();
-        return 'BOOBIES! NSFW';
+        return false;
       }
       if((message.toLowerCase().indexOf('http') != -1) || (message.toLowerCase().indexOf('www.') != -1)){
         var messageArray = message.split(' ');
@@ -313,7 +315,7 @@ $(function (){
                 color: App.User.get('color'),
                 recipient: 'all',
                 time: time,
-                text: '<a href="'+node.url+'">NSFW"</a>'
+                text: '<a href="'+node.url+'" target="_blank" onmouseover="showPreview(this.href)" onmouseout="hidePreview()">BOOBIES! NSFW</a>'
               })
               that.collection.add(newLine);
               break;
