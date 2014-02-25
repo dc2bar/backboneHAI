@@ -2,8 +2,11 @@
   globals
  */
 function showPreview(target) {
-  $('.preview-img').attr('src', target);
-  $('.preview-container').show();
+  var imageExtensions = ['gif','jpg','peg','iff','bmp'];
+  if(imageExtensions.indexOf(target.substring((target.length-3),(target.length))) != -1){
+    $('.preview-img').attr('src', target);
+    $('.preview-container').show();
+  }
 }
 function hidePreview() {
   $('.preview-img').attr('src', '');
