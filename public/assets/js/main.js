@@ -11,12 +11,17 @@ $(function (){
     login: function (user) {
       App.User = user;
       function checkin() {
-        console.log(App.User.get('color'));
-        $.getJSON('stillHere?name='+encodeURI(App.User.get('name'))+'&color='+encodeURI(App.User.get('color'))+'&avatar='+encodeURI(App.User.get('avatar'))+'&title='+encodeURI(App.User.get('title')),function(data){
+        var checkinurl = 'stillHere?name='+encodeURI(App.User.get('name'))+'&color='+encodeURI(App.User.get('color'))+'&avatar='+encodeURI(App.User.get('avatar'))+'&title='+encodeURI(App.User.get('title'))+'&callback=?';
+        $.getJSON(checkinurl, function(data){
           console.log(data);
         });
       }
       setInterval(checkin,3000);
+
+      $.getJSON( "getMessages?callback=?", function( data ) {
+        chatMessages.set(data);
+        console.log(data);
+      });
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
