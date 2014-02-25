@@ -16,6 +16,7 @@ $(function (){
           data.sort(function(a, b){
             return a.name-b.name
           })
+          console.log(data);
           var current = JSON.stringify(usersCollection);
           var server = JSON.stringify(data);
           if(current != server) {
