@@ -109,9 +109,9 @@ function clearUsers() {
   usersCollection.reset();
 
   function compare(a,b) {
-    if (a.get('name') < b.get('name'))
+    if (a.name < b.name)
       return -1;
-    if (a.get('name') > b.get('name'))
+    if (a.name > b.name)
       return 1;
     return 0;
   }
