@@ -11,7 +11,9 @@ $(function (){
     login: function (user) {
       App.User = user;
       function checkin() {
-        $.getJSON('stillHere?name='+encodeURI(App.User.get('name')),function(){});
+        $.getJSON('stillHere?name='+encodeURI(App.User.get('name'))+'&color='+encodeURI(App.User.get('color'))+'&avatar='+encodeURI(App.User.get('avatar'))+'&title='+encodeURI(App.User.get('title')),function(data){
+          console.log(data);
+        });
       }
       setInterval(checkin,3000);
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
