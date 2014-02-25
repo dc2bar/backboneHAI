@@ -111,6 +111,8 @@ function clearUsers() {
   for(var i in checkedIn) {
     usersCollection.add(checkedIn[i]);
   }
+
+  checkedIn = [];
 }
 
 setInterval(clearUsers, 3000);
