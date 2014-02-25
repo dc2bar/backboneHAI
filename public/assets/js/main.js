@@ -13,7 +13,7 @@ $(function (){
       function checkin() {
         var checkinurl = 'stillHere?name='+encodeURI(App.User.get('name'))+'&color='+encodeURI(App.User.get('color'))+'&avatar='+encodeURI(App.User.get('avatar'))+'&title='+encodeURI(App.User.get('title'))+'&callback=?';
         $.getJSON(checkinurl, function(data){
-          console.log(usersCollection.models);
+          console.log(JSON.stringify(usersCollection));
           console.log(data);
           if(usersCollection.models != data) {
             usersCollection.set(data);
