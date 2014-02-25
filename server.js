@@ -137,7 +137,7 @@ function clearUsers() {
   console.log('--------------------');
   console.log(usersCollection.models.sort());
   console.log('====================');
-  checkedIn.empty;
+  checkedIn = [];
 }
 
 setInterval(clearUsers, 3000);
