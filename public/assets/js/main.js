@@ -282,7 +282,15 @@ $(function (){
     filterMessage: function (message) {
       message = message.replace(/gay/g, "M@");
       if(message == '/tits'){
-        this.getBoobs();
+        this.getReddit('boobies');
+        return false;
+      }
+      if(message == '/datass'){
+        this.getReddit('ass');
+        return false;
+      }
+      if(message == '/random'){
+        this.getReddit('nsfw');
         return false;
       }
       if((message.toLowerCase().indexOf('http') != -1) || (message.toLowerCase().indexOf('www.') != -1)){
@@ -297,10 +305,10 @@ $(function (){
         return message;
       }
     },
-    getBoobs: function () {
+    getReddit: function (type) {
       var that = this;
       $.getJSON(
-        "http://www.reddit.com/r/boobies.json?limit=100&jsonp=?",
+        "http://www.reddit.com/r/"+type+".json?limit=100&jsonp=?",
         function(data)
         {
           var nodes = data.data.children;
@@ -315,7 +323,7 @@ $(function (){
                 color: App.User.get('color'),
                 recipient: 'all',
                 time: time,
-                text: '<a href="'+node.url+'" target="_blank" onmouseover="showPreview(this.href)" onmouseout="hidePreview()">BOOBIES! NSFW</a>'
+                text: '<a href="'+node.url+'" target="_blank" onmouseover="showPreview(this.href)" onmouseout="hidePreview()">'+type+'! NSFW</a>'
               })
               that.collection.add(newLine);
               break;
