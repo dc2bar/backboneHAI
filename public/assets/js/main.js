@@ -290,7 +290,7 @@ $(function (){
       } else {
         return message;
       }
-      if(message.substring(0,5) == '/tits'){
+      if(message.indexOf('/tits') != -1){
         this.getBoobs();
         return 'BOOBIES! NSFW';
       }

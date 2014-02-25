@@ -15,7 +15,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -49,7 +49,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="290" column="23" selection-start="9265" selection-end="9265" vertical-scroll-proportion="0.59821427" vertical-offset="3814" max-vertical-offset="4755">
+            <state line="293" column="24" selection-start="9340" selection-end="9340" vertical-scroll-proportion="0.6484375" vertical-offset="3814" max-vertical-offset="4755">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -1087,7 +1087,11 @@
       <created>1393365352227</created>
       <updated>1393365352228</updated>
     </task>
-    <option name="localTasksCounter" value="189" />
+    <task id="LOCAL-00189" summary="Initial commit&#10;">
+      <created>1393365535437</created>
+      <updated>1393365535438</updated>
+    </task>
+    <option name="localTasksCounter" value="190" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1276,7 +1280,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="290" column="23" selection-start="9265" selection-end="9265" vertical-scroll-proportion="0.59821427" vertical-offset="3814" max-vertical-offset="4755">
+        <state line="293" column="24" selection-start="9340" selection-end="9340" vertical-scroll-proportion="0.6484375" vertical-offset="3814" max-vertical-offset="4755">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
