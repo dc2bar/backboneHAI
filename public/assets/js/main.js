@@ -20,6 +20,7 @@ $(function (){
           });
           var current = JSON.stringify(usersCollection);
           var server = JSON.stringify(data);
+          console.log(server);
           if(current != server) {
             usersCollection.set(data);
           }
