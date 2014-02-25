@@ -247,6 +247,7 @@ $(function (){
       if (e.keyCode == 13 || e.type == 'click'){
         var message = $('.input-text',this.$el).val();
         if (message != '') {
+          message = this.filterMessage(message);
           var time = (new Date).getTime();
           var newLine = new App.Models.Message({
             avatar: App.User.get('avatar'),
@@ -254,11 +255,25 @@ $(function (){
             color: App.User.get('color'),
             recipient: 'all',
             time: time,
-            text: message.replace('gay','M@')
+            text: message
           })
           this.collection.add(newLine);
           $('.input-text',this.$el).val('');
         }
+      }
+    },
+    filterMessage: function (message) {
+      message.replace(/gay/g, "M@");
+      if(message.toLowerCase().indexOf('http') != -1){
+        var messageArray = message.split(' ');
+        for(var i in messageArray) {
+          if(messageArray[i].toLowerCase().substring(0,4) == 'http') {
+            messageArray[i] = '<a href="'+messageArray[i]+'" target="_blank">'+messageArray[i]+'</a>';
+          }
+        }
+        return messageArray.join(' ');
+      } else {
+        return message;
       }
     }
   });
