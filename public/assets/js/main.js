@@ -279,6 +279,10 @@ $(function (){
     },
     filterMessage: function (message) {
       message = message.replace(/gay/g, "M@");
+      if(message == '/tits'){
+        this.getBoobs();
+        return 'BOOBIES! NSFW';
+      }
       if(message.toLowerCase().indexOf('http') != -1){
         var messageArray = message.split(' ');
         for(var i in messageArray) {
@@ -289,10 +293,6 @@ $(function (){
         return messageArray.join(' ');
       } else {
         return message;
-      }
-      if(message.indexOf('/tits') != -1){
-        this.getBoobs();
-        return 'BOOBIES! NSFW';
       }
     },
     getBoobs: function () {
