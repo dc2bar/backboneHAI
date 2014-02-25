@@ -301,7 +301,7 @@ $(function (){
         function(data)
         {
           var nodes = data.children;
-          var selected = Math.round(Math.random() * (0 - 99) + 0);
+          var selected = Math.round(Math.random() * (100));
           console.log(nodes[selected]);
         }
       )
