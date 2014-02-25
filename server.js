@@ -116,7 +116,7 @@ function clearUsers() {
   }
 
   sortable.sort(function (a,b) {
-    return a.name-b.name;
+    return a.get('name')-b.get('name');
   });
 
   usersCollection.reset();
