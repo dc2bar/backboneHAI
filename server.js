@@ -95,12 +95,12 @@ var checkedIn = [];
 app.get('/stillHere', function(req, res){
   res.header('Content-Type', 'application/json');
   res.header('Charset', 'utf-8');
-  var model = new UserModel({
+  var model = {
     name: req.query.name,
     color: req.query.color,
     avatar: req.query.avatar,
     title: req.query.title
-  })
+  };
   checkedIn[''+req.query.name] = model;
   res.send(req.query.callback + '('+JSON.stringify(usersCollection)+');');
 });
