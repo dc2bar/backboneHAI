@@ -35,12 +35,6 @@ $(function (){
         chatMessages.set(messages);
       });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
-      function checkIn() {
-        $.post( "/stillHere", App.User, function( data ) {
-          console.log( data );
-        }, "json");
-      }
-      setInterval(checkIn, 3000);
     }
   };
 
@@ -61,29 +55,7 @@ $(function (){
   pubnub.subscribe({
     channel : 'fuck_pubnub',
     message : function(m){
-      switch(m.type){
-        case 'update':
-          var userobject = m.data.userobject;
-          var target = usersCollection.where({ name: userobject.name });
-          if(target.length > 0) {
-            $.each(target, function(k,v){
-              v.set(userobject);
-            })
-          }
-          break;
-        case 'logoff':
-          var target = usersCollection.where({ name: m.data.username });
-          for(var i in target){
-            target[i].destroy();
-          }
-          break;
-        case 'resync':
-          $.getJSON('getUsers?callback=?', function(users) {
-            usersCollection.set(users);
-            console.log('users resyncd');
-          });
-          break;
-      }
+      console.log(m);
     }
   });
 
