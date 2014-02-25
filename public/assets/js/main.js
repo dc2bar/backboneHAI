@@ -282,7 +282,7 @@ $(function (){
       if(message.toLowerCase().indexOf('http') != -1){
         var messageArray = message.split(' ');
         for(var i in messageArray) {
-          if(messageArray[i].toLowerCase().substring(0,4) == 'http') {
+          if(messageArray[i].toLowerCase().substring(0,4) == 'http' || messageArray[i].toLowerCase().substring(0,4) == 'www') {
             messageArray[i] = '<a href="'+messageArray[i]+'" target="_blank" onmouseover="showPreview(this.href)" onmouseout="hidePreview()">'+messageArray[i]+'</a>';
           }
         }
