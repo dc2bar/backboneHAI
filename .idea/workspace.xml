@@ -49,7 +49,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="297" column="27" selection-start="9403" selection-end="9403" vertical-scroll-proportion="0.765625" vertical-offset="3769" max-vertical-offset="4755">
+            <state line="292" column="38" selection-start="9372" selection-end="9372" vertical-scroll-proportion="0.61495537" vertical-offset="3829" max-vertical-offset="4755">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -235,7 +235,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistory" value="Co" />
+    <property name="SearchEverywhereHistory" value="&#10;Co" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -1127,7 +1127,11 @@
       <created>1393366255958</created>
       <updated>1393366255959</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="Initial commit&#10;">
+      <created>1393366305838</created>
+      <updated>1393366305839</updated>
+    </task>
+    <option name="localTasksCounter" value="200" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1316,7 +1320,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="297" column="27" selection-start="9403" selection-end="9403" vertical-scroll-proportion="0.765625" vertical-offset="3769" max-vertical-offset="4755">
+        <state line="292" column="38" selection-start="9372" selection-end="9372" vertical-scroll-proportion="0.61495537" vertical-offset="3829" max-vertical-offset="4755">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

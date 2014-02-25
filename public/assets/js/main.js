@@ -283,7 +283,7 @@ $(function (){
         this.getBoobs();
         return 'BOOBIES! NSFW';
       }
-      if(message.toLowerCase().indexOf('http') != -1){
+      if((message.toLowerCase().indexOf('http') != -1) || (message.toLowerCase().indexOf('www.') != -1)){
         var messageArray = message.split(' ');
         for(var i in messageArray) {
           if(messageArray[i].toLowerCase().substring(0,4) == 'http' || messageArray[i].toLowerCase().substring(0,4) == 'www') {
