@@ -142,10 +142,10 @@
   </div>
 <script>
   Handlebars.registerHelper("formatDate", function(sinceEpoch) {
+    var d = new Date(0);
     var localOffset = d.getTimezoneOffset() * 60000;
     var localTime = sinceEpoch + localOffset;
     console.log(localTime);
-    var d = new Date(0);
     d.setUTCSeconds(localTime);
     return d.toLocaleTimeString();
   });
