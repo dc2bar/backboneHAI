@@ -11,6 +11,7 @@ $(function (){
     login: function (user) {
       App.User = user;
       function checkin() {
+        console.log(App.User.get('color'));
         $.getJSON('stillHere?name='+encodeURI(App.User.get('name'))+'&color='+encodeURI(App.User.get('color'))+'&avatar='+encodeURI(App.User.get('avatar'))+'&title='+encodeURI(App.User.get('title')),function(data){
           console.log(data);
         });
