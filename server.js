@@ -101,7 +101,6 @@ app.get('/stillHere', function(req, res){
   })
   checkedIn.push(model);
   console.log('checked in!');
-  console.log(model);
 });
 
 function clearUsers() {
@@ -114,8 +113,6 @@ function clearUsers() {
   for(var i in checkedIn) {
     usersCollection.add(checkedIn[i]);
   }
-
-  console.log(usersCollection);
 }
 
 setInterval(clearUsers, 3000);

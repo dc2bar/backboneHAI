@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/main.js" afterPath="$PROJECT_DIR$/public/assets/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -57,7 +56,7 @@
       <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="0" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.5670103" vertical-offset="1245" max-vertical-offset="2055">
+            <state line="102" column="29" selection-start="2847" selection-end="2847" vertical-scroll-proportion="0.43814433" vertical-offset="1275" max-vertical-offset="2010">
               <folding />
             </state>
           </provider>
@@ -831,7 +830,11 @@
       <created>1393305110274</created>
       <updated>1393305110274</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="Initial commit&#10;">
+      <created>1393305518343</created>
+      <updated>1393305518343</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1010,7 +1013,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="0" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.5670103" vertical-offset="1245" max-vertical-offset="2055">
+        <state line="102" column="29" selection-start="2847" selection-end="2847" vertical-scroll-proportion="0.43814433" vertical-offset="1275" max-vertical-offset="2010">
           <folding />
         </state>
       </provider>
