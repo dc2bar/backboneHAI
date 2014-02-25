@@ -14,10 +14,13 @@ $(function (){
         var checkinurl = 'stillHere?name='+encodeURI(App.User.get('name'))+'&color='+encodeURI(App.User.get('color'))+'&avatar='+encodeURI(App.User.get('avatar'))+'&title='+encodeURI(App.User.get('title'))+'&callback=?';
         $.getJSON(checkinurl, function(data){
           data.sort(function(a, b){
+            console.log(a.name);
+            console.log(b.name);
             return b.name-a.name
-          })
+          });
           var current = JSON.stringify(usersCollection);
           var server = JSON.stringify(data);
+          console.log(server);
           if(current != server) {
             usersCollection.set(data);
           }
