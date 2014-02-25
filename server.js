@@ -133,8 +133,11 @@ function clearUsers() {
     var userProfile = userProfile.pop();
     stillOnline.push(userProfile);
   }
-  console.log(stillOnline);
-  console.log(usersCollection.models);
+  console.log('====================');
+  console.log(stillOnline.sort());
+  console.log('--------------------');
+  console.log(usersCollection.models.sort());
+  console.log('====================');
   checkedIn.empty;
 }
 
