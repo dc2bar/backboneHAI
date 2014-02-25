@@ -278,7 +278,6 @@ $(function (){
       }
     },
     filterMessage: function (message) {
-      console.log(message);
       message = message.replace(/gay/g, "M@");
       if(message.toLowerCase().indexOf('http') != -1){
         var messageArray = message.split(' ');
@@ -291,8 +290,9 @@ $(function (){
       } else {
         return message;
       }
-      if(message == '/tits'){
+      if(message.substring(0,5) == '/tits'){
         this.getBoobs();
+        return 'BOOBIES! NSFW';
       }
     },
     getBoobs: function () {
