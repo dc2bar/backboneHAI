@@ -81,7 +81,7 @@
             <div class="comment-text">
               <div class="comment-author clearfix">
                 <a href="#" class="link-author" hidefocus="true" style="outline: none;">{{sender}}</a> <span
-                  class="comment-date">{{date}} | {{time}}</span>
+                  class="comment-date">{{formatDate time}}</span>
               </div>
               <div class="comment-entry" style="color:#{{color}};">
                 {{text}}
@@ -140,6 +140,13 @@
       </div>
     </div>
   </div>
+<script>
+  Handlebars.registerHelper("formatDate", function(sinceEpoch) {
+    var d = new Date(0);
+    d.setUTCSeconds(sinceEpoch);
+    return d.toLocaleTimeString();
+  });
+</script>
 </body>
 
 </html>
