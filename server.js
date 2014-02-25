@@ -109,10 +109,21 @@ app.get('/stillHere', function(req, res){
 });
 
 function clearUsers() {
+  var sortable = [];
+
+  for(var i in checkedIn){
+    sortable.push(checkedIn[i]);
+  }
+
+  sortable.sort(function (a,b) {
+    return a.name-b.name;
+  });
+
   usersCollection.reset();
 
-  for(var i in checkedIn) {
-    usersCollection.add(checkedIn[i]);
+  for(var i in sortable) {
+    console.log(sortable[i].name);
+    usersCollection.add(sortable[i]);
   }
 
   checkedIn = [];
