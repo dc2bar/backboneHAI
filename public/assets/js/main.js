@@ -301,6 +301,7 @@ $(function (){
         function(data)
         {
           console.log(data.data['children']);
+          console.log(data.data.children);
           var nodes = data.data;
           var selected = Math.round(Math.random() * (100));
           console.log(nodes[selected]);
