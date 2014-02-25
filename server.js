@@ -98,32 +98,26 @@ var checkedIn = [];
 app.get('/stillHere', function(req, res){
   res.header('Content-Type', 'application/json');
   res.header('Charset', 'utf-8');
-  var model = new UserModel({
+  var user = {
     name: req.query.name,
     color: req.query.color,
     avatar: req.query.avatar,
     title: req.query.title
-  })
-  checkedIn[''+req.query.name] = model;
+  }
+  checkedIn[''+req.query.name] = user;
   res.send(req.query.callback + '('+JSON.stringify(usersCollection)+');');
 });
 
 function clearUsers() {
-  var sortable = [];
-
-  for(var i in checkedIn){
-    sortable.push(checkedIn[i]);
-  }
-
-  sortable.sort(function (a,b) {
-    return a.get('name')-b.get('name');
-  });
-
   usersCollection.reset();
 
-  for(var i in sortable) {
-    console.log(sortable[i].get('name'));
-    usersCollection.add(sortable[i]);
+  checkedIn.sort(function(a,b){a.name-b.name});
+
+  console.log(checkedIn);
+
+  for(var i in checkedIn) {
+    var model = new UserModel(checkedIn[i]);
+    usersCollection.add(model);
   }
 
   checkedIn = [];
