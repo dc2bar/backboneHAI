@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/main.js" afterPath="$PROJECT_DIR$/public/assets/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backbone.iws" />
@@ -49,7 +48,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="312" column="47" selection-start="10021" selection-end="10021" vertical-scroll-proportion="0.6651786" vertical-offset="4084" max-vertical-offset="5055">
+            <state line="307" column="42" selection-start="9795" selection-end="9795" vertical-scroll-proportion="0.58147323" vertical-offset="4084" max-vertical-offset="5055">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -1147,7 +1146,11 @@
       <created>1393366918972</created>
       <updated>1393366918972</updated>
     </task>
-    <option name="localTasksCounter" value="204" />
+    <task id="LOCAL-00204" summary="Initial commit&#10;">
+      <created>1393367195491</created>
+      <updated>1393367195492</updated>
+    </task>
+    <option name="localTasksCounter" value="205" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1336,7 +1339,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="312" column="47" selection-start="10021" selection-end="10021" vertical-scroll-proportion="0.6651786" vertical-offset="4084" max-vertical-offset="5055">
+        <state line="307" column="42" selection-start="9795" selection-end="9795" vertical-scroll-proportion="0.58147323" vertical-offset="4084" max-vertical-offset="5055">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
