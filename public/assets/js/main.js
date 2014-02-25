@@ -2,11 +2,11 @@
   globals
  */
 function showPreview(target) {
-  $('.preview-iframe').attr('src', target);
+  $('.preview-img').attr('src', target);
   $('.preview-container').show();
 }
 function hidePreview() {
-  $('.preview-iframe').attr('src', '');
+  $('.preview-img').attr('src', '');
   $('.preview-container').hide();
 }
 
