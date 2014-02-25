@@ -132,11 +132,12 @@ function clearUsers() {
     var userProfile = userProfile.pop();
     stillOnline.push(userProfile);
   }
-  console.log('====================');
-  console.log(stillOnline.sort());
-  console.log('--------------------');
-  console.log(usersCollection.models.sort());
-  console.log('====================');
+  if(stillOnline.sort() != usersCollection.models.sort()){
+    pubnub.publish({
+      channel : 'fuck_pubnub',
+      message : {type: 'resync'}
+    });
+  }
   checkedIn = [];
 }
 

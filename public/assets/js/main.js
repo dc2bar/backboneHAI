@@ -76,6 +76,12 @@ $(function (){
             target[i].destroy();
           }
           break;
+        case 'resync':
+          $.getJSON('getUsers?callback=?', function(users) {
+            usersCollection.set(users);
+            console.log('users resyncd');
+          });
+          break;
       }
     }
   });
