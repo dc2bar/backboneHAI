@@ -254,7 +254,7 @@ $(function (){
             color: App.User.get('color'),
             recipient: 'all',
             time: time,
-            text: message
+            text: message.replace('gay','M@');
           })
           this.collection.add(newLine);
           $('.input-text',this.$el).val('');
