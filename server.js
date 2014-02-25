@@ -93,6 +93,8 @@ app.get('/getMessages', function(req, res){
 var checkedIn = [];
 
 app.get('/stillHere', function(req, res){
+  res.header('Content-Type', 'application/json');
+  res.header('Charset', 'utf-8');
   var model = new UserModel({
     name: req.query.name,
     color: req.query.color,
