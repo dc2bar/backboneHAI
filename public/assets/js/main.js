@@ -85,7 +85,7 @@ $(function (){
     },
     initialize: function () {
       if(this.checkCookie('color')){
-        this.user.color = decodeURI(this.checkCookie('color'));
+        this.user.color = decodeURI(this.checkCookie('color')).replace('#','');
       }
       if(this.checkCookie('avatar')){
         this.user.avatar = decodeURI(this.checkCookie('avatar'));
