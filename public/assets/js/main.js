@@ -1,3 +1,15 @@
+/*
+  globals
+ */
+function showPreview(target) {
+  $('.preview-iframe').attr('src', target);
+  $('.preview-container').show();
+}
+function hidePreview() {
+  $('.preview-iframe').attr('src', '');
+  $('.preview-container').hide();
+}
+
 $(function (){
   /*-------------Application----------*/
   var App = {
@@ -268,7 +280,7 @@ $(function (){
         var messageArray = message.split(' ');
         for(var i in messageArray) {
           if(messageArray[i].toLowerCase().substring(0,4) == 'http') {
-            messageArray[i] = '<a href="'+messageArray[i]+'" target="_blank">'+messageArray[i]+'</a>';
+            messageArray[i] = '<a href="'+messageArray[i]+'" target="_blank" onmouseover="showPreview(this.href)" onmouseout="hidePreview()">'+messageArray[i]+'</a>';
           }
         }
         return messageArray.join(' ');

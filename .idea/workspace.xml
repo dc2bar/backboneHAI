@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/main.css" afterPath="$PROJECT_DIR$/public/assets/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/main.js" afterPath="$PROJECT_DIR$/public/assets/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backbone.iws" />
@@ -27,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="45" selection-start="1707" selection-end="1707" vertical-scroll-proportion="-2.1989248" vertical-offset="1872" max-vertical-offset="2430">
+            <state line="129" column="18" selection-start="4634" selection-end="4634" vertical-scroll-proportion="-2.625" vertical-offset="1872" max-vertical-offset="2430">
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#li#0;n#ol#0;n#div#0;n#script#2;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -47,11 +46,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="281" column="3" selection-start="8809" selection-end="8809" vertical-scroll-proportion="-31.846153" vertical-offset="3387" max-vertical-offset="4305">
-              <folding />
+            <state line="279" column="46" selection-start="8684" selection-end="8684" vertical-scroll-proportion="0.44751382" vertical-offset="3942" max-vertical-offset="4485">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,7 +60,7 @@
       <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="0" selection-start="2604" selection-end="2604" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2055">
+            <state line="11" column="3" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2055">
               <folding />
             </state>
           </provider>
@@ -91,8 +92,8 @@
         <option value="$PROJECT_DIR$/scratch" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/public/assets/css/main.css" />
-        <option value="$PROJECT_DIR$/public/assets/js/main.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/assets/js/main.js" />
       </list>
     </option>
   </component>
@@ -1057,7 +1058,11 @@
       <created>1393340816265</created>
       <updated>1393340816265</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="Initial commit&#10;">
+      <created>1393342074569</created>
+      <updated>1393342074569</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1124,7 +1129,9 @@
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="24" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="4230">
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1147,7 +1154,9 @@
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="27" selection-start="678" selection-end="678" vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="3840">
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1217,17 +1226,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="0" selection-start="2604" selection-end="2604" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2055">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="281" column="3" selection-start="8809" selection-end="8809" vertical-scroll-proportion="-31.846153" vertical-offset="3387" max-vertical-offset="4305">
-          <folding />
+        <state line="129" column="18" selection-start="4634" selection-end="4634" vertical-scroll-proportion="-2.625" vertical-offset="1872" max-vertical-offset="2430">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#li#0;n#ol#0;n#div#0;n#script#2;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1238,11 +1242,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="45" selection-start="1707" selection-end="1707" vertical-scroll-proportion="-2.1989248" vertical-offset="1872" max-vertical-offset="2430">
+        <state line="11" column="3" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2055">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="279" column="46" selection-start="8684" selection-end="8684" vertical-scroll-proportion="0.44751382" vertical-offset="3942" max-vertical-offset="4485">
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#li#0;n#ol#0;n#div#0;n#script#2;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
