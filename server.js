@@ -95,12 +95,12 @@ var checkedIn = [];
 app.get('/stillHere', function(req, res){
   res.header('Content-Type', 'application/json');
   res.header('Charset', 'utf-8');
-  var model = {
+  var model = new UserModel({
     name: req.query.name,
     color: req.query.color,
     avatar: req.query.avatar,
     title: req.query.title
-  };
+  })
   checkedIn[''+req.query.name] = model;
   res.send(req.query.callback + '('+JSON.stringify(usersCollection)+');');
 });
@@ -108,22 +108,17 @@ app.get('/stillHere', function(req, res){
 function clearUsers() {
   usersCollection.reset();
 
-  function compare(a,b) {
-    if (a.name < b.name)
-      return -1;
-    if (a.name > b.name)
-      return 1;
-    return 0;
+  var keys = [];
+
+  for(var i in keys) {
+    keys.push(i);
   }
 
-  checkedIn.sort(compare);
+  keys.sort();
+  console.log(keys);
 
-  console.log('================');
-  console.log(checkedIn);
-  console.log('----------------');
-
-  for(var i in checkedIn) {
-    usersCollection.add(checkedIn[i]);
+  for(var i in keys) {
+    usersCollection.add(checkedIn[keys[i]]);
   }
 
   checkedIn = [];
