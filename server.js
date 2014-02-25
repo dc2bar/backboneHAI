@@ -101,7 +101,7 @@ app.get('/stillHere', function(req, res){
     avatar: req.query.avatar,
     title: req.query.title
   })
-  checkedIn.push(model);
+  checkedIn[''+req.query.name] = model;
   res.send(req.query.callback + '('+JSON.stringify(usersCollection)+');');
 });
 
