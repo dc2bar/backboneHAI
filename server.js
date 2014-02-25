@@ -119,7 +119,6 @@ app.get('/stillHere', function(req, res){
   res.header('Content-Type', 'application/json');
   res.header('Charset', 'utf-8');
   checkedIn[''+req.query.username] = req.query.username;
-  console.log(checkedIn);
   res.send(req.query.callback + '({ok:"ok"});');
 });
 
