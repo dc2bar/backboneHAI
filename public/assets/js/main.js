@@ -35,7 +35,7 @@ $(function (){
         chatMessages.set(messages);
       });
       function checkIn(){
-        $.post('stillHere', App.User);
+        $.getJSON('stillHere?name='+encodeURI(App.User.name)+'&color='+encodeURI(App.User.name)+'&title='+encodeURI(App.User.title)+'&avatar='+encodeURI(App.User.avatar), function(data){});
       }
       setInterval(checkIn, 3000);
       var userslistView = new App.Views.UsersList({ collection: usersCollection });

@@ -75,7 +75,6 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
-  app.use(express.bodyParser());
 });
 
 app.get('/getUsers', function(req, res){
@@ -93,10 +92,14 @@ app.get('/getMessages', function(req, res){
 
 var checkedIn = [];
 
-app.post('/stillHere', function(request, response){
-  checkedIn.push(request.body);
-  console.log(request.body);
-  response.send(usersCollection);    // echo the result back
+app.get('/stillHere', function(req, res){
+  var model = new UserModel({
+    name: req.query.name,
+    color: req.query.color,
+    avatar: req.query.avatar,
+    title: req.query.title
+  })
+  checkedIn.push(model);
 });
 
 function clearUsers() {
