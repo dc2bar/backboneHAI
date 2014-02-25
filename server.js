@@ -122,7 +122,7 @@ function clearUsers() {
   usersCollection.reset();
 
   for(var i in sortable) {
-    console.log(sortable[i]);
+    console.log(sortable[i].get('name'));
     usersCollection.add(sortable[i]);
   }
 
