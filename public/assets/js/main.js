@@ -34,6 +34,10 @@ $(function (){
       $.getJSON('getMessages?callback=?', function(messages) {
         chatMessages.set(messages);
       });
+      function checkIn(){
+        $.post('stillHere', App.User);
+      }
+      setInterval(checkIn, 3000);
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
   };
