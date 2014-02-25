@@ -53,9 +53,6 @@ $(function (){
   });
 
   App.Collections.Users = Backbone.Collection.extend({
-    comparator : function(ab) {
-      return -ab.name;
-    },
     model: App.Models.User
   });
 

@@ -8,9 +8,6 @@ var _ = require('underscore')._,
 
 var UserModel = Backbone.Model.extend({});
 var UsersCollection = Backbone.Collection.extend({
-  comparator : function(ab) {
-    return -ab.name;
-  },
   model: UserModel
 });
 
@@ -98,32 +95,35 @@ var checkedIn = [];
 app.get('/stillHere', function(req, res){
   res.header('Content-Type', 'application/json');
   res.header('Charset', 'utf-8');
-  var user = {
+  var model = new UserModel({
     name: req.query.name,
     color: req.query.color,
     avatar: req.query.avatar,
     title: req.query.title
-  }
-  checkedIn[''+req.query.name] = user;
+  })
+  checkedIn[''+req.query.name] = model;
   res.send(req.query.callback + '('+JSON.stringify(usersCollection)+');');
 });
 
 function clearUsers() {
   usersCollection.reset();
 
-  var sortable = [];
-  for(var i in checkedIn){
-    sortable.push(checkedIn[i]);
+  function compare(a,b) {
+    if (a.get('name') < b.get('name'))
+      return -1;
+    if (a.get('name') > b.get('name'))
+      return 1;
+    return 0;
   }
-  sortable.sort(function(a,b){a.name-b.name});
 
-  console.log('--------');
-  console.log(sortable);
-  console.log('========');
+  checkedIn.sort(compare);
+
+  console.log('================');
+  console.log(checkedIn);
+  console.log('----------------');
 
   for(var i in checkedIn) {
-    var model = new UserModel(checkedIn[i]);
-    usersCollection.add(model);
+    usersCollection.add(checkedIn[i]);
   }
 
   checkedIn = [];
