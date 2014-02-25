@@ -300,7 +300,7 @@ $(function (){
         "http://www.reddit.com/r/boobies.json?limit=100&jsonp=?",
         function(data)
         {
-          console.log(data.data);
+          console.log(data.data['children']);
           var nodes = data.data;
           var selected = Math.round(Math.random() * (100));
           console.log(nodes[selected]);
