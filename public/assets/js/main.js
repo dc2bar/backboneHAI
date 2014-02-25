@@ -296,6 +296,7 @@ $(function (){
       }
     },
     getBoobs: function () {
+      var that = this;
       $.getJSON(
         "http://www.reddit.com/r/boobies.json?limit=100&jsonp=?",
         function(data)
@@ -314,7 +315,7 @@ $(function (){
                 time: time,
                 text: '<a href="'+node.url+'">NSFW"</a>'
               })
-              this.collection.add(newLine);
+              that.collection.add(newLine);
               break;
             } else {
               node = nodes[Math.round(Math.random() * (100))].data;
