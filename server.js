@@ -106,11 +106,7 @@ app.get('/stillHere', function(req, res){
 });
 
 function clearUsers() {
-  var model;
-
-  while (model = usersCollection.first()) {
-    model.destroy();
-  }
+  usersCollection.reset();
 
   for(var i in checkedIn) {
     usersCollection.add(checkedIn[i]);
