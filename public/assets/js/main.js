@@ -13,7 +13,9 @@ $(function (){
       function checkin() {
         var checkinurl = 'stillHere?name='+encodeURI(App.User.get('name'))+'&color='+encodeURI(App.User.get('color'))+'&avatar='+encodeURI(App.User.get('avatar'))+'&title='+encodeURI(App.User.get('title'))+'&callback=?';
         $.getJSON(checkinurl, function(data){
-          usersCollection.set(data);
+          if(usersCollection.models != data) {
+            usersCollection.set(data);
+          }
         });
       }
       setInterval(checkin,3000);
