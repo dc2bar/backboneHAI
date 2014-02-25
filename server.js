@@ -106,11 +106,10 @@ app.get('/stillHere', function(req, res){
 });
 
 function clearUsers() {
-  checkedIn.sort();
-
   usersCollection.reset();
 
   for(var i in checkedIn) {
+    console.log(checkedIn);
     usersCollection.add(checkedIn[i]);
   }
 
