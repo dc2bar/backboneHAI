@@ -13,6 +13,7 @@ $(function (){
       function checkin() {
         $.getJSON('stillHere?name='+encodeURI(App.User.get('name')),function(){});
       }
+      setInterval(checkin,3000);
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
