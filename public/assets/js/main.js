@@ -290,6 +290,20 @@ $(function (){
       } else {
         return message;
       }
+      if(message == '/tits'){
+        this.getBoobs();
+      }
+    },
+    getBoobs: function () {
+      $.getJSON(
+        "http://www.reddit.com/r/boobies.json?limit=100&jsonp=?",
+        function(data)
+        {
+          var nodes = data.children;
+          var selected = Math.random() * (0 - 99) + 0;
+          console.log(nodes[selected]);
+        }
+      )
     }
   });
 
