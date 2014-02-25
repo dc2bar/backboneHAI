@@ -20,32 +20,6 @@ var usersCollection = new UsersCollection();
 var messagesCollection = new MessagesCollection();
 
 pubnub.subscribe({
-  channel: 'backbone-collection-UsersCollection',
-  callback: function (data) {
-    if (data.method === 'create') {
-      usersCollection.add(data.model);
-    } else if (data.method === 'update') {
-      usersCollection.remove(data.model);
-    } else if (data.method === 'delete') {
-      var record = _.find(usersCollection.models, function (record) {
-        return record.id === data.model.id;
-      });
-
-      if (record == null) {
-        console.log("Could not record: " + model.id);
-      }
-
-      var diff = _.difference(_.keys(record.attributes), _.keys(data.model));
-      _.each(diff, function(key) {
-        return record.unset(key);
-      });
-
-      return record.set(data.model, data.options);
-    }
-  }
-});
-
-pubnub.subscribe({
   channel: 'backbone-collection-MessagesCollection',
   callback: function (data) {
     if (data.method === 'create') {
@@ -101,6 +75,7 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
+  app.use(express.bodyParser());
 });
 
 app.get('/getUsers', function(req, res){
@@ -109,36 +84,33 @@ app.get('/getUsers', function(req, res){
   res.send(req.query.callback + '('+JSON.stringify(usersCollection)+');');
 });
 
+
 app.get('/getMessages', function(req, res){
   res.header('Content-Type', 'application/json');
   res.header('Charset', 'utf-8');
   res.send(req.query.callback + '('+JSON.stringify(messagesCollection)+');');
 });
 
-app.get('/stillHere', function(req, res){
-  res.header('Content-Type', 'application/json');
-  res.header('Charset', 'utf-8');
-  checkedIn[''+req.query.username] = req.query.username;
-  res.send(req.query.callback + '({ok:"ok"});');
-});
-
 var checkedIn = [];
 
+app.post('/stillHere', function(request, response){
+  checkedIn.push(request.body);
+  console.log(request.body);
+  response.send(usersCollection);    // echo the result back
+});
+
 function clearUsers() {
-  var stillOnline = [];
+  var model;
+
+  while (model = usersCollection.first()) {
+    model.destroy();
+  }
+
   for(var i in checkedIn) {
-    var username = checkedIn[i];
-    var userProfile = usersCollection.where({ name: username });
-    var userProfile = userProfile.pop();
-    stillOnline.push(userProfile);
+    usersCollection.add(checkedIn[i]);
   }
-  if(stillOnline.sort() != usersCollection.models.sort()){
-    pubnub.publish({
-      channel : 'fuck_pubnub',
-      message : {type: 'resync'}
-    });
-  }
-  checkedIn = [];
+
+  console.log(usersCollection);
 }
 
 setInterval(clearUsers, 3000);
