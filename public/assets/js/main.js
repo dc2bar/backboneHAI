@@ -18,7 +18,7 @@ $(function (){
           }
         });
       }
-      setInterval(checkin,3000);
+      setInterval(checkin,2000);
 
       $.getJSON( "getMessages?callback=?", function( data ) {
         chatMessages.set(data);

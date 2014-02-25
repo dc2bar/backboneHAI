@@ -115,7 +115,7 @@ function clearUsers() {
   checkedIn = [];
 }
 
-setInterval(clearUsers, 3000);
+setInterval(clearUsers, 2000);
 
 
 app.listen(80);
