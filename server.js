@@ -8,6 +8,9 @@ var _ = require('underscore')._,
 
 var UserModel = Backbone.Model.extend({});
 var UsersCollection = Backbone.Collection.extend({
+  comparator : function(ab) {
+    return -ab.name;
+  },
   model: UserModel
 });
 

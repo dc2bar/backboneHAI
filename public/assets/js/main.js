@@ -13,11 +13,6 @@ $(function (){
       function checkin() {
         var checkinurl = 'stillHere?name='+encodeURI(App.User.get('name'))+'&color='+encodeURI(App.User.get('color'))+'&avatar='+encodeURI(App.User.get('avatar'))+'&title='+encodeURI(App.User.get('title'))+'&callback=?';
         $.getJSON(checkinurl, function(data){
-          console.log(data);
-          data.sort(function(a,b){
-            return a.name-b.name;
-          });
-          console.log(data);
           var current = JSON.stringify(usersCollection);
           var server = JSON.stringify(data);
           if(current != server) {
@@ -58,6 +53,9 @@ $(function (){
   });
 
   App.Collections.Users = Backbone.Collection.extend({
+    comparator : function(ab) {
+      return -ab.name;
+    },
     model: App.Models.User
   });
 
