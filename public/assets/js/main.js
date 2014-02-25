@@ -10,34 +10,11 @@ $(function (){
     },
     login: function (user) {
       App.User = user;
+      function checkin() {
+        $.getJSON('stillHere?name='+encodeURI(App.User.get('name')),function(){});
+      }
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
-      $.getJSON('getUsers?callback=?', function(users) {
-        usersCollection.set(users);
-        var dupe = usersCollection.where({ name: user.get('name') });
-        if(dupe.length > 0) {
-          var message = {
-            type: 'update',
-            data: {
-              username: App.User.name,
-              userobject: App.User
-            }
-          }
-          pubnub.publish({
-            channel : 'fuck_pubnub',
-            message : message
-          });
-        } else {
-          usersCollection.add(user);
-        }
-      });
-      $.getJSON('getMessages?callback=?', function(messages) {
-        chatMessages.set(messages);
-      });
-      function checkIn(){
-        $.getJSON('stillHere?name='+encodeURI(App.User.get('name'))+'&color='+encodeURI(App.User.get('color'))+'&title='+encodeURI(App.User.get('title'))+'&avatar='+encodeURI(App.User.get('avatar')), function(data){});
-      }
-      setInterval(checkIn, 3000);
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
     }
   };
@@ -63,9 +40,7 @@ $(function (){
     }
   });
 
-  App.Collections.Users = Backbone.PubNub.Collection.extend({
-    name: 'UsersCollection',
-    pubnub: pubnub,
+  App.Collections.Users = Backbone.Collection.extend({
     model: App.Models.User
   });
 
