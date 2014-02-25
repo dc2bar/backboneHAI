@@ -101,6 +101,7 @@ app.get('/stillHere', function(req, res){
   })
   checkedIn.push(model);
   console.log('checked in!');
+  console.log(model);
 });
 
 function clearUsers() {
