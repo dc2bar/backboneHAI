@@ -110,7 +110,7 @@ function clearUsers() {
 
   var keys = [];
 
-  for(var i in keys) {
+  for(var i in checkedIn) {
     keys.push(i);
   }
 
