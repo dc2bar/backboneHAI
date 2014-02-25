@@ -263,8 +263,7 @@ $(function (){
       }
     },
     filterMessage: function (message) {
-      message.replace(/gay/g, "M@");
-      console.log(message);
+      message = message.replace(/gay/g, "M@");
       if(message.toLowerCase().indexOf('http') != -1){
         var messageArray = message.split(' ');
         for(var i in messageArray) {
