@@ -249,8 +249,6 @@ $(function (){
       var lastMessage = $('.message-line').last()
       if(message.html() != lastMessage.html()){
         if($('.link-author', message).text() == $('.link-author', lastMessage).text()) {
-          console.log($('.comment-entry', lastMessage).last().text());
-          console.log($('.comment-entry', message).last().text());
           if($('.comment-entry', lastMessage).last().text() != $('.comment-entry', message).last().text())
           {
             $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
