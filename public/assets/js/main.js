@@ -236,7 +236,7 @@ $(function (){
         if(pos < posWas) {
           if(!scrollDisable){
             scrollDisable = true;
-            $('.popover').show().delay(500).fadeOut();
+            $('.popover').show().delay(1000).fadeOut();
           }
         }
         posWas = pos;
