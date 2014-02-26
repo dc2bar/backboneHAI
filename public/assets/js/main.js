@@ -290,6 +290,7 @@ $(function (){
     sendChat: function (e) {
       if (e.keyCode == 13 || e.type == 'click'){
         scrollDisable = false;
+        $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
         var message = $('.input-text',this.$el).val();
         if (message != '') {
           message = this.filterMessage(message);
