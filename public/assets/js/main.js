@@ -43,7 +43,6 @@ $(function (){
         chatMessages.set(data);
       });
 
-      console.log(user.get('wintitle'));
       if(user.get('wintitle')){
         document.title = user.get('wintitle');
       }
