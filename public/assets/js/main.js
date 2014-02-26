@@ -229,7 +229,10 @@ $(function (){
     },
     addLine: function (message) {
       var messageView = new App.Views.Message({model: message});
-      $(this.$el).append(messageView.render().el);
+      var message = $(messageView.render().el).attr('class','message-line');
+      console.log(message);
+      console.log($('.message-line').last());
+      $(this.$el).append(message);
       $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
     }
   });
