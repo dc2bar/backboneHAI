@@ -230,9 +230,14 @@ $(function (){
     addLine: function (message) {
       var messageView = new App.Views.Message({model: message});
       var message = $(messageView.render().el).attr('class','message-line');
-      if($(message).html() != $('.message-line').last().html()){
-        $(this.$el).append(message);
-        $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
+      var lastMessage = $('.message-line').last()
+      if(message.html() != lastMessage.html()){
+        if($('.comment-author', message).text() == $('.comment-author', lastMessage)) {
+          console.log(message);
+        } else {
+          $(this.$el).append(message);
+          $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
+        }
       }
     }
   });
