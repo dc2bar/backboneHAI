@@ -42,6 +42,9 @@ $(function (){
       $.getJSON( "getMessages?callback=?", function( data ) {
         chatMessages.set(data);
       });
+
+      document.title = user.wintitle;
+
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
@@ -94,7 +97,7 @@ $(function (){
       title: 'Giant Faggot',
       avatar: 'assets/images/avatar_placeholder.jpg',
       color: '959da6',
-      status: 'offline'
+      wintitle: 'Microsoft Outlook Web Access'
     },
     events : {
       'click .login-btn' : 'setLogin',
@@ -109,6 +112,9 @@ $(function (){
       }
       if(this.checkCookie('title')){
         this.user.title = decodeURI(this.checkCookie('title'));
+      }
+      if(this.checkCookie('wintitle')){
+        this.user.wintitle = decodeURI(this.checkCookie('wintitle'));
       }
       if (this.checkCookie('newchatcookie')) {
         this.login();
@@ -135,6 +141,7 @@ $(function (){
       this.setCookie('title',this.user.title,999);
       this.setCookie('avatar',this.user.avatar,999);
       this.setCookie('color',this.user.color,999);
+      this.setCookie('wintitle',this.user.wintitle,999);
       this.setCookie('newchatcookie','true',999);
       this.login();
     },
