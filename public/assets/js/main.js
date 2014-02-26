@@ -138,7 +138,7 @@ $(function (){
       $(this.avatarSelector + ' img', this.el).attr('src',this.user.avatar);
     },
     setLogin: function () {
-      this.user.title = $('.title').val();
+      this.user.title = $('.title').val().substring(0,21);
       this.user.color = $('.colorpicker_hex input').val();
       this.user.wintitle = $('.wintitle').val();
       this.setCookie('title',this.user.title,999);
