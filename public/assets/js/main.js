@@ -228,11 +228,20 @@ $(function (){
       this.collection.each( function(message) {
         thisView.addLine(message);
       });
+
+      var posWas;
+
       $('.messages').scroll(function(){
-        console.log('scrolled');
-        scrollDisable = true;
-        $('.popover').show().delay(2000).fadeOut();
+        var pos = $('.messages').scrollTop();
+        if(pos < posWas) {
+          if(!scrollDisable){
+            scrollDisable = true;
+            $('.popover').show().delay(2000).fadeOut();
+          }
+        }
+        posWas = pos;
       });
+
     },
     addLine: function (message) {
       var messageView = new App.Views.Message({model: message});
