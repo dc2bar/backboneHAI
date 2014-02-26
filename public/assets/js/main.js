@@ -141,6 +141,7 @@ $(function (){
     setLogin: function () {
       this.user.title = $('.title').val();
       this.user.color = $('.colorpicker_hex input').val();
+      this.user.wintitle = $('.wintitle').val();
       this.setCookie('title',this.user.title,999);
       this.setCookie('avatar',this.user.avatar,999);
       this.setCookie('color',this.user.color,999);
