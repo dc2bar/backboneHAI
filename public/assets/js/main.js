@@ -232,9 +232,8 @@ $(function (){
       var message = $(messageView.render().el).attr('class','message-line');
       var lastMessage = $('.message-line').last()
       if(message.html() != lastMessage.html()){
-        console.log($('.comment-author', message).text());
-        console.log($('.comment-author', lastMessage).text());
-        if($('.comment-author', message).text() == $('.comment-author', lastMessage).text()) {
+        if($('.link-author', message).text() == $('.link-author', lastMessage).text()) {
+          $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
           console.log(message);
         } else {
           $(this.$el).append(message);
