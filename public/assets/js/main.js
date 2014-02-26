@@ -232,7 +232,9 @@ $(function (){
       var message = $(messageView.render().el).attr('class','message-line');
       var lastMessage = $('.message-line').last()
       if(message.html() != lastMessage.html()){
-        if($('.comment-author', message).text() == $('.comment-author', lastMessage)) {
+        console.log($('.comment-author', message).text());
+        console.log($('.comment-author', lastMessage).text());
+        if($('.comment-author', message).text() == $('.comment-author', lastMessage).text()) {
           console.log(message);
         } else {
           $(this.$el).append(message);
