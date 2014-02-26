@@ -234,7 +234,6 @@ $(function (){
       if(message.html() != lastMessage.html()){
         if($('.link-author', message).text() == $('.link-author', lastMessage).text()) {
           $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
-          console.log(message);
         } else {
           $(this.$el).append(message);
           $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
