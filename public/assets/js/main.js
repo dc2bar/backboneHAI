@@ -43,7 +43,7 @@ $(function (){
         chatMessages.set(data);
       });
 
-      document.title = user.wintitle;
+      document.title = user.get('wintitle');
 
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
@@ -155,7 +155,6 @@ $(function (){
       }
       this.user.name = B64.decode(getURLParameter('hn')).replace('7 À','');
       var currentUser = new App.Models.User(this.user);
-      console.log(currentUser);
       App.login(currentUser);
       this.remove();
     },
