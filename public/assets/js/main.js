@@ -13,6 +13,13 @@ function hidePreview() {
   $('.preview-container').hide();
 }
 
+var scrollDisable = false;
+
+$('.messages').scroll(function(){
+  scrollDisable = true;
+  $('.popover').show().delay(2000).fadeOut();
+})
+
 $(function (){
   /*-------------Application----------*/
   var App = {
@@ -234,9 +241,14 @@ $(function (){
       if(message.html() != lastMessage.html()){
         if($('.link-author', message).text() == $('.link-author', lastMessage).text()) {
           $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
+          if(!scrollDisable) {
+            $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
+          }
         } else {
           $(this.$el).append(message);
-          $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
+          if(!scrollDisable) {
+            $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
+          }
         }
       }
     }
@@ -268,6 +280,7 @@ $(function (){
     },
     sendChat: function (e) {
       if (e.keyCode == 13 || e.type == 'click'){
+        scrollDisable = false;
         var message = $('.input-text',this.$el).val();
         if (message != '') {
           message = this.filterMessage(message);
