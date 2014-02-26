@@ -43,6 +43,7 @@ $(function (){
         chatMessages.set(data);
       });
 
+      console.log(user.get('wintitle'));
       document.title = user.get('wintitle');
 
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
