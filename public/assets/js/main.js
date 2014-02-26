@@ -154,8 +154,8 @@ $(function (){
         );
       }
       this.user.name = B64.decode(getURLParameter('hn')).replace('7 À','');
-      console.log(this.user);
       var currentUser = new App.Models.User(this.user);
+      console.log(currentUser);
       App.login(currentUser);
       this.remove();
     },
