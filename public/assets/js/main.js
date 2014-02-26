@@ -232,8 +232,10 @@ $(function (){
       var message = $(messageView.render().el).attr('class','message-line');
       console.log($(message).html());
       console.log($('.message-line').last().html());
-      $(this.$el).append(message);
-      $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
+      if($(message).html() != $('.message-line').last().html()){
+        $(this.$el).append(message);
+        $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
+      }
     }
   });
 
