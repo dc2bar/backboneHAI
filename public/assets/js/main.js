@@ -249,9 +249,14 @@ $(function (){
       var lastMessage = $('.message-line').last()
       if(message.html() != lastMessage.html()){
         if($('.link-author', message).text() == $('.link-author', lastMessage).text()) {
-          $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
-          if(!scrollDisable) {
-            $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
+          console.log($('.comment-entry', lastMessage).last().text());
+          console.log($('.comment-entry', message).last().text());
+          if($('.comment-entry', lastMessage).last().text() != $('.comment-entry', message).last().text())
+          {
+            $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
+            if(!scrollDisable) {
+              $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
+            }
           }
         } else {
           $(this.$el).append(message);
