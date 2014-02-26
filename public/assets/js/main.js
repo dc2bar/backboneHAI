@@ -15,11 +15,6 @@ function hidePreview() {
 
 var scrollDisable = false;
 
-$('.messages').scroll(function(){
-  scrollDisable = true;
-  $('.popover').show().delay(2000).fadeOut();
-})
-
 $(function (){
   /*-------------Application----------*/
   var App = {
@@ -232,6 +227,11 @@ $(function (){
       $(thisView.$el).empty();
       this.collection.each( function(message) {
         thisView.addLine(message);
+      });
+      $('.messages').scroll(function(){
+        console.log('scrolled');
+        scrollDisable = true;
+        $('.popover').show().delay(2000).fadeOut();
       });
     },
     addLine: function (message) {
