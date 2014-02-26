@@ -44,7 +44,9 @@ $(function (){
       });
 
       console.log(user.get('wintitle'));
-      document.title = user.get('wintitle');
+      if(user.get('wintitle')){
+        document.title = user.get('wintitle');
+      }
 
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
