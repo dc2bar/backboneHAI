@@ -15,7 +15,7 @@ function hidePreview() {
 
 var scrollDisable = false;
 
-var scrollTimer = setTimeout(function(){scrollDisable = false},5000);
+var scrollTimer = setTimeout(function(){scrollDisable = false; $(this.$el).scrollTop($(this.$el)[0].scrollHeight);},5000);
 
 $(function (){
   /*-------------Application----------*/
@@ -247,8 +247,7 @@ $(function (){
         var pos = $('.messages').scrollTop();
         if(pos < posWas) {
           clearTimeout(scrollTimer);
-          scrollTimer = setTimeout(function(){scrollDisable = false},5000);
-          setTimeout(function(){scrollDisable = false; $(this.$el).scrollTop($(this.$el)[0].scrollHeight);},5000);
+          scrollTimer = setTimeout(function(){scrollDisable = false; $(this.$el).scrollTop($(this.$el)[0].scrollHeight);},5000);
           if(!scrollDisable){
             scrollDisable = true;
             $('.popover').show().delay(1000).fadeOut();
