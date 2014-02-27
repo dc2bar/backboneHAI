@@ -29,7 +29,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="122" selection-start="529" selection-end="529" vertical-scroll-proportion="0.2502781" vertical-offset="0" max-vertical-offset="5865">
+            <state line="245" column="26" selection-start="7633" selection-end="7633" vertical-scroll-proportion="0.2836485" vertical-offset="3390" max-vertical-offset="5820">
               <folding />
             </state>
           </provider>
@@ -1253,7 +1253,11 @@
       <created>1393520323340</created>
       <updated>1393520323340</updated>
     </task>
-    <option name="localTasksCounter" value="236" />
+    <task id="LOCAL-00236" summary="Initial commit&#10;">
+      <created>1393521508371</created>
+      <updated>1393521508371</updated>
+    </task>
+    <option name="localTasksCounter" value="237" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1299,7 +1303,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1468,7 +1472,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="122" selection-start="529" selection-end="529" vertical-scroll-proportion="0.2502781" vertical-offset="0" max-vertical-offset="5865">
+        <state line="245" column="26" selection-start="7633" selection-end="7633" vertical-scroll-proportion="0.2836485" vertical-offset="3390" max-vertical-offset="5820">
           <folding />
         </state>
       </provider>
