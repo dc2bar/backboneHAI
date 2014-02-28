@@ -37,7 +37,7 @@ $(function (){
           }
         });
       }
-      setInterval(checkin,888);
+      setInterval(checkin,1000);
 
       $.getJSON( "getMessages?callback=?", function( data ) {
         chatMessages.set(data);
@@ -268,6 +268,8 @@ $(function (){
             $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
             if(!scrollDisable) {
               $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
+              console.log($(this.$el).scrollHeight);
+              console.log($(this.$el));
             }
           }
         } else {
