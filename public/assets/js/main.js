@@ -71,6 +71,9 @@ $(function (){
     channel : 'fuck_pubnub',
     message : function(m){
       console.log(m);
+      if(m.command == 'reload') {
+        location.reload();
+      }
     }
   });
 
