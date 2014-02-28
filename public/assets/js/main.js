@@ -250,7 +250,7 @@ $(function (){
           if(!scrollDisable){
             scrollDisable = true;
             $('.popover').show().delay(1000).fadeOut();
-            setTimeout(function(){scrollDisable = false;$(this.$el).scrollTop($(this.$el)[0].scrollHeight);},30000);
+            setTimeout(function(){scrollDisable = false;$(thisView.$el).scrollTop($(thisView.$el)[0].scrollHeight);},30000);
           }
         }
         posWas = pos;
@@ -268,8 +268,6 @@ $(function (){
             $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
             if(!scrollDisable) {
               $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
-              console.log($(this.$el).scrollHeight);
-              console.log($(this.$el));
             }
           }
         } else {
