@@ -2,7 +2,7 @@
   globals
  */
 function showPreview(target) {
-  var imageExtensions = ['gif','jpg','peg','iff','bmp'];
+  var imageExtensions = ['gif','jpg','png','iff','bmp'];
   if(imageExtensions.indexOf(target.substring((target.length-3),(target.length))) != -1){
     $('.preview-img').attr('src', target);
     $('.preview-container').show();
