@@ -14,12 +14,12 @@ function hidePreview() {
 }
 
 //sync everyone's timestamps
-function getTime() {
+function getServerTime() {
   $.ajax({
     type: "HEAD",
     url: '/',
     success: function(data, status, xhr) {
-      console.log(new Date(xhr.getResponseHeader('Date')));
+      return new Date(xhr.getResponseHeader('Date'));
     }
   });
 }
@@ -27,8 +27,6 @@ function getTime() {
 var scrollDisable = false;
 
 $(function (){
-  getTime();
-  console.log('time started');
   /*-------------Application----------*/
   var App = {
     Models: {},
@@ -325,7 +323,7 @@ $(function (){
         if (message != '') {
           message = this.filterMessage(message);
           if(message != false) {
-            var time = (new Date).getTime();
+            var time = getServerTime().getTime();
             var newLine = new App.Models.Message({
               avatar: App.User.get('avatar'),
               sender: App.User.get('name'),
