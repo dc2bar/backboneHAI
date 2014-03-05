@@ -345,7 +345,7 @@ $(function (){
         var messageArray = message.split(' ');
         for(var i in messageArray) {
           if(messageArray[i].toLowerCase().substring(0,4) == 'http' || messageArray[i].toLowerCase().substring(0,4) == 'www') {
-            messageArray[i] = '<a href="'+messageArray[i]+'" target="_blank" onmouseover="showPreview(this.href)" onmouseout="hidePreview()">'+messageArray[i]+' <img src="assets/images/camera.png"/></a>';
+            messageArray[i] = '<a href="'+messageArray[i]+'" target="_blank">'+messageArray[i]+' <img src="assets/images/camera.png" onmouseover="showPreview(this.href)" onmouseout="hidePreview()"/></a>';
           }
         }
         return messageArray.join(' ');
@@ -371,7 +371,7 @@ $(function (){
                 color: App.User.get('color'),
                 recipient: 'all',
                 time: time,
-                text: '<a href="'+node.url+'" target="_blank" onmouseover="showPreview(this.href)" onmouseout="hidePreview()">'+type+'! NSFW <img src="assets/images/camera.png"/></a>'
+                text: '<a href="'+node.url+'" target="_blank">'+type+'! NSFW <img src="assets/images/camera.png" onmouseover="showPreview(this.href)" onmouseout="hidePreview()"/></a>'
               })
               that.collection.add(newLine);
               break;
