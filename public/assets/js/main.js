@@ -356,7 +356,7 @@ $(function (){
         return false;
       }
       if(message.substring(0,4) == '/me '){
-        sendMe(message);
+        this.sendMe(message);
       }
       if((message.toLowerCase().indexOf('http') != -1) || (message.toLowerCase().indexOf('www.') != -1)){
         var messageArray = message.split(' ');
