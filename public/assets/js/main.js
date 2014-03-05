@@ -15,10 +15,11 @@ function hidePreview() {
 
 //sync everyone's timestamps
 function getTime() {
-  $.ajax('/', {
-    type: 'HEAD',
-    success: function(r,status,xhr) {
-      return(xhr.getResponseHeader('Date'));
+  $.ajax({
+    type: "HEAD",
+    url: '/',
+    success: function(data, status, xhr) {
+      console.log(new Date(xhr.getResponseHeader('Date')));
     }
   });
 }
