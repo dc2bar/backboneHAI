@@ -13,6 +13,16 @@ function hidePreview() {
   $('.preview-container').hide();
 }
 
+//sync everyone's timestamps
+function getTime() {
+  $.ajax('http://www.google.com', {
+    type: 'HEAD',
+    success: function(r,status,xhr) {
+      return(xhr.getResponseHeader('Date'));
+    }
+  });
+}
+
 var scrollDisable = false;
 
 $(function (){
