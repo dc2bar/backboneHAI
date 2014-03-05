@@ -342,6 +342,7 @@ $(function (){
     },
     filterMessage: function (message) {
       message = message.replace(/gay/g, "M@");
+      console.log(message.substring(0,4));
       if(message == '/tits'){
         this.getReddit('boobies');
         return false;
@@ -354,6 +355,9 @@ $(function (){
         this.getReddit('nsfw');
         return false;
       }
+      if(message.substring(0,4) == '/me '){
+        sendMe(message);
+      }
       if((message.toLowerCase().indexOf('http') != -1) || (message.toLowerCase().indexOf('www.') != -1)){
         var messageArray = message.split(' ');
         for(var i in messageArray) {
@@ -365,6 +369,17 @@ $(function (){
       } else {
         return message;
       }
+    },
+    sendMe: function (message) {
+      var that = this;
+      var newLine = new App.Models.Message({
+        avatar: App.User.get('avatar'),
+        sender: App.User.get('name') + message.substring(4),
+        color: App.User.get('color'),
+        recipient: 'all',
+        time: time
+      })
+      that.collection.add(newLine);
     },
     getReddit: function (type) {
       var that = this;
