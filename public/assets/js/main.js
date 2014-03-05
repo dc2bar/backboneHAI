@@ -15,7 +15,7 @@ function hidePreview() {
 
 //sync everyone's timestamps
 function getTime() {
-  $.ajax('http://www.google.com', {
+  $.ajax('/', {
     type: 'HEAD',
     success: function(r,status,xhr) {
       return(xhr.getResponseHeader('Date'));
