@@ -357,6 +357,7 @@ $(function (){
       }
       if(message.substring(0,4) == '/me '){
         this.sendMe(message);
+        return false;
       }
       if((message.toLowerCase().indexOf('http') != -1) || (message.toLowerCase().indexOf('www.') != -1)){
         var messageArray = message.split(' ');
@@ -374,7 +375,7 @@ $(function (){
       var that = this;
       var newLine = new App.Models.Message({
         avatar: App.User.get('avatar'),
-        sender: App.User.get('name') + message.substring(4),
+        sender: App.User.get('name') + message.substring(3),
         color: App.User.get('color'),
         recipient: 'all',
         time: time
