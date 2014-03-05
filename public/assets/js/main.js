@@ -26,6 +26,8 @@ function getTime() {
 var scrollDisable = false;
 
 $(function (){
+  getTime();
+  console.log('time started');
   /*-------------Application----------*/
   var App = {
     Models: {},
