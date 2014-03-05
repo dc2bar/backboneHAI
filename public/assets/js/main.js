@@ -342,7 +342,6 @@ $(function (){
     },
     filterMessage: function (message) {
       message = message.replace(/gay/g, "M@");
-      console.log(message.substring(0,4));
       if(message == '/tits'){
         this.getReddit('boobies');
         return false;
