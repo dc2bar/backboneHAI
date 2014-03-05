@@ -13,13 +13,14 @@ function hidePreview() {
   $('.preview-container').hide();
 }
 
+var time = new Date().getTime();
 //sync everyone's timestamps
 function getServerTime() {
   $.ajax({
     type: "HEAD",
     url: '/',
     success: function(data, status, xhr) {
-      return new Date(xhr.getResponseHeader('Date'));
+      time = new Date(xhr.getResponseHeader('Date')).getTime();
     }
   });
 }
@@ -27,6 +28,8 @@ function getServerTime() {
 var scrollDisable = false;
 
 $(function (){
+  getTime();
+  console.log('time started');
   /*-------------Application----------*/
   var App = {
     Models: {},
@@ -317,13 +320,13 @@ $(function (){
     },
     sendChat: function (e) {
       if (e.keyCode == 13 || e.type == 'click'){
+        getServerTime();
         scrollDisable = false;
         $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
         var message = $('.input-text',this.$el).val();
         if (message != '') {
           message = this.filterMessage(message);
           if(message != false) {
-            var time = getServerTime().getTime();
             var newLine = new App.Models.Message({
               avatar: App.User.get('avatar'),
               sender: App.User.get('name'),
@@ -375,7 +378,6 @@ $(function (){
           var node = nodes[selected].data;
           for(var i=0;i<5;i++){
             if(node.domain == 'i.imgur.com'){
-              var time = (new Date).getTime();
               var newLine = new App.Models.Message({
                 avatar: App.User.get('avatar'),
                 sender: App.User.get('name'),
