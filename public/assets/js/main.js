@@ -21,7 +21,8 @@ function getServerTime() {
     url: '/',
     success: function(data, status, xhr) {
       time = new Date(xhr.getResponseHeader('Date')).getTime();
-    }
+    },
+    async: false
   });
 }
 
