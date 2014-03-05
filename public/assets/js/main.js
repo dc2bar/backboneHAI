@@ -335,8 +335,8 @@ $(function (){
               text: message
             })
             this.collection.add(newLine);
-            $('.input-text',this.$el).val('');
           }
+          $('.input-text',this.$el).val('');
         }
       }
     },
