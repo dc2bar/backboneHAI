@@ -361,7 +361,7 @@ $(function (){
         for(var i in messageArray) {
           if(messageArray[i].toLowerCase().substring(0,4) == 'http' || messageArray[i].toLowerCase().substring(0,4) == 'www') {
             var flag = '';
-            console.log(messageArray[i].toLowerCase().indexOf('nsfw'));
+            console.log(messageArray[i].toLowerCase());
             if(messageArray[i].toLowerCase().indexOf('nsfw') != -1){
               flag = 'nsfw';
             }
