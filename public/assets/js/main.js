@@ -2,6 +2,10 @@
   globals
  */
 function showPreview(target) {
+  if(!previewEnable && target.toLowerCase().indexOf('nsfw') != -1){
+    $('.preview-img').attr('src', 'assets/images/150px-Bawwwww_bunny.jpg');
+    $('.preview-container').show();
+  }
   var imageExtensions = ['gif','jpg','png','iff','bmp'];
   if(imageExtensions.indexOf(target.substring((target.length-3),(target.length))) != -1){
     $('.preview-img').attr('src', target);
@@ -26,8 +30,8 @@ function getServerTime() {
   });
 }
 
-var scrollDisable = false;
-var previewDisable = false;
+var scrollEnable = true;
+var previewEnable = true;
 
 $(function (){
   /*-------------Application----------*/
@@ -265,13 +269,13 @@ $(function (){
           if($('.comment-entry', lastMessage).last().text() != $('.comment-entry', message).last().text())
           {
             $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
-            if(!scrollDisable) {
+            if(scrollEnable) {
               $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
             }
           }
         } else {
           $(this.$el).append(message);
-          if(!scrollDisable) {
+          if(scrollEnable) {
             $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
           }
         }
@@ -295,7 +299,7 @@ $(function (){
       'click .send' : 'sendChat',
       'keyup .input-text' : 'sendChat',
       'change #enableScroll' : 'toggleAutoscroll',
-      'change #enableenableNSFW' : 'togglePreview'
+      'change #enableNSFW' : 'togglePreview'
     },
     initialize: function () {
       this.render();
@@ -306,10 +310,10 @@ $(function (){
       this.$el.html(template());
     },
     toggleAutoscroll: function (e) {
-      console.log($(e.target).val());
+      scrollEnable = $(e.target).prop('checked');
     },
     togglePreview: function (e) {
-      console.log($(e.target).val());
+      previewEnable = $(e.target).prop('checked');
     },
     sendChat: function (e) {
       if (e.keyCode == 13 || e.type == 'click'){
