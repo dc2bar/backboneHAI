@@ -2511,7 +2511,7 @@ body .btn {
 .chat-area .message-container {
     height: 100%;
     width: 100%;
-    padding: 5px 0 40px 5px;
+    padding: 5px 0 60px 5px;
 }
 
 .chat-area .messages {
@@ -2535,7 +2535,7 @@ body .btn {
     border-left: 1px solid #dedede;
     height: 100%;
     width: 100%;
-    overflow-y: scroll;
+    overflow: hidden;
 }
 
 .input-text {
