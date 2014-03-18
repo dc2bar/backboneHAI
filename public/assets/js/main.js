@@ -27,6 +27,7 @@ function getServerTime() {
 }
 
 var scrollDisable = false;
+var previewDisable = false;
 
 $(function (){
   /*-------------Application----------*/
@@ -254,21 +255,6 @@ $(function (){
       this.collection.each( function(message) {
         thisView.addLine(message);
       });
-
-      var posWas;
-
-      $('.messages').scroll(function(){
-        var pos = $('.messages').scrollTop();
-        if(pos < posWas) {
-          if(!scrollDisable){
-            scrollDisable = true;
-            $('.popover').show().delay(1000).fadeOut();
-            setTimeout(function(){scrollDisable = false;$(thisView.$el).scrollTop($(thisView.$el)[0].scrollHeight);},30000);
-          }
-        }
-        posWas = pos;
-      });
-
     },
     addLine: function (message) {
       var messageView = new App.Views.Message({model: message});
@@ -307,7 +293,9 @@ $(function (){
     el: '.chat-input',
     events : {
       'click .send' : 'sendChat',
-      'keyup .input-text' : 'sendChat'
+      'keyup .input-text' : 'sendChat',
+      'change #enableScroll' : 'toggleAutoscroll',
+      'change #enableenableNSFW' : 'togglePreview'
     },
     initialize: function () {
       this.render();
@@ -317,10 +305,15 @@ $(function (){
       var template = Handlebars.compile(source);
       this.$el.html(template());
     },
+    toggleAutoscroll: function (e) {
+      console.log(e);
+    },
+    togglePreview: function (e) {
+      console.log(e);
+    },
     sendChat: function (e) {
       if (e.keyCode == 13 || e.type == 'click'){
         getServerTime();
-        scrollDisable = false;
         $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
         var message = $('.input-text',this.$el).val();
         if (message != '') {
