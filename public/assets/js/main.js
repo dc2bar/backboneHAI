@@ -2,15 +2,15 @@
   globals
  */
 function showPreview(target, type) {
-  console.log(type);
   if(previewEnable.toString() == 'false' && type == 'nsfw'){
     $('.preview-img').attr('src', 'assets/images/150px-Bawwwww_bunny.jpg');
     $('.preview-container').show();
-  }
-  var imageExtensions = ['gif','jpg','png','iff','bmp'];
-  if(imageExtensions.indexOf(target.substring((target.length-3),(target.length))) != -1){
-    $('.preview-img').attr('src', target);
-    $('.preview-container').show();
+  } else {
+    var imageExtensions = ['gif','jpg','png','iff','bmp'];
+    if(imageExtensions.indexOf(target.substring((target.length-3),(target.length))) != -1){
+      $('.preview-img').attr('src', target);
+      $('.preview-container').show();
+    }
   }
 }
 function hidePreview() {
