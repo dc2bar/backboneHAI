@@ -306,10 +306,10 @@ $(function (){
       this.$el.html(template());
     },
     toggleAutoscroll: function (e) {
-      console.log(e);
+      console.log($(e.target).val());
     },
     togglePreview: function (e) {
-      console.log(e);
+      console.log($(e.target).val());
     },
     sendChat: function (e) {
       if (e.keyCode == 13 || e.type == 'click'){
