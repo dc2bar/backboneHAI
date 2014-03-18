@@ -358,13 +358,12 @@ $(function (){
       }
       if((message.toLowerCase().indexOf('http') != -1) || (message.toLowerCase().indexOf('www.') != -1)){
         var messageArray = message.split(' ');
+        var flag = '';
+        if(messageArray.indexOf('nsfw') != -1 || messageArray.indexOf('NSFW') != -1){
+          flag = 'nsfw';
+        }
         for(var i in messageArray) {
           if(messageArray[i].toLowerCase().substring(0,4) == 'http' || messageArray[i].toLowerCase().substring(0,4) == 'www') {
-            var flag = '';
-            console.log(messageArray[i].toLowerCase());
-            if(messageArray[i].toLowerCase().indexOf('nsfw') != -1){
-              flag = 'nsfw';
-            }
             messageArray[i] = '<a href="'+messageArray[i]+'" target="_blank" onmouseover="showPreview(this.href,\''+flag+'\')" onmouseout="hidePreview()">'+messageArray[i]+' <img src="assets/images/camera.png"/></a>';
           }
         }
