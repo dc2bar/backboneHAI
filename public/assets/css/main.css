@@ -2512,6 +2512,8 @@ body .btn {
     height: 100%;
     width: 100%;
     padding: 5px 0 60px 5px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .chat-area .messages {
@@ -2528,6 +2530,8 @@ body .btn {
     width: 20%;
     float: left;
     height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .userslist {
     margin-left: 5px;
@@ -2535,7 +2539,6 @@ body .btn {
     border-left: 1px solid #dedede;
     height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 
 .input-text {
