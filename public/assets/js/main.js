@@ -3,7 +3,7 @@
  */
 function showPreview(target, type) {
   console.log(type);
-  if(!previewEnable && type == 'nsfw'){
+  if(previewEnable.toString() == 'false' && type == 'nsfw'){
     $('.preview-img').attr('src', 'assets/images/150px-Bawwwww_bunny.jpg');
     $('.preview-container').show();
   }
