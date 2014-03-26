@@ -24,7 +24,10 @@ pubnub.subscribe({
   callback: function (data) {
     if (data.method === 'create') {
       messagesCollection.add(data.model);
-      console.log(messagesCollection.length);
+      while (messagesCollection.length > 50)
+      {
+        messagesCollection.slice();
+      }
     } else if (data.method === 'update') {
       messagesCollection.remove(data.model);
     } else if (data.method === 'delete') {
