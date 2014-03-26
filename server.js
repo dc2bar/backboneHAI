@@ -24,6 +24,9 @@ pubnub.subscribe({
   callback: function (data) {
     if (data.method === 'create') {
       messagesCollection.add(data.model);
+      if(messagesCollection.length > 50){
+        messagesCollection.remove(messagesCollection.first(messagesCollection.length - 50));
+      }
     } else if (data.method === 'update') {
       messagesCollection.remove(data.model);
     } else if (data.method === 'delete') {
