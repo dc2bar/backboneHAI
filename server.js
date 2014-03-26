@@ -24,7 +24,7 @@ pubnub.subscribe({
   callback: function (data) {
     if (data.method === 'create') {
       messagesCollection.add(data.model);
-      console.log(data.model);
+      console.log(messagesCollection.length);
     } else if (data.method === 'update') {
       messagesCollection.remove(data.model);
     } else if (data.method === 'delete') {
