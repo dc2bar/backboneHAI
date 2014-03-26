@@ -19,6 +19,8 @@ var MessagesCollection = Backbone.Collection.extend({
 var usersCollection = new UsersCollection();
 var messagesCollection = new MessagesCollection();
 
+var filters = [];
+
 pubnub.subscribe({
   channel: 'backbone-collection-MessagesCollection',
   callback: function (data) {
@@ -91,6 +93,17 @@ app.get('/getMessages', function(req, res){
   res.header('Content-Type', 'application/json');
   res.header('Charset', 'utf-8');
   res.send(req.query.callback + '('+JSON.stringify(messagesCollection)+');');
+});
+
+app.get('/addFilter', function(req, res){
+  res.header('Content-Type', 'application/json');
+  res.header('Charset', 'utf-8');
+  var user = req.query.user;
+  var from = req.query.from;
+  var to = req.query.to;
+  var filter = {from: from, to: to};
+  filters[user] = filter;
+  res.send(req.query.callback + '('+JSON.stringify(filter)+');');
 });
 
 var checkedIn = [];
