@@ -21,6 +21,8 @@ var messagesCollection = new MessagesCollection();
 
 var filters = [];
 
+var messageCounter = 1;
+
 pubnub.subscribe({
   channel: 'backbone-collection-MessagesCollection',
   callback: function (data) {
@@ -88,11 +90,25 @@ app.get('/getUsers', function(req, res){
   res.send(req.query.callback + '('+JSON.stringify(usersCollection)+');');
 });
 
-
 app.get('/getMessages', function(req, res){
   res.header('Content-Type', 'application/json');
   res.header('Charset', 'utf-8');
   res.send(req.query.callback + '('+JSON.stringify(messagesCollection)+');');
+});
+
+app.get('/safePreview', function(req, res){
+  var target = req.query.uri;
+  target = new Buffer(target, 'base64');
+  var request = require('request').defaults({ encoding: null });
+
+  request.get(target, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      var data = "data:" + response.headers["content-type"] + ";base64," + new Buffer(body).toString('base64');
+      res.send(req.query.callback + '({"image":"'+data+'"});');
+    } else {
+      res.send(req.query.callback + '({"error":"'+error+'"});');
+    }
+  });
 });
 
 app.get('/addFilter', function(req, res){

@@ -6,7 +6,7 @@ function showPreview(target, type) {
     $('.preview-img').attr('src', 'assets/images/150px-Bawwwww_bunny.jpg');
     $('.preview-container').show();
   } else {
-    var imageExtensions = ['gif','jpg','png','iff','bmp'];
+    var imageExtensions = ['gif','jpg','png','iff','bmp','peg'];
     if(imageExtensions.indexOf(target.substring((target.length-3),(target.length))) != -1){
       $('.preview-img').attr('src', target);
       $('.preview-container').show();
