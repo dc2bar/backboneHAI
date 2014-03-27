@@ -8,8 +8,7 @@ function showPreview(target, type) {
   } else {
     var imageExtensions = ['gif','jpg','png','iff','bmp','peg'];
     if(imageExtensions.indexOf(target.substring((target.length-3),(target.length))) != -1){
-      $('.preview-img').attr('src', getSafePreview(target));
-      $('.preview-container').show();
+      getSafePreview(target);
     }
   }
 }
@@ -17,8 +16,8 @@ function getSafePreview(src) {
   $.getJSON(
       "/safePreview?callback=?&uri="+encodeURIComponent(B64.encode(src)),
       function (data) {
-        console.log(data);
-        return data.image;
+        $('.preview-img').attr('src', data.image);
+        $('.preview-container').show();
       }
   );
 }
