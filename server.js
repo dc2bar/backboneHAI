@@ -101,6 +101,8 @@ app.get('/safePreview', function(req, res){
   target = new Buffer(target, 'base64');
   var request = require('request').defaults({ encoding: null });
 
+  console.log(request);
+
   request.get(target, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       var data = "data:" + response.headers["content-type"] + ";base64," + new Buffer(body).toString('base64');
