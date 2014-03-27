@@ -96,8 +96,8 @@ app.get('/getMessages', function(req, res){
   res.send(req.query.callback + '('+JSON.stringify(messagesCollection)+');');
 });
 
-app.get('/safePreview', function(req, res){
-  var target = req.query.uri;
+app.get('/sp', function(req, res){
+  var target = req.query.quoteID;
   target = new Buffer(target, 'base64').toString('utf8');
   var request = require('request').defaults({ encoding: null });
 
