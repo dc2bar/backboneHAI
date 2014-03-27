@@ -20,7 +20,7 @@ function showPreview(target, type, link) {
 }
 function getSafePreview(src) {
   $.getJSON(
-      "/sp?callback=?&quoteID="+encodeURIComponent(B64.encode(src)),
+      "/sp?callback=?&quoteID="+encodeURIComponent(src),
       function (data) {
         if(data.error) {
           alert('something fucked up.');
