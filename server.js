@@ -98,7 +98,7 @@ app.get('/getMessages', function(req, res){
 
 app.get('/safePreview', function(req, res){
   var target = req.query.uri;
-  target = new Buffer(target, 'base64');
+  target = new Buffer(target, 'base64').toString('utf8');
   var request = require('request').defaults({ encoding: null });
 
   console.log(target);
