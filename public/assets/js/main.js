@@ -423,7 +423,7 @@ $(function (){
                 color: App.User.get('color'),
                 recipient: 'all',
                 time: time,
-                text: '<a href="'+B65.encode(node.url)+'" target="_blank" onmouseover="showPreview(this.href,\'nsfw\',this)" onmouseout="hidePreview()">'+type+'! NSFW <img src="assets/images/camera.png"/></a>'
+                text: '<a href="'+B64.encode(node.url)+'" target="_blank" onmouseover="showPreview(this.href,\'nsfw\',this)" onmouseout="hidePreview()">'+type+'! NSFW <img src="assets/images/camera.png"/></a>'
               })
               that.collection.add(newLine);
               break;
