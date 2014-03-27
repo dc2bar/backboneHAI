@@ -2,13 +2,13 @@
   globals
  */
 function showPreview(target, type, link) {
+  console.log($(link));
   mouseoff = false;
   if(previewEnable.toString() == 'false' && type == 'nsfw'){
     $('.preview-img').attr('src', 'assets/images/150px-Bawwwww_bunny.jpg');
     $('.preview-container').show();
   } else {
     var imageExtensions = ['gif','jpg','png','iff','bmp','peg'];
-    console.log(target);
     if(imageExtensions.indexOf(B64.decode(target).substring((target.length-3),(target.length))) != -1){
       if($('#enableSafePreview').prop('checked')){
         getSafePreview(target);
@@ -21,7 +21,7 @@ function showPreview(target, type, link) {
 }
 function getSafePreview(src) {
   $.getJSON(
-      "/sp?callback=?&quoteID="+encodeURIComponent(src),
+      "/sp?callback=?&quoteID="+encodeURIComponent(B64.encode(src)),
       function (data) {
         if(data.error) {
           alert('something fucked up.');
@@ -388,7 +388,7 @@ $(function (){
         }
         for(var i in messageArray) {
           if(messageArray[i].toLowerCase().substring(0,4) == 'http' || messageArray[i].toLowerCase().substring(0,4) == 'www') {
-            messageArray[i] = '<a href="'+ B64.encode(messageArray[i])+'" target="_blank" onmouseover="showPreview(this.href,\''+flag+'\',this)" onmouseout="hidePreview()">'+messageArray[i]+' <img src="assets/images/camera.png"/></a>';
+            messageArray[i] ='<a href="#" data-base="'+B64.encode(messageArray[i])+'" target="_blank" onmouseover="showPreview(this.data-base,\''+flag+'\')" onmouseout="hidePreview()">'+messageArray[i]+' <img src="assets/images/camera.png"/></a>';
           }
         }
         return messageArray.join(' ');
@@ -424,7 +424,7 @@ $(function (){
                 color: App.User.get('color'),
                 recipient: 'all',
                 time: time,
-                text: '<a href="'+B64.encode(node.url)+'" target="_blank" onmouseover="showPreview(this.href,\'nsfw\',this)" onmouseout="hidePreview()">'+type+'! NSFW <img src="assets/images/camera.png"/></a>'
+                text: '<a href="#" data-base="'+B64.encode(node.url)+'" target="_blank" onmouseover="showPreview(this.data-base,\'nsfw\',this)" onmouseout="hidePreview()">'+type+'! NSFW <img src="assets/images/camera.png"/></a>'
               })
               that.collection.add(newLine);
               break;
