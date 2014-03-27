@@ -104,7 +104,6 @@ app.get('/safePreview', function(req, res){
   request.get(target, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       var data = "data:" + response.headers["content-type"] + ";base64," + new Buffer(body).toString('base64');
-      console.log(data);
       res.send(req.query.callback + '({"image":"'+data+'"});');
     } else {
       res.send(req.query.callback + '({"error":"'+error+'"});');
