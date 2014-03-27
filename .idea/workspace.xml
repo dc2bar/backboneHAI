@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/main.js" afterPath="$PROJECT_DIR$/public/assets/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backbone.iws" />
@@ -26,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="4" selection-start="682" selection-end="682" vertical-scroll-proportion="0.5769231" vertical-offset="0" max-vertical-offset="6450">
+            <state line="22" column="1" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="6450">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -37,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="9" selection-start="2779" selection-end="2791" vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="2535">
+            <state line="103" column="56" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.35957065" vertical-offset="1344" max-vertical-offset="2535">
               <folding />
             </state>
           </provider>
@@ -80,9 +81,9 @@
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/scratch" />
         <option value="$PROJECT_DIR$/public/assets/css/main.css" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/assets/js/main.js" />
+        <option value="$PROJECT_DIR$/server.js" />
       </list>
     </option>
   </component>
@@ -1492,7 +1493,11 @@
       <created>1395888459781</created>
       <updated>1395888459781</updated>
     </task>
-    <option name="localTasksCounter" value="292" />
+    <task id="LOCAL-00292" summary="Initial commit&#10;">
+      <created>1395888604950</created>
+      <updated>1395888604950</updated>
+    </task>
+    <option name="localTasksCounter" value="293" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1891,19 +1896,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="9" selection-start="2779" selection-end="2791" vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="2535">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="4" selection-start="682" selection-end="682" vertical-scroll-proportion="0.5769231" vertical-offset="0" max-vertical-offset="6450">
+        <state line="22" column="1" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="6450">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="56" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.35957065" vertical-offset="1344" max-vertical-offset="2535">
+          <folding />
         </state>
       </provider>
     </entry>
