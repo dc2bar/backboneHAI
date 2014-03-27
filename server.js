@@ -101,11 +101,10 @@ app.get('/safePreview', function(req, res){
   target = new Buffer(target, 'base64').toString('utf8');
   var request = require('request').defaults({ encoding: null });
 
-  console.log(target);
-
   request.get(target, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       var data = "data:" + response.headers["content-type"] + ";base64," + new Buffer(body).toString('base64');
+      console.log(data);
       res.send(req.query.callback + '({"image":"'+data+'"});');
     } else {
       res.send(req.query.callback + '({"error":"'+error+'"});');
