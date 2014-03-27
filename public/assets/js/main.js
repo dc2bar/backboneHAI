@@ -3,7 +3,6 @@
  */
 function showPreview(target, type, link) {
   mouseoff = false;
-  console.log(link);
   if(previewEnable.toString() == 'false' && type == 'nsfw'){
     $('.preview-img').attr('src', 'assets/images/150px-Bawwwww_bunny.jpg');
     $('.preview-container').show();
@@ -20,9 +19,11 @@ function showPreview(target, type, link) {
   }
 }
 function getSafePreview(src) {
+  console.log(src)
   $.getJSON(
       "/sp?callback=?&quoteID="+encodeURIComponent(src),
       function (data) {
+        console.log(data);
         if(data.error) {
           alert('something fucked up.');
           alert(data.error);
