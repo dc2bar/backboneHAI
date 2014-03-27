@@ -101,7 +101,7 @@ app.get('/safePreview', function(req, res){
   target = new Buffer(target, 'base64');
   var request = require('request').defaults({ encoding: null });
 
-  console.log(request);
+  console.log(target);
 
   request.get(target, function (error, response, body) {
     if (!error && response.statusCode == 200) {
