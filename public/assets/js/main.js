@@ -2,7 +2,10 @@
   globals
  */
 function showPreview(target, type, link) {
-  console.log($(link));
+  var clear = $(link).data('base');
+  clear = B64.decode(clear);
+  $(link).attr('href',clear);
+  console.log(target);
   mouseoff = false;
   if(previewEnable.toString() == 'false' && type == 'nsfw'){
     $('.preview-img').attr('src', 'assets/images/150px-Bawwwww_bunny.jpg');
