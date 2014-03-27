@@ -8,7 +8,12 @@ function showPreview(target, type) {
   } else {
     var imageExtensions = ['gif','jpg','png','iff','bmp','peg'];
     if(imageExtensions.indexOf(target.substring((target.length-3),(target.length))) != -1){
-      getSafePreview(target);
+      if($('#enableSafePreview').prop('checked') == 'checked'){
+        getSafePreview(target);
+      } else {
+        $('.preview-img').attr('src',target);
+        $('.preview-container').show();
+      }
     }
   }
 }
