@@ -8,6 +8,7 @@ function showPreview(target, type) {
   } else {
     var imageExtensions = ['gif','jpg','png','iff','bmp','peg'];
     if(imageExtensions.indexOf(target.substring((target.length-3),(target.length))) != -1){
+      console.log($('#enableSafePreview').prop('checked'));
       if($('#enableSafePreview').prop('checked') == 'checked'){
         getSafePreview(target);
       } else {
