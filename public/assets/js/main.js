@@ -2,6 +2,7 @@
   globals
  */
 function showPreview(target, type) {
+  mouseoff = false;
   if(previewEnable.toString() == 'false' && type == 'nsfw'){
     $('.preview-img').attr('src', 'assets/images/150px-Bawwwww_bunny.jpg');
     $('.preview-container').show();
@@ -25,13 +26,16 @@ function getSafePreview(src) {
           alert('something fucked up.');
           alert(data.error);
         } else if (data.ix) {
-          $('.preview-img').attr('src', B64.decode(data.ix));
-          $('.preview-container').show();
+          if(mouseoff == false){
+            $('.preview-img').attr('src', B64.decode(data.ix));
+            $('.preview-container').show();
+          }
         }
       }
   );
 }
 function hidePreview() {
+  mouseoff = true;
   $('.preview-img').attr('src', '');
   $('.preview-container').hide();
 }
@@ -51,6 +55,7 @@ function getServerTime() {
 
 var scrollEnable = true;
 var previewEnable = true;
+var mouseoff = true;
 
 $(function (){
   /*-------------Application----------*/
