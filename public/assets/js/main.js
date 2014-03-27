@@ -2,9 +2,6 @@
   globals
  */
 function showPreview(target, type, link) {
-  var clear = $(link).data('base');
-  clear = B64.decode(clear);
-  $(link).attr('href',clear);
   console.log(target);
   mouseoff = false;
   if(previewEnable.toString() == 'false' && type == 'nsfw'){
