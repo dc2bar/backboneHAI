@@ -21,6 +21,7 @@ function getSafePreview(src) {
   $.getJSON(
       "/safePreview?callback=?&uri="+encodeURIComponent(B64.encode(src)),
       function (data) {
+        console.log(data);
         $('.preview-img').attr('src', B64.decode(data.image));
         $('.preview-container').show();
       }
