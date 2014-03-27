@@ -21,9 +21,13 @@ function getSafePreview(src) {
   $.getJSON(
       "/safePreview?callback=?&uri="+encodeURIComponent(B64.encode(src)),
       function (data) {
-        console.log(data);
-        $('.preview-img').attr('src', B64.decode(data.image));
-        $('.preview-container').show();
+        if(data.error) {
+          alert('something fucked up.');
+          alert(data.error);
+        } else if (data.ix) {
+          $('.preview-img').attr('src', B64.decode(data.ix));
+          $('.preview-container').show();
+        }
       }
   );
 }
