@@ -57,6 +57,7 @@ function sendMessage(message){
   $.post('/messages',message).done(function(d){console.log(d)});
 }
 
+var messageCounter = 0;
 var scrollEnable = true;
 var previewEnable = true;
 var mouseoff = true;
@@ -96,7 +97,6 @@ $(function (){
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
-      var messageCounter = 0;
 
       setInterval(getMessage,1000);
     }

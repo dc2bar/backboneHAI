@@ -29,12 +29,12 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="35" selection-start="2942" selection-end="2942" vertical-scroll-proportion="0.61538464" vertical-offset="1104" max-vertical-offset="5115">
+            <state line="58" column="0" selection-start="1547" selection-end="1547" vertical-scroll-proportion="0.4945055" vertical-offset="570" max-vertical-offset="5115">
               <folding>
-                <element signature="e#1780#1842#0" expanded="false" />
-                <element signature="e#3975#7145#0" expanded="false" />
-                <element signature="e#7194#7632#0" expanded="false" />
-                <element signature="e#7676#8408#0" expanded="false" />
+                <element signature="e#1804#1866#0" expanded="false" />
+                <element signature="e#3969#7139#0" expanded="false" />
+                <element signature="e#7188#7626#0" expanded="false" />
+                <element signature="e#7670#8402#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1763,7 +1763,11 @@
       <created>1396289355966</created>
       <updated>1396289355966</updated>
     </task>
-    <option name="localTasksCounter" value="354" />
+    <task id="LOCAL-00354" summary="Initial commit&#10;">
+      <created>1396289804314</created>
+      <updated>1396289804314</updated>
+    </task>
+    <option name="localTasksCounter" value="355" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2155,12 +2159,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="35" selection-start="2942" selection-end="2942" vertical-scroll-proportion="0.61538464" vertical-offset="1104" max-vertical-offset="5115">
+        <state line="58" column="0" selection-start="1547" selection-end="1547" vertical-scroll-proportion="0.4945055" vertical-offset="570" max-vertical-offset="5115">
           <folding>
-            <element signature="e#1780#1842#0" expanded="false" />
-            <element signature="e#3975#7145#0" expanded="false" />
-            <element signature="e#7194#7632#0" expanded="false" />
-            <element signature="e#7676#8408#0" expanded="false" />
+            <element signature="e#1804#1866#0" expanded="false" />
+            <element signature="e#3969#7139#0" expanded="false" />
+            <element signature="e#7188#7626#0" expanded="false" />
+            <element signature="e#7670#8402#0" expanded="false" />
           </folding>
         </state>
       </provider>
