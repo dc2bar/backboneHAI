@@ -27,6 +27,8 @@ exports.addMessage = function(req, res) {
 }
 
 exports.catchUp = function(req, res) {
+  console.log(req.params);
+  console.log(messageCounter);
   var last = req.params.lastID;
   if(last*1 == messageCounter){
     res.send([]);
@@ -34,6 +36,7 @@ exports.catchUp = function(req, res) {
   var models = cmessagesCollection.select(function (model) {
     return model.get('msgID') > last;
   });
+  console.log(models);
   res.send(models);
 }
 
