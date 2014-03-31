@@ -1,5 +1,6 @@
 var express = require('express'),
-    messages = require('./routes/messages');
+    messages = require('./routes/messages.js');
+
 
 var app = express();
 
