@@ -288,7 +288,8 @@ $(function (){
       $.getJSON(endpoint,function(data) {
         if(data.messages && data.messages.length > 0){
           for(var i in data.messages){
-            console.log(data.messages[i]);
+            var msg = new App.Models.Message(data.messages[i]);
+            chatMessages.add(msg);
           }
           var last = data.messages.pop();
           messageCounter = last.msgID;
@@ -305,6 +306,7 @@ $(function (){
       });
     },
     addLine: function (message) {
+      console.log('adding');
       var messageView = new App.Views.Message({model: message});
       var message = $(messageView.render().el).attr('class','message-line');
       var lastMessage = $('.message-line').last()
