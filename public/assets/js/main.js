@@ -284,14 +284,12 @@ $(function (){
       setInterval(this.getMessages, 1000);
     },
     getMessages: function () {
-      var thisView = this;
       var endpoint = '/catchUp?lastID=' + messageCounter;
       $.getJSON(endpoint,function(data) {
         if(data.messages && data.messages.length > 0){
           for(var i in data.messages){
             var msg = new App.Models.Message(data.messages[i]);
-            console.log(thisView);
-            thisView.addLine(msg);
+            App.Views.ChatMessages.addLine(msg);
           }
           var last = data.messages.pop();
           messageCounter = last.msgID;
@@ -308,7 +306,6 @@ $(function (){
       });
     },
     addLine: function (message) {
-      console.log(message);
       var messageView = new App.Views.Message({model: message});
       var message = $(messageView.render().el).attr('class','message-line');
       var lastMessage = $('.message-line').last()
