@@ -7,6 +7,8 @@ var Server = mongo.Server,
 var server = new Server('localhost', 27017, {auto_reconnect: true});
 db = new Db('messages', server);
 
+var current = "";
+
 db.open(function(err, db) {
   if(!err) {
     console.log("Connected to 'messages' database");
@@ -39,17 +41,22 @@ exports.findAll = function(req, res) {
 
 exports.addMessage = function(req, res) {
   var wine = req.body;
-  console.log('Adding message: ' + JSON.stringify(wine));
-  db.collection('message', function(err, collection) {
-    collection.insert(wine, {safe:true}, function(err, result) {
+  console.log('Adding message: ' + JSON.stringify(messages));
+  db.collection('messages', function(err, collection) {
+    collection.insert(messages, {safe:true}, function(err, result) {
       if (err) {
         res.send({'error':'An error has occurred'});
       } else {
         console.log('Success: ' + JSON.stringify(result[0]));
         res.send(result[0]);
+        current = result[0]._id;
       }
     });
   });
+}
+
+exports.getCurrent = function(){
+  return current;
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
