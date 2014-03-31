@@ -351,15 +351,17 @@ $(function (){
         if (message != '') {
           message = this.filterMessage(message);
           if(message != false) {
-            var newLine = new App.Models.Message({
+            var line = {
               avatar: App.User.get('avatar'),
               sender: App.User.get('name'),
               color: App.User.get('color'),
               recipient: 'all',
               time: time,
               text: message
-            })
+            }
+            var newLine = new App.Models.Message(line);
             this.collection.add(newLine);
+            sendMessage(line);
           }
           $('.input-text',this.$el).val('');
         }
@@ -401,15 +403,16 @@ $(function (){
     },
     sendMe: function (message) {
       var that = this;
-      var newLine = new App.Models.Message({
+      var line = {
         avatar: App.User.get('avatar'),
         sender: App.User.get('name') + message.substring(3),
         color: App.User.get('color'),
         recipient: 'all',
         time: time
-      })
+      }
+      var newLine = new App.Models.Message(line);
       that.collection.add(newLine);
-      console.log(newLine);
+      sendMessage(line);
     },
     getReddit: function (type) {
       var that = this;
