@@ -1,18 +1,4 @@
 var express = require('express'),
-    messages = require('./routes/messages.js');
-
-
-var app = express();
-
-app.get('/messages', messages.findAll);
-app.get('/messages/:id', messages.findById);
-app.get('/messages/catchUp', messages.catchUp);
-
-app.listen(3000);
-console.log('Listening on port 3000...');
-
-
-var express = require('express'),
     message = require('./routes/messages');
 
 var app = express();
