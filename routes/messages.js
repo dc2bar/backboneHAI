@@ -55,9 +55,11 @@ exports.addMessage = function(req, res) {
   });
 }
 
+
+
 exports.catchUp = function(req, res) {
   var last = req.params.lastID;
-  db.collection.find({_id: {$gt: {ObjectId(last)}}}).toArray(function(err, items) {
+  db.collection.find({_id:{$gt:ObjectId(last)}}).toArray(function(err, items) {
     res.send(items);
   });
 }
