@@ -289,7 +289,8 @@ $(function (){
         if(data.messages && data.messages.length > 0){
           for(var i in data.messages){
             var msg = new App.Models.Message(data.messages[i]);
-            App.Views.ChatMessages.addLine(msg);
+            self.addLine(msg)
+            console.log(self);
           }
           var last = data.messages.pop();
           messageCounter = last.msgID;
