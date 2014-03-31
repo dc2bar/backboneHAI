@@ -290,7 +290,8 @@ $(function (){
         if(data.messages && data.messages.length > 0){
           for(var i in data.messages){
             var msg = new App.Models.Message(data.messages[i]);
-            that.addLine(msg);
+            console.log(msg);
+            //that.addLine(msg);
           }
           var last = data.messages.pop();
           messageCounter = last.msgID;
