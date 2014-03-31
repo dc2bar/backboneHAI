@@ -62,9 +62,9 @@ var messageCounter = 0;
 function getMessage(){
   $.getJSON('/catchUp?lastID=0',function(data) {
     if(data && data.length > 0){
-      console.log(data);
       var newLast = data.pop();
       messageCounter = newLast.msgID;
+      console.log(messageCounter);
     }
     setTimeout(getMessage(),200);
   });
