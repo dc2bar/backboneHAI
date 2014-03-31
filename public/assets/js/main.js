@@ -57,25 +57,6 @@ function sendMessage(message){
   $.post('/messages',message).done(function(d){console.log(d)});
 }
 
-var messageCounter = 0;
-
-function getMessage(){
-  var endpoint = '/catchUp?lastID=' + messageCounter;
-  $.getJSON(endpoint,function(data) {
-    if(data.messages && data.messages.length > 0){
-      for(var i in data.messages){
-        console.log(data.messages[i]);
-      }
-      var last = data.messages.pop();
-      messageCounter = last.msgID;
-    } else {
-      console.log('up-to-date');
-    }
-  });
-}
-
-setInterval(getMessage,1000);
-
 var scrollEnable = true;
 var previewEnable = true;
 var mouseoff = true;
@@ -115,6 +96,9 @@ $(function (){
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
+      var messageCounter = 0;
+
+      setInterval(getMessage,1000);
     }
   };
 
@@ -467,4 +451,21 @@ $(function (){
   });
 
   new App.start();
+
 });
+
+function getMessage(){
+  var endpoint = '/catchUp?lastID=' + messageCounter;
+  $.getJSON(endpoint,function(data) {
+    if(data.messages && data.messages.length > 0){
+      for(var i in data.messages){
+        var msg = new App.Models.Message(data.messages[i]);
+        App.Views.ChatMessages.addLine(msg);
+      }
+      var last = data.messages.pop();
+      messageCounter = last.msgID;
+    } else {
+      console.log('up-to-date');
+    }
+  });
+}
