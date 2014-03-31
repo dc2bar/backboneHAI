@@ -47,7 +47,7 @@
       <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="4" selection-start="37" selection-end="68" vertical-scroll-proportion="41.23077" vertical-offset="1087" max-vertical-offset="2580">
+            <state line="1" column="4" selection-start="37" selection-end="68" vertical-scroll-proportion="43.53846" vertical-offset="1147" max-vertical-offset="2580">
               <folding />
             </state>
           </provider>
@@ -56,7 +56,7 @@
       <file leaf-file-name="messages.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/messages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="22" selection-start="1043" selection-end="1043" vertical-scroll-proportion="0.7185741" vertical-offset="187" max-vertical-offset="765">
+            <state line="32" column="31" selection-start="886" selection-end="886" vertical-scroll-proportion="0.4934334" vertical-offset="217" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -1650,7 +1650,11 @@
       <created>1396282729497</created>
       <updated>1396282729497</updated>
     </task>
-    <option name="localTasksCounter" value="327" />
+    <task id="LOCAL-00327" summary="Initial commit&#10;">
+      <created>1396282864060</created>
+      <updated>1396282864060</updated>
+    </task>
+    <option name="localTasksCounter" value="328" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2035,14 +2039,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="4" selection-start="37" selection-end="68" vertical-scroll-proportion="41.23077" vertical-offset="1087" max-vertical-offset="2580">
+        <state line="1" column="4" selection-start="37" selection-end="68" vertical-scroll-proportion="43.53846" vertical-offset="1147" max-vertical-offset="2580">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/messages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="22" selection-start="1043" selection-end="1043" vertical-scroll-proportion="0.7185741" vertical-offset="187" max-vertical-offset="765">
+        <state line="32" column="31" selection-start="886" selection-end="886" vertical-scroll-proportion="0.4934334" vertical-offset="217" max-vertical-offset="765">
           <folding />
         </state>
       </provider>

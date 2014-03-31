@@ -27,9 +27,9 @@ exports.addMessage = function(req, res) {
 }
 
 exports.catchUp = function(req, res) {
-  console.log(req.params);
+  var last = req.query.lastID;
   console.log(messageCounter);
-  var last = req.params.lastID;
+  console.log(last);
   if(last*1 == messageCounter){
     res.send([]);
   }
