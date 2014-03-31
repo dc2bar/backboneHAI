@@ -284,6 +284,7 @@ $(function (){
       setInterval(this.getMessages, 1000);
     },
     getMessages: function () {
+      console.log(this.collection);
       var that = this;
       var endpoint = '/catchUp?lastID=' + messageCounter;
       $.getJSON(endpoint,function(data) {
