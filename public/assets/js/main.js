@@ -395,8 +395,6 @@ $(function (){
               time: time,
               text: message
             }
-            var newLine = new App.Models.Message(line);
-            this.collection.add(newLine);
             sendMessage(line);
           }
           $('.input-text',this.$el).val('');
@@ -467,8 +465,6 @@ $(function (){
                 time: time,
                 text: '<a href="'+node.url+'" target="_blank" onmouseover="showPreview(this.href,\'nsfw\')" onmouseout="hidePreview()">'+type+'! NSFW <img src="assets/images/camera.png"/></a>'
               }
-              var newLine = new App.Models.Message(line);
-              that.collection.add(newLine);
               sendMessage(line);
               break;
             } else {
