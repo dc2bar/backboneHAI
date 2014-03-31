@@ -30,13 +30,12 @@ exports.addMessage = function(req, res) {
 exports.catchUp = function(req, res) {
   var last = req.query.lastID;
   if(last*1 == messageCounter){
-    res.send([]);
+    res.send({status:"up-to-date"});
   }
   var models = cmessagesCollection.select(function (model) {
     return model.get('msgID') > last;
   });
-  console.log(cmessagesCollection);
-  res.send(models);
+  res.send({messages:models});
 }
 
 exports.getCurrent = function(){
