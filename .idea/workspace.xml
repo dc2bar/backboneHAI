@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/messages.js" afterPath="$PROJECT_DIR$/routes/messages.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/main.js" afterPath="$PROJECT_DIR$/public/assets/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backbone.iws" />
@@ -26,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="20" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="6645">
+            <state line="417" column="16" selection-start="13076" selection-end="13076" vertical-scroll-proportion="0.8076923" vertical-offset="5784" max-vertical-offset="6750">
               <folding />
             </state>
           </provider>
@@ -53,10 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="messages.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/messages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="45" selection-start="936" selection-end="936" vertical-scroll-proportion="0.54971856" vertical-offset="217" max-vertical-offset="750">
+            <state line="39" column="1" selection-start="1053" selection-end="1053" vertical-scroll-proportion="-22.5" vertical-offset="0" max-vertical-offset="750">
               <folding />
             </state>
           </provider>
@@ -93,8 +93,8 @@
         <option value="$PROJECT_DIR$/api/server.js" />
         <option value="$PROJECT_DIR$/api/routes/index.js" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/public/assets/js/main.js" />
         <option value="$PROJECT_DIR$/routes/messages.js" />
+        <option value="$PROJECT_DIR$/public/assets/js/main.js" />
       </list>
     </option>
   </component>
@@ -1666,7 +1666,11 @@
       <created>1396283085490</created>
       <updated>1396283085490</updated>
     </task>
-    <option name="localTasksCounter" value="331" />
+    <task id="LOCAL-00331" summary="Initial commit&#10;">
+      <created>1396283115627</created>
+      <updated>1396283115627</updated>
+    </task>
+    <option name="localTasksCounter" value="332" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2035,13 +2039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="20" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="6645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="1" selection-start="147" selection-end="147" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="210">
@@ -2058,7 +2055,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/messages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="45" selection-start="936" selection-end="936" vertical-scroll-proportion="0.54971856" vertical-offset="217" max-vertical-offset="750">
+        <state line="39" column="1" selection-start="1053" selection-end="1053" vertical-scroll-proportion="-22.5" vertical-offset="0" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="417" column="16" selection-start="13076" selection-end="13076" vertical-scroll-proportion="0.8076923" vertical-offset="5784" max-vertical-offset="6750">
           <folding />
         </state>
       </provider>
