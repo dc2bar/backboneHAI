@@ -47,7 +47,7 @@
       <file leaf-file-name="messages.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/messages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="12" selection-start="313" selection-end="313" vertical-scroll-proportion="0.36585367" vertical-offset="0" max-vertical-offset="1560">
+            <state line="52" column="32" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.42213884" vertical-offset="555" max-vertical-offset="1560">
               <folding />
             </state>
           </provider>
@@ -1596,7 +1596,11 @@
       <created>1396273687640</created>
       <updated>1396273687640</updated>
     </task>
-    <option name="localTasksCounter" value="320" />
+    <task id="LOCAL-00320" summary="Initial commit&#10;">
+      <created>1396273792854</created>
+      <updated>1396273792854</updated>
+    </task>
+    <option name="localTasksCounter" value="321" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1988,7 +1992,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/messages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="12" selection-start="313" selection-end="313" vertical-scroll-proportion="0.36585367" vertical-offset="0" max-vertical-offset="1560">
+        <state line="52" column="32" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.42213884" vertical-offset="555" max-vertical-offset="1560">
           <folding />
         </state>
       </provider>
