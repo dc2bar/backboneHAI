@@ -89,6 +89,8 @@ app.get('/messages', message.findAll);
 app.get('/messages/:id', message.findById);
 app.post('/messages', message.addMessage);
 
+app.get('/catchUp', message.catchUp);
+
 app.get('/getUsers', function(req, res){
   res.header('Content-Type', 'application/json');
   res.header('Charset', 'utf-8');
