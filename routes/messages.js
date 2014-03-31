@@ -23,8 +23,8 @@ exports.addMessage = function(req, res) {
   if(cmessagesCollection.length > 50){
     cmessagesCollection.remove(cmessagesCollection.first(cmessagesCollection.length - 50));
   }
-  messageCounter++;
   res.send({msgID: messageCounter});
+  messageCounter++;
 }
 
 exports.catchUp = function(req, res) {
