@@ -22,8 +22,6 @@ var messagesCollection = new MessagesCollection();
 
 var filters = [];
 
-var messageCounter = 1;
-
 pubnub.subscribe({
   channel: 'backbone-collection-MessagesCollection',
   callback: function (data) {
@@ -86,9 +84,7 @@ app.configure(function(){
 });
 
 app.get('/messages', message.findAll);
-app.get('/messages/:id', message.findById);
 app.post('/messages', message.addMessage);
-
 app.get('/catchUp', message.catchUp);
 
 app.get('/getUsers', function(req, res){
