@@ -61,6 +61,7 @@ var messageCounter = 0;
 
 function getMessage(){
   var endpoint = '/catchUp?lastID=' + messageCounter;
+  console.log(endpoint);
   $.getJSON(endpoint,function(data) {
     if(data && data.length > 0){
       console.log(data);
