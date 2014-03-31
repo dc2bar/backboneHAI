@@ -6,7 +6,7 @@ var cMessagesCollection = Backbone.Collection.extend({
 });
 
 var cmessagesCollection = new cMessagesCollection();
-var messageCounter = 0;
+var messageCounter = 1;
 
 exports.findAll = function(req, res) {
   db.collection('messages', function(err, collection) {
@@ -18,6 +18,7 @@ exports.findAll = function(req, res) {
 
 exports.addMessage = function(req, res) {
   var message = req.body;
+  message.msgID = messageCounter;
   cmessagesCollection.add(message);
   if(cmessagesCollection.length > 50){
     cmessagesCollection.remove(cmessagesCollection.first(cmessagesCollection.length - 50));
