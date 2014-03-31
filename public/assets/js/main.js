@@ -281,7 +281,7 @@ $(function (){
       this.listenTo(this.collection, "change reset remove", this.render);
       this.listenTo(this.collection, "add", this.addLine);
       this.render();
-      setInterval(this.getMessages, 1000);
+      //setInterval(this.getMessages, 1000);
     },
     getMessages: function () {
       var that = this;
@@ -290,7 +290,7 @@ $(function (){
         if(data.messages && data.messages.length > 0){
           for(var i in data.messages){
             var msg = new App.Models.Message(data.messages[i]);
-            that.addLine(msg);
+            //App.Collections.Messages.add(msg);
           }
           var last = data.messages.pop();
           messageCounter = last.msgID;
