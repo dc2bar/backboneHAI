@@ -53,6 +53,10 @@ function getServerTime() {
   });
 }
 
+function sendMessage(message){
+  $.post('/messages',message).done(function(d){console.log(d)});
+}
+
 var scrollEnable = true;
 var previewEnable = true;
 var mouseoff = true;
@@ -405,6 +409,7 @@ $(function (){
         time: time
       })
       that.collection.add(newLine);
+      console.log(newLine);
     },
     getReddit: function (type) {
       var that = this;
