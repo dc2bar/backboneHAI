@@ -59,9 +59,8 @@ function sendMessage(message){
 
 var messageCounter = 0;
 
-function getMessage(last){
-  last = last ? last : 0;
-  $.getJSON('/catchUp?lastID='+last,function(data) {
+function getMessage(){
+  $.getJSON('/catchUp?lastID=0',function(data) {
     if(data && data.length > 0){
       console.log(data);
       var newLast = data.pop();
