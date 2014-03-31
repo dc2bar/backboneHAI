@@ -40,10 +40,10 @@ exports.findAll = function(req, res) {
 };
 
 exports.addMessage = function(req, res) {
-  var wine = req.body;
-  console.log('Adding message: ' + JSON.stringify(messages));
+  var message = req.body;
+  console.log('Adding message: ' + JSON.stringify(message));
   db.collection('messages', function(err, collection) {
-    collection.insert(messages, {safe:true}, function(err, result) {
+    collection.insert(message, {safe:true}, function(err, result) {
       if (err) {
         res.send({'error':'An error has occurred'});
       } else {
