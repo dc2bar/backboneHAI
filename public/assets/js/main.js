@@ -57,6 +57,20 @@ function sendMessage(message){
   $.post('/messages',message).done(function(d){console.log(d)});
 }
 
+var messageCounter = 0;
+
+function getMessage(last){
+  last = last ? last : 0;
+  $.getJSON('/catchUp?lastID='+last,function(data) {
+    if(data && data.length > 0){
+      console.log(data);
+      var newLast = data.pop();
+      messageCounter = newLast.msgID;
+    }
+    setTimeout(getMessage(messageCounter),200);
+  });
+}
+
 var scrollEnable = true;
 var previewEnable = true;
 var mouseoff = true;
