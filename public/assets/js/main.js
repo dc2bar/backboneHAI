@@ -281,16 +281,16 @@ $(function (){
       this.listenTo(this.collection, "change reset remove", this.render);
       this.listenTo(this.collection, "add", this.addLine);
       this.render();
-      setInterval(this.getMessages, 1000);
+      this.setInterval(this.getMessages, 1000);
     },
     getMessages: function () {
+      var that = this;
       var endpoint = '/catchUp?lastID=' + messageCounter;
       $.getJSON(endpoint,function(data) {
         if(data.messages && data.messages.length > 0){
           for(var i in data.messages){
             var msg = new App.Models.Message(data.messages[i]);
-            self.addLine(msg)
-            console.log(self);
+            that.addLine(msg);
           }
           var last = data.messages.pop();
           messageCounter = last.msgID;
