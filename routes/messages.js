@@ -28,15 +28,13 @@ exports.addMessage = function(req, res) {
 
 exports.catchUp = function(req, res) {
   var last = req.query.lastID;
-  console.log(messageCounter);
-  console.log(last);
   if(last*1 == messageCounter){
     res.send([]);
   }
   var models = cmessagesCollection.select(function (model) {
     return model.get('msgID') > last;
   });
-  console.log(models);
+  console.log(cmessagesCollection);
   res.send(models);
 }
 
