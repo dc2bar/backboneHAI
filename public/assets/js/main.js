@@ -60,14 +60,13 @@ function sendMessage(message){
 var messageCounter = 0;
 
 function getMessage(){
-  console.log('active');
   var endpoint = '/catchUp?lastID=' + messageCounter;
   $.getJSON(endpoint,function(data) {
     if(data.messages && data.messages.length > 0){
+      console.log(data.messages);
       var last = data.messages.pop();
       messageCounter = last.msgID;
     }
-    setTimeout(getMessage(),1000);
   });
 }
 
