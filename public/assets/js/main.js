@@ -308,6 +308,7 @@ $(function (){
       });
     },
     addLine: function (message) {
+      console.log(message);
       var messageView = new App.Views.Message({model: message});
       var message = $(messageView.render().el).attr('class','message-line');
       var lastMessage = $('.message-line').last()
@@ -444,15 +445,17 @@ $(function (){
           var node = nodes[selected].data;
           for(var i=0;i<5;i++){
             if(node.domain == 'i.imgur.com'){
-              var newLine = new App.Models.Message({
+              var line = {
                 avatar: App.User.get('avatar'),
                 sender: App.User.get('name'),
                 color: App.User.get('color'),
                 recipient: 'all',
                 time: time,
                 text: '<a href="'+node.url+'" target="_blank" onmouseover="showPreview(this.href,\'nsfw\')" onmouseout="hidePreview()">'+type+'! NSFW <img src="assets/images/camera.png"/></a>'
-              })
+              }
+              var newLine = new App.Models.Message(line);
               that.collection.add(newLine);
+              sendMessage(line);
               break;
             } else {
               node = nodes[Math.round(Math.random() * (100))].data;
