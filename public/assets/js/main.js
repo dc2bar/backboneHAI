@@ -284,13 +284,30 @@ $(function (){
       setInterval(this.getMessages, 1000);
     },
     getMessages: function () {
-      var that = this;
       var endpoint = '/catchUp?lastID=' + messageCounter;
       $.getJSON(endpoint,function(data) {
         if(data.messages && data.messages.length > 0){
           for(var i in data.messages){
             var msg = new App.Models.Message(data.messages[i]);
-            //App.Collections.Messages.add(msg);
+            var messageView = new App.Views.Message({model: msg});
+            var message = $(messageView.render().el).attr('class','message-line');
+            var lastMessage = $('.message-line').last()
+            if(message.html() != lastMessage.html()){
+              if($('.link-author', message).text() == $('.link-author', lastMessage).text()) {
+                if($('.comment-entry', lastMessage).last().text() != $('.comment-entry', message).last().text())
+                {
+                  $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
+                  if(scrollEnable) {
+                    $('.messages').scrollTop($('.messages')[0].scrollHeight);
+                  }
+                }
+              } else {
+                $('.messages').append(message);
+                if(scrollEnable) {
+                  $('.messages').scrollTop($('.messages')[0].scrollHeight);
+                }
+              }
+            }
           }
           var last = data.messages.pop();
           messageCounter = last.msgID;

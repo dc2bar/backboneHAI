@@ -29,12 +29,9 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="292" column="14" selection-start="9000" selection-end="9000" vertical-scroll-proportion="0.6996337" vertical-offset="1973" max-vertical-offset="5070">
+            <state line="285" column="30" selection-start="8704" selection-end="8704" vertical-scroll-proportion="0.13653846" vertical-offset="4204" max-vertical-offset="7350">
               <folding>
-                <element signature="e#1804#1866#0" expanded="false" />
-                <element signature="e#3932#7102#0" expanded="false" />
-                <element signature="e#7151#7589#0" expanded="false" />
-                <element signature="e#7633#8365#0" expanded="false" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1815,7 +1812,11 @@
       <created>1396291174250</created>
       <updated>1396291174250</updated>
     </task>
-    <option name="localTasksCounter" value="367" />
+    <task id="LOCAL-00367" summary="Initial commit&#10;">
+      <created>1396291206566</created>
+      <updated>1396291206566</updated>
+    </task>
+    <option name="localTasksCounter" value="368" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2207,12 +2208,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="292" column="14" selection-start="9000" selection-end="9000" vertical-scroll-proportion="0.6996337" vertical-offset="1973" max-vertical-offset="5070">
+        <state line="285" column="30" selection-start="8704" selection-end="8704" vertical-scroll-proportion="0.13653846" vertical-offset="4204" max-vertical-offset="7350">
           <folding>
-            <element signature="e#1804#1866#0" expanded="false" />
-            <element signature="e#3932#7102#0" expanded="false" />
-            <element signature="e#7151#7589#0" expanded="false" />
-            <element signature="e#7633#8365#0" expanded="false" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
