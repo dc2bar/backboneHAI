@@ -66,7 +66,7 @@ function getMessage(){
       var newLast = data.pop();
       messageCounter = newLast.msgID;
     }
-    setTimeout(getMessage(messageCounter),200);
+    setTimeout(getMessage(),200);
   });
 }
 
