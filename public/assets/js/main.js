@@ -68,6 +68,8 @@ function getMessage(){
       }
       var last = data.messages.pop();
       messageCounter = last.msgID;
+    } else {
+      console.log('up-to-date');
     }
   });
 }
