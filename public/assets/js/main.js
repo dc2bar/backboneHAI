@@ -74,7 +74,7 @@ function getMessage(){
   });
 }
 
-setInterval(getMessage(),1000);
+setInterval(getMessage,1000);
 
 var scrollEnable = true;
 var previewEnable = true;
