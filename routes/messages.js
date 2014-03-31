@@ -37,7 +37,7 @@ exports.findAll = function(req, res) {
   });
 };
 
-exports.addWine = function(req, res) {
+exports.addMessage = function(req, res) {
   var wine = req.body;
   console.log('Adding message: ' + JSON.stringify(wine));
   db.collection('message', function(err, collection) {

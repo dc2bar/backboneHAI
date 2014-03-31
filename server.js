@@ -1,5 +1,6 @@
 var _ = require('underscore')._,
     Backbone = require('backbone'),
+    message = require('./routes/messages'),
     pubnub = require('pubnub').init({
       publish_key: 'pub-c-94687441-ef61-4ff5-a0eb-c852642a769a',
       subscribe_key: 'sub-c-e3c8bbee-926d-11e3-9979-02ee2ddab7fe',
@@ -83,6 +84,10 @@ app.configure(function(){
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
 });
+
+app.get('/messages', message.findAll);
+app.get('/messages/:id', message.findById);
+app.post('/messages', message.addMessage);
 
 app.get('/getUsers', function(req, res){
   res.header('Content-Type', 'application/json');
