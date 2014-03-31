@@ -289,6 +289,7 @@ $(function (){
         if(data.messages && data.messages.length > 0){
           for(var i in data.messages){
             var msg = new App.Models.Message(data.messages[i]);
+            msg.message = 'echo';
             chatMessages.add(msg);
           }
           var last = data.messages.pop();
@@ -378,7 +379,7 @@ $(function (){
               text: message
             }
             var newLine = new App.Models.Message(line);
-            //this.collection.add(newLine);
+            this.collection.add(newLine);
             sendMessage(line);
           }
           $('.input-text',this.$el).val('');
