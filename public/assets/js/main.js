@@ -306,7 +306,7 @@ $(function (){
       });
     },
     addLine: function (message) {
-      console.log('adding');
+      console.log(message);
       var messageView = new App.Views.Message({model: message});
       var message = $(messageView.render().el).attr('class','message-line');
       var lastMessage = $('.message-line').last()
