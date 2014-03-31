@@ -288,9 +288,7 @@ $(function (){
       $.getJSON(endpoint,function(data) {
         if(data.messages && data.messages.length > 0){
           for(var i in data.messages){
-            var msg = new App.Models.Message(data.messages[i]);
-            msg.message = 'echo';
-            chatMessages.add(msg);
+            console.log(data.messages[i]);
           }
           var last = data.messages.pop();
           messageCounter = last.msgID;
@@ -307,7 +305,6 @@ $(function (){
       });
     },
     addLine: function (message) {
-      console.log(message);
       var messageView = new App.Views.Message({model: message});
       var message = $(messageView.render().el).attr('class','message-line');
       var lastMessage = $('.message-line').last()
@@ -430,7 +427,6 @@ $(function (){
         time: time
       }
       var newLine = new App.Models.Message(line);
-      console.log(that.collection);
       that.collection.add(newLine);
       sendMessage(line);
     },
