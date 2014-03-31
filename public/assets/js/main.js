@@ -97,8 +97,6 @@ $(function (){
       var chatMessagesView = new App.Views.ChatMessages({ collection: chatMessages });
       var chatInputView = new App.Views.ChatInput({ collection: chatMessages });
       var userslistView = new App.Views.UsersList({ collection: usersCollection });
-
-      setInterval(getMessage,1000);
     }
   };
 
@@ -283,6 +281,22 @@ $(function (){
       this.listenTo(this.collection, "change reset remove", this.render);
       this.listenTo(this.collection, "add", this.addLine);
       this.render();
+      setInterval(this.getMessages, 1000);
+    },
+    getMessages: function () {
+      var endpoint = '/catchUp?lastID=' + messageCounter;
+      $.getJSON(endpoint,function(data) {
+        if(data.messages && data.messages.length > 0){
+          for(var i in data.messages){
+            var msg = new App.Models.Message(data.messages[i]);
+            this.addLine(msg);
+          }
+          var last = data.messages.pop();
+          messageCounter = last.msgID;
+        } else {
+          console.log('up-to-date');
+        }
+      });
     },
     render: function () {
       var thisView = this;
@@ -451,21 +465,4 @@ $(function (){
   });
 
   new App.start();
-
 });
-
-function getMessage(){
-  var endpoint = '/catchUp?lastID=' + messageCounter;
-  $.getJSON(endpoint,function(data) {
-    if(data.messages && data.messages.length > 0){
-      for(var i in data.messages){
-        var msg = new App.Models.Message(data.messages[i]);
-        App.Views.ChatMessages.addLine(msg);
-      }
-      var last = data.messages.pop();
-      messageCounter = last.msgID;
-    } else {
-      console.log('up-to-date');
-    }
-  });
-}
