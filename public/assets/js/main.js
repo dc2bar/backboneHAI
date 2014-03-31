@@ -281,7 +281,7 @@ $(function (){
       this.listenTo(this.collection, "change reset remove", this.render);
       this.listenTo(this.collection, "add", this.addLine);
       this.render();
-      this.setInterval(this.getMessages, 1000);
+      setInterval(this.getMessages, 1000);
     },
     getMessages: function () {
       var that = this;
