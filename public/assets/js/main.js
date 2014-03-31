@@ -284,13 +284,14 @@ $(function (){
       setInterval(this.getMessages, 1000);
     },
     getMessages: function () {
-      var that = this;
+      var thisView = this;
       var endpoint = '/catchUp?lastID=' + messageCounter;
       $.getJSON(endpoint,function(data) {
         if(data.messages && data.messages.length > 0){
           for(var i in data.messages){
             var msg = new App.Models.Message(data.messages[i]);
-            that.addLine(msg);
+            console.log(thisView);
+            thisView.addLine(msg);
           }
           var last = data.messages.pop();
           messageCounter = last.msgID;
