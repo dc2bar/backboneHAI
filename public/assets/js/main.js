@@ -57,13 +57,6 @@ var scrollEnable = true;
 var previewEnable = true;
 var mouseoff = true;
 
-function sendMessage(message){
-  $.post( "/messages", message)
-      .done(function( data ) {
-        console.log('posted! -> ' + data);
-      });
-}
-
 $(function (){
   /*-------------Application----------*/
   var App = {
@@ -363,7 +356,6 @@ $(function (){
               text: message
             })
             this.collection.add(newLine);
-            sendMessage(newLine);
           }
           $('.input-text',this.$el).val('');
         }
