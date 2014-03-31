@@ -289,6 +289,7 @@ $(function (){
         if(data.messages && data.messages.length > 0){
           for(var i in data.messages){
             var msg = new App.Models.Message(data.messages[i]);
+            console.log(msg);
             var messageView = new App.Views.Message({model: msg});
             var message = $(messageView.render().el).attr('class','message-line');
             var lastMessage = $('.message-line').last()
