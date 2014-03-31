@@ -284,30 +284,14 @@ $(function (){
       setInterval(this.getMessages, 1000);
     },
     getMessages: function () {
+      var that = this;
       var endpoint = '/catchUp?lastID=' + messageCounter;
       $.getJSON(endpoint,function(data) {
         if(data.messages && data.messages.length > 0){
           for(var i in data.messages){
             var msg = new App.Models.Message(data.messages[i]);
-            var messageView = new App.Views.Message({model: msg});
-            var message = $(messageView.render().el).attr('class','message-line');
-            var lastMessage = $('.message-line').last()
-            if(message.html() != lastMessage.html()){
-              if($('.link-author', message).text() == $('.link-author', lastMessage).text()) {
-                if($('.comment-entry', lastMessage).last().text() != $('.comment-entry', message).last().text())
-                {
-                  $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
-                  if(scrollEnable) {
-                    $('.messages').scrollTop($('.messages')[0].scrollHeight);
-                  }
-                }
-              } else {
-                $('.messages').append(message);
-                if(scrollEnable) {
-                  $('.messages').scrollTop($('.messages')[0].scrollHeight);
-                }
-              }
-            }
+            console.log(msg);
+            //that.addLine(msg);
           }
           var last = data.messages.pop();
           messageCounter = last.msgID;
@@ -394,6 +378,8 @@ $(function (){
               time: time,
               text: message
             }
+            var newLine = new App.Models.Message(line);
+            this.collection.add(newLine);
             sendMessage(line);
           }
           $('.input-text',this.$el).val('');
@@ -443,6 +429,8 @@ $(function (){
         recipient: 'all',
         time: time
       }
+      var newLine = new App.Models.Message(line);
+      that.collection.add(newLine);
       sendMessage(line);
     },
     getReddit: function (type) {
@@ -464,6 +452,8 @@ $(function (){
                 time: time,
                 text: '<a href="'+node.url+'" target="_blank" onmouseover="showPreview(this.href,\'nsfw\')" onmouseout="hidePreview()">'+type+'! NSFW <img src="assets/images/camera.png"/></a>'
               }
+              var newLine = new App.Models.Message(line);
+              that.collection.add(newLine);
               sendMessage(line);
               break;
             } else {
