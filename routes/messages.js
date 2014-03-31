@@ -1,4 +1,5 @@
 var mongo = require('mongodb');
+var ObjectId = require('mongodb').ObjectID;
 
 var Server = mongo.Server,
     Db = mongo.Db,
