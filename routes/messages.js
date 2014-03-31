@@ -59,7 +59,7 @@ exports.addMessage = function(req, res) {
 exports.catchUp = function(req, res) {
   var last = req.params.lastID;
   db.collection('messages', function(err, collection) {
-    collection.find({_id:{$gt:BSON.ObjectId(last)}}).toArray(function(err, items) {
+    collection.find({_id:{$gt:new BSON.ObjectId(last)}}).toArray(function(err, items) {
       res.send(items);
     });
   });
