@@ -1,3 +1,5 @@
+var Backbone = require('backbone');
+
 var cMessageModel = Backbone.Model.extend({});
 var cMessagesCollection = Backbone.Collection.extend({
   model: cMessageModel
