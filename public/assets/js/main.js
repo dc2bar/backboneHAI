@@ -427,7 +427,7 @@ $(function (){
         time: time
       }
       var newLine = new App.Models.Message(line);
-      //that.collection.add(newLine);
+      that.collection.add(newLine);
       sendMessage(line);
     },
     getReddit: function (type) {
