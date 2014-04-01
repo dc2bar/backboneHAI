@@ -281,16 +281,17 @@ $(function (){
       this.listenTo(this.collection, "change reset remove", this.render);
       this.listenTo(this.collection, "add", this.addLine);
       this.render();
-      //setInterval(this.getMessages, 1000);
+      setInterval(this.getMessages, 2000);
     },
     getMessages: function () {
-      var that = this;
       var endpoint = '/catchUp?lastID=' + messageCounter;
       $.getJSON(endpoint,function(data) {
         if(data.messages && data.messages.length > 0){
           for(var i in data.messages){
             var msg = new App.Models.Message(data.messages[i]);
-            //App.Collections.Messages.add(msg);
+            var messageView = new App.Views.Message({model: msg});
+            var message = $(messageView.render().el).attr('class','message-line');
+            console.log(message);
           }
           var last = data.messages.pop();
           messageCounter = last.msgID;
