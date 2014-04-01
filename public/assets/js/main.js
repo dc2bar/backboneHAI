@@ -281,25 +281,19 @@ $(function (){
       this.listenTo(this.collection, "change reset remove", this.render);
       this.listenTo(this.collection, "add", this.addLine);
       this.render();
-      setInterval(this.getMessages, 2000);
+      //setInterval(this.getMessages, 2000);
     },
     getMessages: function () {
       var endpoint = '/catchUp?lastID=' + messageCounter;
       $.getJSON(endpoint,function(data) {
-        console.log('got data');
-        console.log(JSON.stringify(data));
         if(data.messages && data.messages.length > 0){
           for(var i in data.messages){
-            console.log(JSON.stringify(data.messages[i]))
             var msg = new App.Models.Message(data.messages[i]);
             var messageView = new App.Views.Message({model: msg});
             var message = $(messageView.render().el).attr('class','message-line');
-            $('.messages').append(message);
           }
           var last = data.messages.pop();
           messageCounter = last.msgID;
-        } else {
-          console.log('up-to-date');
         }
       });
     },

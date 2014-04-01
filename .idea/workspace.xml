@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="Initial commit&#10;">
+    <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/main.js" afterPath="$PROJECT_DIR$/public/assets/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -29,7 +29,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="289" column="42" selection-start="8880" selection-end="8880" vertical-scroll-proportion="0.40384614" vertical-offset="4125" max-vertical-offset="7155">
+            <state line="288" column="54" selection-start="8861" selection-end="8861" vertical-scroll-proportion="0.3653846" vertical-offset="4130" max-vertical-offset="7065">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -1921,7 +1921,11 @@
       <created>1396358132438</created>
       <updated>1396358132438</updated>
     </task>
-    <option name="localTasksCounter" value="392" />
+    <task id="LOCAL-00392" summary="Initial commit&#10;">
+      <created>1396360455532</created>
+      <updated>1396360455532</updated>
+    </task>
+    <option name="localTasksCounter" value="393" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2341,7 +2345,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="289" column="42" selection-start="8880" selection-end="8880" vertical-scroll-proportion="0.40384614" vertical-offset="4125" max-vertical-offset="7155">
+        <state line="288" column="54" selection-start="8861" selection-end="8861" vertical-scroll-proportion="0.3653846" vertical-offset="4130" max-vertical-offset="7065">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
