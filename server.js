@@ -75,8 +75,8 @@ var express = require('express')
     , https = require('https');
 
 var httpsOptions = {
-  key: fs.readFileSync('/certs/privatekey.pem')
-  , cert: fs.readFileSync('/certs/certificate.pem')
+  key: fs.readFileSync('certs/privatekey.pem')
+  , cert: fs.readFileSync('certs/certificate.pem')
 }
 
 var app = module.exports = express.createServer()
