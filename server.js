@@ -165,5 +165,5 @@ setInterval(clearUsers, 2000);
 
 app.listen(80);
 var secureServer = https.createServer(httpsOptions, app).listen(443, function(){
-  console.log("https server listening on port " + port);
+  console.log("https server listening on port 443");
 });
