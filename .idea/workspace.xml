@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ssl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backbone.iws" />
@@ -55,28 +55,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="1" selection-start="2247" selection-end="2247" vertical-scroll-proportion="0.0" vertical-offset="924" max-vertical-offset="2595">
+            <state line="168" column="3" selection-start="4859" selection-end="4859" vertical-scroll-proportion="0.8389982" vertical-offset="2051" max-vertical-offset="2610">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/certs/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ssl.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ssl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ssl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="251" selection-end="251" vertical-scroll-proportion="0.29516995" vertical-offset="0" max-vertical-offset="559">
+            <state line="14" column="0" selection-start="274" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
               <folding />
             </state>
           </provider>
@@ -123,8 +114,8 @@
         <option value="$PROJECT_DIR$/api/routes/index.js" />
         <option value="$PROJECT_DIR$/routes/messages.js" />
         <option value="$PROJECT_DIR$/public/assets/js/main.js" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/ssl.js" />
+        <option value="$PROJECT_DIR$/server.js" />
       </list>
     </option>
   </component>
@@ -174,6 +165,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="backbone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backbone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backbone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="certs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1882,7 +1887,11 @@
       <created>1396539422728</created>
       <updated>1396539422728</updated>
     </task>
-    <option name="localTasksCounter" value="398" />
+    <task id="LOCAL-00398" summary="Initial commit&#10;">
+      <created>1396539818891</created>
+      <updated>1396539818892</updated>
+    </task>
+    <option name="localTasksCounter" value="399" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1954,13 +1963,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="63" selection-start="4054" selection-end="4054" vertical-scroll-proportion="0.0" vertical-offset="1323" max-vertical-offset="2625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="360" column="22" selection-start="11290" selection-end="11290" vertical-scroll-proportion="0.0" vertical-offset="5400" max-vertical-offset="6300">
@@ -2284,9 +2286,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$PROJECT_DIR$/certs/certrequest.csr">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="1" selection-start="2247" selection-end="2247" vertical-scroll-proportion="0.0" vertical-offset="924" max-vertical-offset="2595">
+        <state line="13" column="0" selection-start="0" selection-end="777" vertical-scroll-proportion="0.40625" vertical-offset="0" max-vertical-offset="480">
           <folding />
         </state>
       </provider>
@@ -2300,7 +2302,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ssl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="251" selection-end="251" vertical-scroll-proportion="0.29516995" vertical-offset="0" max-vertical-offset="559">
+        <state line="14" column="0" selection-start="274" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="3" selection-start="4859" selection-end="4859" vertical-scroll-proportion="0.8389982" vertical-offset="2051" max-vertical-offset="2610">
           <folding />
         </state>
       </provider>

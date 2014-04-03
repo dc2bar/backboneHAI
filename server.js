@@ -79,8 +79,7 @@ var httpsOptions = {
   , cert: fs.readFileSync('certs/certificate.pem')
 }
 
-var app = module.exports = express.createServer()
-    , appSecure = module.exports = express.createServer(httpsOptions);
+var app = module.exports = express.createServer();
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
@@ -165,4 +164,6 @@ setInterval(clearUsers, 2000);
 
 
 app.listen(80);
-appSecure.listen(443);
+var secureServer = https.createServer(httpsOptions, app).listen(443, function(){
+  console.log("https server listening on port " + port);
+});
