@@ -70,9 +70,17 @@ pubnub.subscribe({
   }
 });
 
-var express = require('express');
+var express = require('express')
+    , fs = require('fs')
+    , https = require('https');
 
-var app = module.exports = express.createServer();
+var httpsOptions = {
+  key: fs.readFileSync('/certs/privatekey.pem')
+  , cert: fs.readFileSync('/certs/certificate.pem')
+}
+
+var app = module.exports = express.createServer()
+    , appSecure = module.exports = express.createServer(httpsOptions);
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
@@ -157,10 +165,4 @@ setInterval(clearUsers, 2000);
 
 
 app.listen(80);
-
-
-
-
-
-
-
+appSecure.listen(443);
