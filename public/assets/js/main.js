@@ -393,8 +393,8 @@ $(function (){
         this.getReddit('ass');
         return false;
       }
-      if(message == '/random'){
-        this.getReddit('nsfw');
+      if(message == '/gonewild'){
+        this.getReddit('gonewild');
         return false;
       }
       if(message.substring(0,4) == '/me '){
