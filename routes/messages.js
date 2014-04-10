@@ -39,7 +39,3 @@ exports.getMessages = function(req, res) {
     res.send({messages:'current'});
   }
 }
-
-exports.getCurrent = function(){
-  return messageCounter;
-}

@@ -13,9 +13,6 @@ var httpsOptions = {
 
 //configure express
 app.configure(function(){
-  //include JADE templating engine
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
@@ -39,8 +36,6 @@ app.post('/users', users.addUser);
 
 //safe preview
 app.get('/sp', sp.init_p);
-
-//pic get
 
 /* END ROUTES */
 

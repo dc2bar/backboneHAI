@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Microsoft Outlook Web Access</title>
-</head>
-
 <script id="login-modal" type="text/x-handlebars-template">
   <div class="add-comment add-comment-velvet styled" id="addcomments">
 
-  <div class="modal-header">
-    <div class="add-comment-title"><h3>Chat Login</h3></div>
-  </div>
+    <div class="modal-header">
+      <div class="add-comment-title"><h3>Chat Login</h3></div>
+    </div>
 
-  <div class="modal-body">
-    <!-- login form -->
+    <div class="modal-body">
+      <!-- login form -->
       <div class="comment-form login-form">
         <form class="login">
           <div class="form-inner">
@@ -120,25 +114,3 @@
     <input type="text" class="input-text">
   </div>
 </script>
-
-<script src="assets/js/vendor/jquery.min.js"></script>
-<script src="assets/js/vendor/handlebars.min.js"></script>
-<script src="assets/js/vendor/b64.js"></script>
-<script src="assets/js/vendor/colorpicker.js"></script>
-<body>
-  <div class="chat-area">chat</div>
-  <div class="users-list">users</div>
-  <div class="controls-area">controls</div>
-  <div class="login-form">login</div>
-</body>
-<script>
-  Handlebars.registerHelper("formatDate", function(sinceEpoch) {
-    var d = new Date(0);
-    var localTime = sinceEpoch/1000;
-    d.setUTCSeconds(localTime);
-    return d.toLocaleTimeString();
-  });
-</script>
-</body>
-
-</html>
