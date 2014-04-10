@@ -34,6 +34,7 @@ exports.catchUp = function(req, res) {
     res.send({status:"up-to-date"});
   }
   var models = cmessagesCollection.select(function (model) {
+    console.log(model.toJSON);
     return model.get('msgID').toJSON > last;
   });
   res.send(models);
