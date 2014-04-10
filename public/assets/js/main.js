@@ -292,7 +292,7 @@ $(function (){
             var msg = new App.Models.Message(data[i]);
             var messageView = new App.Views.Message({model: msg});
             var message = $(messageView.render().el).attr('class','message-line');
-            console.log(message);
+            $('.message-container .messages').append(message);
           }
           var last = data.pop();
           messageCounter = last.msgID;
