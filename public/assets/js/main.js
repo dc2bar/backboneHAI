@@ -287,9 +287,8 @@ $(function (){
     getMessages: function () {
       var endpoint = '/catchUp?lastID=' + messageCounter;
       $.getJSON(endpoint,function(data) {
-        console.log(data);
-        if(data.messages && data.messages.length > 0){
-          for(var i in data.messages){
+        if($.isArray(data) && data.length > 0){
+          for(var i in data){
             var msg = new App.Models.Message(data.messages[i]);
             var messageView = new App.Views.Message({model: msg});
             var message = $(messageView.render().el).attr('class','message-line');
