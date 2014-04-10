@@ -132,6 +132,8 @@
 <div class="login-form">login</div>
 </body>
 <script>
+  //because fuck IE.
+  $.ajaxSetup({ cache: false });
   function renderElement(data,template){
     var template = $("#"+template+"").html();
     var compiled = Handlebars.compile(template);
