@@ -35,7 +35,7 @@ exports.catchUp = function(req, res) {
   }
   var models = cmessagesCollection.select(function (model) {
     console.log(model.toJSON());
-    return model.get('msgID').toJSON() > last;
+    return model.get('msgID') > last;
   });
   res.send(models);
 }
