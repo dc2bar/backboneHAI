@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="">
+    <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="Initial commit&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/messages.js" afterPath="$PROJECT_DIR$/routes/messages.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -47,7 +47,7 @@
       <file leaf-file-name="server2.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="14" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="429" max-vertical-offset="855">
+            <state line="43" column="0" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0" vertical-offset="489" max-vertical-offset="855">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -85,7 +85,7 @@
       <file leaf-file-name="messages.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/messages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="36" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0882353" vertical-offset="270" max-vertical-offset="795">
+            <state line="23" column="0" selection-start="643" selection-end="643" vertical-scroll-proportion="0.60294116" vertical-offset="140" max-vertical-offset="780">
               <folding />
             </state>
           </provider>
@@ -1947,7 +1947,11 @@
       <created>1397094253698</created>
       <updated>1397094253698</updated>
     </task>
-    <option name="localTasksCounter" value="410" />
+    <task id="LOCAL-00410" summary="Initial commit&#10;">
+      <created>1397094397826</created>
+      <updated>1397094397826</updated>
+    </task>
+    <option name="localTasksCounter" value="411" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2284,13 +2288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="23" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="39" max-vertical-offset="405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="47" selection-start="467" selection-end="467" vertical-scroll-proportion="0.57377046" vertical-offset="0" max-vertical-offset="375">
@@ -2301,13 +2298,6 @@
     <entry file="file://$PROJECT_DIR$/api/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="1" selection-start="147" selection-end="147" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="113" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="2610">
           <folding />
         </state>
       </provider>
@@ -2326,9 +2316,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ssl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="23" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="39" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="113" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="2610">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="14" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="429" max-vertical-offset="855">
+        <state line="43" column="0" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0" vertical-offset="489" max-vertical-offset="855">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -2337,7 +2341,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/messages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="36" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0882353" vertical-offset="270" max-vertical-offset="795">
+        <state line="23" column="0" selection-start="643" selection-end="643" vertical-scroll-proportion="0.60294116" vertical-offset="140" max-vertical-offset="780">
           <folding />
         </state>
       </provider>

@@ -5,7 +5,7 @@ function message(messageData, messageID)
   this.timestamp = (new Date).getTime();
   this.message = messageData.message;
   this.color = messageData.color;
-  this.id = messageID;
+  this.messageID = messageID;
 }
 
 var messageCounter = 1;
@@ -16,7 +16,7 @@ exports.addMessage = function(req, res) {
   allMessages.push(new message(incomming,messageCounter));
   console.log(allMessages);
   if(allMessages.length > 5){
-    allMessages = allMessages.slice(allMessages.length - 5, allMessages.length);
+    allMessages = allMessages.slice(allMessages.length - 4, allMessages.length);
   }
   res.send({msgID: messageCounter});
   messageCounter++;
@@ -24,7 +24,6 @@ exports.addMessage = function(req, res) {
 
 exports.getMessages = function(req, res) {
   var last = req.query.lastID ? req.query.lastID : 0;
-  console.log(last+"/"+messageCounter);
   if(last*1 == messageCounter){
     res.send({status:"up-to-date"});
   }
