@@ -13,6 +13,7 @@ var allUsers = [];
 exports.addUser = function(req, res) {
   var incomming = req.body;
   allUsers.push(new user(incomming,(new Date).getTime()));
+  res.send({status:'OK'})
 }
 
 exports.getUsers = function(req, res) {
