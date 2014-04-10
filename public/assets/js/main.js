@@ -293,7 +293,7 @@ $(function (){
             var messageView = new App.Views.Message({model: msg});
             var message = $(messageView.render().el).attr('class','message-line');
           }
-          var last = data.messages.pop();
+          var last = data.pop();
           messageCounter = last.msgID;
         }
       });
