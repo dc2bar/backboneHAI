@@ -1,41 +1,44 @@
-var Backbone = require('backbone');
+function message(messageData, messageID)
+{
+  var username = messageData.username;
+  var avatar = messageData.avatar;
+  var timestamp = (new Date).getTime();
+  var message = messageData.message;
+  var color = messageData.color;
+  var id = messageID;
+}
 
-var cMessageModel = Backbone.Model.extend({});
-var cMessagesCollection = Backbone.Collection.extend({
-  model: cMessageModel
-});
-
-var cmessagesCollection = new cMessagesCollection();
 var messageCounter = 1;
-
-exports.findAll = function(req, res) {
-  db.collection('messages', function(err, collection) {
-    collection.find().toArray(function(err, items) {
-      res.send(items);
-    });
-  });
-};
+var allMessages = [];
 
 exports.addMessage = function(req, res) {
-  var message = req.body;
-  message.msgID = messageCounter;
-  cmessagesCollection.add(message);
-  if(cmessagesCollection.length > 50){
-    cmessagesCollection.remove(cmessagesCollection.first(cmessagesCollection.length - 50));
+  var incomming = req.body;
+  allMessages.push(new message(incomming,messageCounter));
+  if(allMessages.length > 5){
+    allMessages = allMessages.slice(allMessages.length - 50, allMessages.length);
   }
   res.send({msgID: messageCounter});
   messageCounter++;
 }
 
-exports.catchUp = function(req, res) {
-  var last = req.query.lastID;
+exports.getMessages = function(req, res) {
+
+  var last = req.query.lastID ? req.query.lastID : 0;
   if(last*1 == messageCounter){
     res.send({status:"up-to-date"});
   }
-  var models = cmessagesCollection.select(function (model) {
-    return model.get('msgID') > last;
-  });
-  res.send({messages:models});
+  var missedMessages = [];
+  for(var i in allMessages){
+    var message = allMessages[i];
+    if(message.messageID > last){
+      missedMessages.push(message);
+    }
+  };
+  if(missedMessages.length > 0){
+    res.send({messages:missedMessages});
+  } else {
+    res.send({messages:'current'});
+  }
 }
 
 exports.getCurrent = function(){
