@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server2.js" afterPath="$PROJECT_DIR$/server2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/messages.js" afterPath="$PROJECT_DIR$/routes/messages.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backbone.iws" />
@@ -44,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server2.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="server2.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="3" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.71311474" vertical-offset="489" max-vertical-offset="855">
+            <state line="39" column="14" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="429" max-vertical-offset="855">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -82,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="messages.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/messages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="4" selection-start="945" selection-end="945" vertical-scroll-proportion="-20.192308" vertical-offset="0" max-vertical-offset="780">
+            <state line="13" column="41" selection-start="340" selection-end="340" vertical-scroll-proportion="0.3970588" vertical-offset="60" max-vertical-offset="795">
               <folding />
             </state>
           </provider>
@@ -124,10 +124,10 @@
         <option value="$PROJECT_DIR$/api/routes/messages.js" />
         <option value="$PROJECT_DIR$/routes/sp.js" />
         <option value="$PROJECT_DIR$/routes/users.js" />
-        <option value="$PROJECT_DIR$/routes/messages.js" />
         <option value="$PROJECT_DIR$/api/server.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/server2.js" />
+        <option value="$PROJECT_DIR$/routes/messages.js" />
       </list>
     </option>
   </component>
@@ -1935,7 +1935,11 @@
       <created>1397094065167</created>
       <updated>1397094065167</updated>
     </task>
-    <option name="localTasksCounter" value="407" />
+    <task id="LOCAL-00407" summary="Initial commit&#10;">
+      <created>1397094084022</created>
+      <updated>1397094084022</updated>
+    </task>
+    <option name="localTasksCounter" value="408" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2279,13 +2283,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/messages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="4" selection-start="945" selection-end="945" vertical-scroll-proportion="-20.192308" vertical-offset="0" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="47" selection-start="467" selection-end="467" vertical-scroll-proportion="0.57377046" vertical-offset="0" max-vertical-offset="375">
@@ -2323,10 +2320,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="3" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.71311474" vertical-offset="489" max-vertical-offset="855">
+        <state line="39" column="14" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="429" max-vertical-offset="855">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/messages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="41" selection-start="340" selection-end="340" vertical-scroll-proportion="0.3970588" vertical-offset="60" max-vertical-offset="795">
+          <folding />
         </state>
       </provider>
     </entry>

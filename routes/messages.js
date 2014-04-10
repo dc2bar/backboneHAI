@@ -14,6 +14,7 @@ var allMessages = [];
 exports.addMessage = function(req, res) {
   var incomming = req.body;
   allMessages.push(new message(incomming,messageCounter));
+  console.log(allMessages);
   if(allMessages.length > 5){
     allMessages = allMessages.slice(allMessages.length - 50, allMessages.length);
   }
