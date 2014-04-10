@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="Initial commit&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/messages.js" afterPath="$PROJECT_DIR$/routes/messages.js" />
+    <list default="true" id="b651ad5f-5b45-4d34-b6b6-7efea953c650" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/users.js" afterPath="$PROJECT_DIR$/routes/users.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backbone.iws" />
@@ -47,7 +47,7 @@
       <file leaf-file-name="server2.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0" vertical-offset="489" max-vertical-offset="855">
+            <state line="43" column="0" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="855">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -55,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="users.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+            <state line="20" column="0" selection-start="455" selection-end="455" vertical-scroll-proportion="0.8196721" vertical-offset="0" max-vertical-offset="405">
               <folding />
             </state>
           </provider>
@@ -82,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="messages.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/messages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1147" selection-end="1147" vertical-scroll-proportion="0.7352941" vertical-offset="425" max-vertical-offset="765">
+            <state line="45" column="0" selection-start="1147" selection-end="1147" vertical-scroll-proportion="-9.615385" vertical-offset="425" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -123,11 +123,11 @@
         <option value="$PROJECT_DIR$/public/assets/js/main.js" />
         <option value="$PROJECT_DIR$/api/routes/messages.js" />
         <option value="$PROJECT_DIR$/routes/sp.js" />
-        <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/api/server.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/server2.js" />
         <option value="$PROJECT_DIR$/routes/messages.js" />
+        <option value="$PROJECT_DIR$/routes/users.js" />
       </list>
     </option>
   </component>
@@ -1955,7 +1955,11 @@
       <created>1397094564859</created>
       <updated>1397094564859</updated>
     </task>
-    <option name="localTasksCounter" value="412" />
+    <task id="LOCAL-00412" summary="Initial commit&#10;">
+      <created>1397094664121</created>
+      <updated>1397094664123</updated>
+    </task>
+    <option name="localTasksCounter" value="413" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2313,13 +2317,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ssl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="23" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="39" max-vertical-offset="405">
@@ -2334,6 +2331,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/messages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="1147" selection-end="1147" vertical-scroll-proportion="-9.615385" vertical-offset="425" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="0" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0" vertical-offset="489" max-vertical-offset="855">
@@ -2343,9 +2347,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/messages.js">
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1147" selection-end="1147" vertical-scroll-proportion="0.7352941" vertical-offset="425" max-vertical-offset="765">
+        <state line="20" column="0" selection-start="455" selection-end="455" vertical-scroll-proportion="0.8196721" vertical-offset="0" max-vertical-offset="405">
           <folding />
         </state>
       </provider>

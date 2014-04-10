@@ -1,11 +1,11 @@
 function user(userData,timeNow)
 {
-  var username = userData.username;
-  var avatar = userData.avatar;
-  var message = userData.message;
-  var color = userData.color;
-  var title = userData.title;
-  var lastCheckin = timeNow;
+  this.username = userData.username;
+  this.avatar = userData.avatar;
+  this.message = userData.message;
+  this.color = userData.color;
+  this.title = userData.title;
+  this.lastCheckin = timeNow;
 }
 
 var allUsers = [];
