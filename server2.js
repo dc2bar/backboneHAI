@@ -26,8 +26,8 @@ app.configure(function(){
 
 /* ROUTES */
 var messages = require('./routes/messages'),
-    users = requre('.routes/users'),
-    sp = requre('.routes/sp');
+    users = require('.routes/users'),
+    sp = require('.routes/sp');
 
 //messages
 app.get('/messages', messages.getMessages);
