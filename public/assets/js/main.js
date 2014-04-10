@@ -129,7 +129,9 @@ $(function (){
     model: App.Models.User
   });
 
-  App.Collections.Messages = Backbone.Collection.extend({
+  App.Collections.Messages = Backbone.PubNub.Collection.extend({
+    name: 'MessagesCollection',
+    pubnub: pubnub,
     model: App.Models.Message
   });
 
@@ -290,7 +292,7 @@ $(function (){
             var msg = new App.Models.Message(data[i]);
             var messageView = new App.Views.Message({model: msg});
             var message = $(messageView.render().el).attr('class','message-line');
-            $('.message-container .messages').append(message);
+            console.log(message);
           }
           var last = data.pop();
           messageCounter = last.msgID;
