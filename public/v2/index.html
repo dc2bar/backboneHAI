@@ -149,7 +149,9 @@
     })
   }
   function getMessages(){
+    console.log('fired');
     $.getJSON('/messages?lastID='+lastMessage,function(response){
+      console.log(JSON.stringify(response));
       if(response.messages.length > 0){
         var chunk = "";
         $.each(response.messages, function( index, value ) {
