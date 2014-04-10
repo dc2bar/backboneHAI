@@ -170,8 +170,8 @@
   });
   var lastMessage = 0;
   $(function(){
-    getUsers();
-    getMessages();
+    setInterval(getMessages,2000);
+    setInterval(getUsers,5000);
   });
 </script>
 </body>
