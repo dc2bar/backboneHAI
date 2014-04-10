@@ -1,11 +1,11 @@
 function message(messageData, messageID)
 {
-  var username = messageData.username;
-  var avatar = messageData.avatar;
-  var timestamp = (new Date).getTime();
-  var message = messageData.message;
-  var color = messageData.color;
-  var id = messageID;
+  this.username = messageData.username;
+  this.avatar = messageData.avatar;
+  this.timestamp = (new Date).getTime();
+  this.message = messageData.message;
+  this.color = messageData.color;
+  this.id = messageID;
 }
 
 var messageCounter = 1;
