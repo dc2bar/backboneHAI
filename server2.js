@@ -46,7 +46,7 @@ app.get('/sp', sp.init_p);
 
 /* INIT - BOOT THIS BITCH UP */
 app.listen(3080);
-var secureServer = https.createServer(httpsOptions, app).listen(443, function(){
+var secureServer = https.createServer(httpsOptions, app).listen(4443, function(){
   console.log("https server listening on port 443");
 });
 /* END INIT */
