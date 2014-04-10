@@ -289,12 +289,11 @@ $(function (){
       $.getJSON(endpoint,function(data) {
         if($.isArray(data) && data.length > 0){
           for(var i in data){
-            var msg = new App.Models.Message(data.messages[i]);
+            var msg = new App.Models.Message(data[i]);
             var messageView = new App.Views.Message({model: msg});
             var message = $(messageView.render().el).attr('class','message-line');
           }
           var last = data.messages.pop();
-          console.log(last);
           messageCounter = last.msgID;
         }
       });
