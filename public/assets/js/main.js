@@ -288,12 +288,13 @@ $(function (){
       var endpoint = '/catchUp?lastID=' + messageCounter;
       $.getJSON(endpoint,function(data) {
         if($.isArray(data) && data.length > 0){
+          var chunk = "";
           for(var i in data){
             var msg = new App.Models.Message(data[i]);
             var messageView = new App.Views.Message({model: msg});
-            var message = $(messageView.render().el).attr('class','message-line');
-            console.log(message);
+            chunk += $(messageView.render().el).attr('class','message-line');
           }
+          console.log(chunk);
           var last = data.pop();
           messageCounter = last.msgID;
         }
