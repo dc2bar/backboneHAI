@@ -132,11 +132,30 @@
 <div class="login-form">login</div>
 </body>
 <script>
+  function renderElement(data,template){
+    var template = $("#"+template+"").html();
+    var compiled = Handlebars.compile(template);
+    return compiled(data);
+  }
+  function getUsers(){
+    $.getJSON('/users',function(response){
+      console.log(response);
+    })
+  }
+  function getMessages(){
+    $.getJSON('/messages',function(response){
+      console.log(response);
+    })
+  }
   Handlebars.registerHelper("formatDate", function(sinceEpoch) {
     var d = new Date(0);
     var localTime = sinceEpoch/1000;
     d.setUTCSeconds(localTime);
     return d.toLocaleTimeString();
+  });
+  $(function(){
+    getUsers();
+    getMessages();
   });
 </script>
 </body>
