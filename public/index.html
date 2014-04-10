@@ -122,15 +122,42 @@
 </script>
 
 <script src="assets/js/vendor/jquery.min.js"></script>
+<script src="assets/js/vendor/underscore.min.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/vendor/backbone.min.js"></script>
+<script src="assets/js/vendor/pubnub.min.js"></script>
+<script src="assets/js/vendor/backbone-pubnub.min.js"></script>
 <script src="assets/js/vendor/handlebars.min.js"></script>
 <script src="assets/js/vendor/b64.js"></script>
 <script src="assets/js/vendor/colorpicker.js"></script>
+<script src="assets/js/main.js"></script>
+<link href="assets/css/main.css" media="screen" rel="stylesheet">
+<link href="assets/css/bootstrap.css" media="screen" rel="stylesheet">
+<link href="assets/css/colorpicker.css" media="screen" rel="stylesheet">
 <body>
-  <div class="chat-area">chat</div>
-  <div class="users-list">users</div>
-  <div class="controls-area">controls</div>
-  <div class="login-form">login</div>
-</body>
+  <div class="login-modal">
+    login
+  </div>
+  <div class="chat-container">
+    <div class="chat-area">
+      <div class="message-container">
+        <div class="messages">
+          messages
+        </div>
+      </div>
+      <div class="chat-input">
+        chat input
+      </div>
+    </div>
+    <div class="userslist-container">
+      <div class="preview-container">
+        <img class="preview-img" src="">
+      </div>
+      <div class="userslist">
+        users
+      </div>
+    </div>
+  </div>
 <script>
   Handlebars.registerHelper("formatDate", function(sinceEpoch) {
     var d = new Date(0);
