@@ -1,6 +1,6 @@
 var _ = require('underscore')._,
     Backbone = require('backbone'),
-    message = require('./routes/messages'),
+    message = require('./routes/messagesorig'),
     pubnub = require('pubnub').init({
       publish_key: 'pub-c-94687441-ef61-4ff5-a0eb-c852642a769a',
       subscribe_key: 'sub-c-e3c8bbee-926d-11e3-9979-02ee2ddab7fe',
