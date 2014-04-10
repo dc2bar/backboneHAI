@@ -1,6 +1,7 @@
 /*
   globals
  */
+$.ajaxSetup({ cache: false });
 function showPreview(target, type) {
   mouseoff = false;
   if(previewEnable.toString() == 'false' && type == 'nsfw'){
@@ -281,7 +282,7 @@ $(function (){
       this.listenTo(this.collection, "change reset remove", this.render);
       this.listenTo(this.collection, "add", this.addLine);
       this.render();
-      //setInterval(this.getMessages, 2000);
+      setInterval(this.getMessages, 2000);
     },
     getMessages: function () {
       var endpoint = '/catchUp?lastID=' + messageCounter;
