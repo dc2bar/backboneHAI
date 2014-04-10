@@ -129,9 +129,7 @@ $(function (){
     model: App.Models.User
   });
 
-  App.Collections.Messages = Backbone.PubNub.Collection.extend({
-    name: 'MessagesCollection',
-    pubnub: pubnub,
+  App.Collections.Messages = Backbone.Collection.extend({
     model: App.Models.Message
   });
 
