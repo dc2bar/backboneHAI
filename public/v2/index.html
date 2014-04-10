@@ -142,7 +142,7 @@
       if(response.users.length > 0){
         var chunk = "";
         for(var i = 0; i < response.users.length; i++){
-          chunk += renderElement(response.users[i]);
+          chunk += renderElement(response.users[i],"usercard");
         }
         $('.users-list').append(chunk);
       }
@@ -153,7 +153,7 @@
       if(response.messages.length > 0){
         var chunk = "";
         for(var i = 0; i < response.messages.length; i++){
-          chunk += renderElement(response.messages[i]);
+          chunk += renderElement(response.messages[i],"chatline");
         }
         $('.messages-list').append(chunk);
       }
