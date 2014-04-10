@@ -162,7 +162,7 @@
   }
   Handlebars.registerHelper("formatDate", function(sinceEpoch) {
     var d = new Date(0);
-    var localTime = sinceEpoch;
+    var localTime = sinceEpoch/1000;
     d.setUTCSeconds(localTime);
     return d.toLocaleTimeString();
   });
