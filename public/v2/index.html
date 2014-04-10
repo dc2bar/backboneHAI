@@ -171,6 +171,7 @@
   });
   var lastMessage = 0;
   $(function(){
+    $('.controls-area').html(renderElement('','chatinput'));
     setInterval(function(){getMessages()}, 3000);
     setInterval(function(){getUsers()}, 5000);
   });
