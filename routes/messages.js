@@ -33,9 +33,5 @@ exports.getMessages = function(req, res) {
       missedMessages.push(message);
     }
   };
-  if(missedMessages.length > 0){
-    res.send({messages:missedMessages});
-  } else {
-    res.send({messages:'current'});
-  }
+  res.send({messages:missedMessages});
 }

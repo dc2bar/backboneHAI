@@ -126,7 +126,7 @@
 <script src="../assets/js/vendor/b64.js"></script>
 <script src="../assets/js/vendor/colorpicker.js"></script>
 <body>
-<div class="chat-area">chat</div>
+<div class="messages-list">chat</div>
 <div class="users-list">users</div>
 <div class="controls-area">controls</div>
 <div class="login-form">login</div>
@@ -139,12 +139,24 @@
   }
   function getUsers(){
     $.getJSON('/users',function(response){
-      console.log(response);
+      if(response.users.length > 0){
+        var chunk = "";
+        for(var i = 0; i < response.users.length; i++){
+          chunk += renderElement(response.users[i]);
+        }
+        $('.users-list').append(chunk);
+      }
     })
   }
   function getMessages(){
     $.getJSON('/messages',function(response){
-      console.log(response);
+      if(response.messages.length > 0){
+        var chunk = "";
+        for(var i = 0; i < response.messages.length; i++){
+          chunk += renderElement(response.messages[i]);
+        }
+        $('.messages-list').append(chunk);
+      }
     })
   }
   Handlebars.registerHelper("formatDate", function(sinceEpoch) {
