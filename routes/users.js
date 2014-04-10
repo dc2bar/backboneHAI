@@ -2,7 +2,6 @@ function user(userData,timeNow)
 {
   this.username = userData.username;
   this.avatar = userData.avatar;
-  this.message = userData.message;
   this.color = userData.color;
   this.title = userData.title;
   this.lastCheckin = timeNow;
