@@ -171,8 +171,8 @@
   });
   var lastMessage = 0;
   $(function(){
-    setInterval(getMessages,2000);
-    setInterval(getUsers,5000);
+    setInterval(function(){getMessages()}, 3000);
+    setInterval(function(){getUsers()}, 5000);
   });
 </script>
 </body>
