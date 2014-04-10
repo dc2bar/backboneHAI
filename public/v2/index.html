@@ -149,7 +149,7 @@
     })
   }
   function getMessages(){
-    $.getJSON('/messages',function(response){
+    $.getJSON('/messages?lastID='+lastMessage,function(response){
       if(response.messages.length > 0){
         var chunk = "";
         for(var i = 0; i < response.messages.length; i++){
@@ -157,6 +157,8 @@
           chunk += renderElement(response.messages[i],"chatline");
         }
         $('.messages-list').append(chunk);
+        var last = response.messages.pop();
+        lastMessage = last.messageID;
       }
     })
   }
@@ -166,6 +168,7 @@
     d.setUTCSeconds(localTime);
     return d.toLocaleTimeString();
   });
+  var lastMessage = 0;
   $(function(){
     getUsers();
     getMessages();
