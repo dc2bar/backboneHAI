@@ -287,7 +287,6 @@ $(function (){
     getMessages: function () {
       var endpoint = '/catchUp?lastID=' + messageCounter;
       $.getJSON(endpoint,function(data) {
-        console.log(data);
         if(data.messages && data.messages.length > 0){
           for(var i in data.messages){
             var msg = new App.Models.Message(data.messages[i]);
@@ -295,6 +294,7 @@ $(function (){
             var message = $(messageView.render().el).attr('class','message-line');
           }
           var last = data.messages.pop();
+          console.log(last);
           messageCounter = last.msgID;
         }
       });
