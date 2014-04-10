@@ -152,10 +152,11 @@
     $.getJSON('/messages?lastID='+lastMessage,function(response){
       if(response.messages.length > 0){
         var chunk = "";
-        for(var i = 0; i < response.messages.length; i++){
-          console.log(response.messages[i]);
-          chunk += renderElement(response.messages[i],"chatline");
-        }
+        $.each(response.messages, function( index, value ) {
+          console.log(value);
+          chunk += renderElement(value,"chatline");
+          console.log(chunk);
+        });
         $('.messages-list').append(chunk);
         var last = response.messages.pop();
         lastMessage = last.messageID;
