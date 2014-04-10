@@ -28,6 +28,7 @@ exports.addMessage = function(req, res) {
 }
 
 exports.catchUp = function(req, res) {
+  console.log(cMessagesCollection);
   var last = req.query.lastID;
   if(last*1 == messageCounter){
     res.send({status:"up-to-date"});
