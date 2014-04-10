@@ -16,15 +16,15 @@ exports.addMessage = function(req, res) {
   allMessages.push(new message(incomming,messageCounter));
   console.log(allMessages);
   if(allMessages.length > 5){
-    allMessages = allMessages.slice(allMessages.length - 50, allMessages.length);
+    allMessages = allMessages.slice(allMessages.length - 5, allMessages.length);
   }
   res.send({msgID: messageCounter});
   messageCounter++;
 }
 
 exports.getMessages = function(req, res) {
-
   var last = req.query.lastID ? req.query.lastID : 0;
+  console.log(last+"/"+messageCounter);
   if(last*1 == messageCounter){
     res.send({status:"up-to-date"});
   }
