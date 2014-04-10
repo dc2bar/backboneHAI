@@ -85,7 +85,7 @@
             </div>
             <div class="comment-text">
               <div class="comment-author clearfix">
-                <a href="#" class="link-author" hidefocus="true" style="outline: none;">{{sender}}</a> <span
+                <a href="#" class="link-author" hidefocus="true" style="outline: none;">{{username}}</a> <span
                   class="comment-date">{{formatDate time}}</span>
               </div>
               <div class="comment-entry" style="color:#{{color}};">
@@ -153,6 +153,7 @@
       if(response.messages.length > 0){
         var chunk = "";
         for(var i = 0; i < response.messages.length; i++){
+          console.log(response.messages[i]);
           chunk += renderElement(response.messages[i],"chatline");
         }
         $('.messages-list').append(chunk);

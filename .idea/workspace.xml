@@ -40,7 +40,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/v2/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="163" column="31" selection-start="6187" selection-end="6187" vertical-scroll-proportion="0.31610942" vertical-offset="2341" max-vertical-offset="2715">
+            <state line="155" column="44" selection-start="5973" selection-end="5973" vertical-scroll-proportion="0.58966565" vertical-offset="2131" max-vertical-offset="2730">
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#div#0;n#div#0;n#li#0;n#ol#0;n#div#0;n#script#2;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#li#0;n#ol#0;n#div#0;n#script#2;n#html#0;n#!!top" expanded="true" />
@@ -2028,7 +2028,11 @@
       <created>1397096519434</created>
       <updated>1397096519434</updated>
     </task>
-    <option name="localTasksCounter" value="423" />
+    <task id="LOCAL-00423" summary="Initial commit&#10;">
+      <created>1397096570380</created>
+      <updated>1397096570380</updated>
+    </task>
+    <option name="localTasksCounter" value="424" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2418,7 +2422,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/v2/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="31" selection-start="6187" selection-end="6187" vertical-scroll-proportion="0.31610942" vertical-offset="2341" max-vertical-offset="2715">
+        <state line="155" column="44" selection-start="5973" selection-end="5973" vertical-scroll-proportion="0.58966565" vertical-offset="2131" max-vertical-offset="2730">
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#div#0;n#div#0;n#li#0;n#ol#0;n#div#0;n#script#2;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#li#0;n#ol#0;n#div#0;n#script#2;n#html#0;n#!!top" expanded="true" />
