@@ -401,6 +401,7 @@ $(function (){
       }
       if(message.substring(0,8) == '/reddit '){
         this.getReddit(message.substring(8));
+        return false;
       }
       if(message.substring(0,4) == '/me '){
         this.sendMe(message);
