@@ -395,8 +395,8 @@ $(function (){
         this.getReddit('ass');
         return false;
       }
-      if(message == '/gonewild'){
-        this.getReddit('gonewild');
+      if(message == '/nsfw'){
+        this.getReddit('nsfw');
         return false;
       }
       if(message.substring(0,4) == '/me '){
