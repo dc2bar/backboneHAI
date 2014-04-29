@@ -311,12 +311,9 @@ $(function (){
       var message = $(messageView.render().el).attr('class','message-line');
       var lastMessage = $('.message-line').last()
       if($('.link-author', message).text() == $('.link-author', lastMessage).text()) {
-        if($('.comment-entry', lastMessage).last().text() != $('.comment-entry', message).last().text())
-        {
-          $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
-          if(scrollEnable) {
-            $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
-          }
+        $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
+        if(scrollEnable) {
+          $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
         }
       } else {
         $(this.$el).append(message);
