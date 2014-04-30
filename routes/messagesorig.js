@@ -25,7 +25,6 @@ exports.addMessage = function(req, res) {
   }
   res.send({msgID: messageCounter});
   messageCounter++;
-  console.log(cmessagesCollection.toJSON())
 }
 
 exports.catchUp = function(req, res) {
@@ -34,7 +33,6 @@ exports.catchUp = function(req, res) {
     res.send({status:"up-to-date"});
   }
   var models = cmessagesCollection.select(function (model) {
-    console.log(model.toJSON());
     return model.get('msgID') > last;
   });
   res.send(models);
