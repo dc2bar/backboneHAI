@@ -308,17 +308,17 @@ $(function (){
       var messageView = new App.Views.Message({model: message});
       var message = $(messageView.render().el).attr('class','message-line');
       var lastMessage = $('.message-line').last()
-      console.log(message);
-      console.log(lastMessage);
-      if($('.link-author', message).text() == $('.link-author', lastMessage).text()) {
-        $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
-        if(scrollEnable) {
-          $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
-        }
-      } else {
-        $(this.$el).append(message);
-        if(scrollEnable) {
-          $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
+      if($('.comment-entry', message) != $('.comment-entry', lastMessage)){
+        if($('.link-author', message).text() == $('.link-author', lastMessage).text()) {
+          $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
+          if(scrollEnable) {
+            $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
+          }
+        } else {
+          $(this.$el).append(message);
+          if(scrollEnable) {
+            $(this.$el).scrollTop($(this.$el)[0].scrollHeight);
+          }
         }
       }
     }
