@@ -308,7 +308,7 @@ $(function (){
       var messageView = new App.Views.Message({model: message});
       var message = $(messageView.render().el).attr('class','message-line');
       var lastMessage = $('.message-line').last()
-      if($('.comment-entry', message) != $('.comment-entry', lastMessage)){
+      if($('.comment-entry', message) != $('.comment-entry', lastMessage).last()){
         if($('.link-author', message).text() == $('.link-author', lastMessage).text()) {
           $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
           if(scrollEnable) {
