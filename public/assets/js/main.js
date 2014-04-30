@@ -55,7 +55,7 @@ function getServerTime() {
 }
 
 function sendMessage(message){
-  $.post('/messages',message).done(function(d){console.log(d)});
+  //$.post('/messages',message).done(function(d){console.log(d)});
 }
 
 var messageCounter = 0;
@@ -118,7 +118,6 @@ $(function (){
   pubnub.subscribe({
     channel : 'fuck_pubnub',
     message : function(m){
-      console.log(m);
       if(m.command == 'reload') {
         location.reload();
       }
@@ -292,7 +291,6 @@ $(function (){
             var msg = new App.Models.Message(data[i]);
             var messageView = new App.Views.Message({model: msg});
             var message = $(messageView.render().el).attr('class','message-line');
-            console.log(message);
           }
           var last = data.pop();
           messageCounter = last.msgID;
@@ -310,6 +308,8 @@ $(function (){
       var messageView = new App.Views.Message({model: message});
       var message = $(messageView.render().el).attr('class','message-line');
       var lastMessage = $('.message-line').last()
+      console.log(message);
+      console.log(lastMessage);
       if($('.link-author', message).text() == $('.link-author', lastMessage).text()) {
         $('.comment-entry', message).appendTo($('.comment-text', lastMessage));
         if(scrollEnable) {
