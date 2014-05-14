@@ -370,7 +370,7 @@ $(function (){
               color: App.User.get('color'),
               recipient: 'all',
               time: time,
-              text: message
+              text: message + "<img src='http://thoughtfulcode.files.wordpress.com/2010/08/speaker_icon.png' style='height:20px; width: 20px;'/>"
             }
             var newLine = new App.Models.Message(line);
             this.collection.add(newLine);
