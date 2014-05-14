@@ -39,11 +39,9 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34306568" vertical-offset="5317" max-vertical-offset="7050">
-              <caret line="369" column="43" selection-start-line="369" selection-start-column="43" selection-end-line="369" selection-end-column="43" />
-              <folding>
-                <marker date="1400082502000" expanded="true" signature="11799:11824" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="0.50915754" vertical-offset="5377" max-vertical-offset="7050">
+              <caret line="379" column="9" selection-start-line="379" selection-start-column="9" selection-end-line="379" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2209,13 +2207,18 @@
       <created>1398873795699</created>
       <updated>1398873795699</updated>
     </task>
-    <option name="localTasksCounter" value="468" />
+    <task id="LOCAL-00468" summary="Initial commit&#10;">
+      <created>1400082506205</created>
+      <updated>1400082506205</updated>
+    </task>
+    <option name="localTasksCounter" value="469" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="705" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917964" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2232,7 +2235,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20613287" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917964" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2636,11 +2638,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34306568" vertical-offset="5317" max-vertical-offset="7050">
-          <caret line="369" column="43" selection-start-line="369" selection-start-column="43" selection-end-line="369" selection-end-column="43" />
-          <folding>
-            <marker date="1400082502000" expanded="true" signature="11799:11824" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.50915754" vertical-offset="5377" max-vertical-offset="7050">
+          <caret line="379" column="9" selection-start-line="379" selection-start-column="9" selection-end-line="379" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
